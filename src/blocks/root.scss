@@ -1,0 +1,245 @@
+// Тут будут записаны все переменные
+$fontFamily: 'Raleway', 'Arial', sans-serif;
+$bold: 700;
+$medium: 500;
+$regular: 400;
+
+
+
+// Система отступов
+// Отступ между блоками
+$marginBlocks: 150px;
+// Отступ от заголовка до основного контента в секции
+$marginTitleContent: 50px;
+// Отступ внутри карточки
+$paddingInCard: 30px;
+// Отступ между заголовком и текстом в карточке
+$marginCardTitleText: 20px;
+// Отступ между текстом и иконкой в кнопке
+$marginTextIconButton: 10px;
+// Горизонтальные отступы в секциях
+$paddingSectionHorizontal: 40px;
+// Вертикальные отступы в секциях
+$paddingSectionVertical: 100px;
+
+@media screen and (max-width: 1439px) {
+  $marginBlocks: 100px;
+  $marginTitleContent: 32px;
+  $marginCardTitleText: 10px;
+  $paddingSectionVertical: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  $marginBlocks: 64px;
+  $marginTitleContent: 24px;
+  $paddingInCard: 24px;
+  $paddingSectionHorizontal: 10px;
+  $paddingSectionVertical: 32px;
+}
+
+
+
+// Переменные с цветами
+// Цвета фона карточек
+$lightBlue: #E7F0FF;
+$lightPink: #FEEFEA;
+$lightGreen: #DAEFD5;
+$lightPurple: #EAE6FF;
+
+// Цвета текста карточек, кнопок в стандартном виде
+$blue: #0C4BA0;
+$orange: #E98509;
+$green: #319B17;
+$purple: #8B75FF;
+$darkGrey: #333333;
+
+// Основной цвет бекграунда
+$backgroundColor: #FFFFFF;
+
+// Цвет для фона блоков
+$lightGrey: #F5F5F5;
+$superLightBlue: #E7F0FF;
+
+// Цвет границы border
+$borderColor: #DADADA;
+
+// Цвет кнопок в состоянии hover и disabled
+$buttonHoverColor: #4183DC;
+$buttonDisabledColor: #CACACA;
+
+// Цвет кнопок в состоянии pressed
+$bluePressed: #00275C;
+$orangePressed: #864A00;
+$greenPressed: #0E4900;
+$purplePressed: #4935B5;
+
+
+
+// Тут находятся все миксины
+@mixin flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: 1439px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+%raleway {
+  font-family: $fontFamily;
+  line-height: 120%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// Тут стили всех шрифтов
+%mainTitleH1 {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 72px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 38px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+%mainTitleH2 {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 64px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+
+%mainTitleH3 {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 36px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+%mainTitleH4 {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 34px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+%mainTitleH5 {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 24px;
+  }
+}
+
+%bigTextStyle {
+  @extend %raleway;
+  font: {
+    weight: $bold;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%mainTextStyle {
+  @extend %raleway;
+  font: {
+    weight: $regular;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%smallTextStyle {
+  @extend %raleway;
+  font: {
+    weight: $medium;
+    size: 18px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+%buttonTextStyle {
+  @extend %raleway;
+  font: {
+    weight: $medium;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
