@@ -11,7 +11,7 @@ $regular: 400;
 $marginBlocks: 150px;
 // Отступ от заголовка до основного контента в секции
 $marginTitleContent: 50px;
-// Отступ внутрикарточки
+// Отступ внутри карточки
 $paddingInCard: 30px;
 // Отступ между заголовком и текстом в карточке
 $marginCardTitleText: 20px;
@@ -22,14 +22,14 @@ $paddingSectionHorizontal: 40px;
 // Вертикальные отступы в секциях
 $paddingSectionVertical: 100px;
 
-@media (max-width: 1023px) {
+@media screen and (max-width: 1439px) {
   $marginBlocks: 100px;
   $marginTitleContent: 32px;
   $marginCardTitleText: 10px;
   $paddingSectionVertical: 50px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   $marginBlocks: 64px;
   $marginTitleContent: 24px;
   $paddingInCard: 24px;
@@ -67,7 +67,7 @@ $borderColor: #DADADA;
 $buttonHoverColor: #4183DC;
 $buttonDisabledColor: #CACACA;
 
-// Цвет кнопко в состоянии pressed
+// Цвет кнопок в состоянии pressed
 $bluePressed: #00275C;
 $orangePressed: #864A00;
 $greenPressed: #0E4900;
@@ -76,13 +76,6 @@ $purplePressed: #4935B5;
 
 
 // Тут находятся все миксины
-@mixin raleway {
-  font-family: $fontFamily;
-  line-height: 120%;
-  margin: 0;
-  padding: 0;
-}
-
 @mixin flex($flex-direction, $justify-content, $align-items) {
   display: flex;
   flex-direction: $flex-direction;
@@ -95,85 +88,92 @@ $purplePressed: #4935B5;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+}
+
+%raleway {
+  font-family: $fontFamily;
+  line-height: 120%;
+  margin: 0;
+  padding: 0;
 }
 
 
 
 // Тут стили всех шрифтов
 %mainTitleH1 {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 72px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 38px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 28px;
   }
 }
 
 %mainTitleH2 {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 64px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 36px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 26px;
   }
 }
 
 %mainTitleH3 {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 36px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 26px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 18px;
   }
 }
 
 %mainTitleH4 {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 34px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 20px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 16px;
   }
 }
 
 %mainTitleH5 {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 24px;
@@ -181,65 +181,65 @@ $purplePressed: #4935B5;
 }
 
 %bigTextStyle {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $bold;
     size: 20px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 16px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
   }
 }
 
 %mainTextStyle {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $regular;
     size: 20px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 16px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
   }
 }
 
 %smallTextStyle {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $medium;
     size: 18px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 14px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 12px;
   }
 }
 
 %buttonTextStyle {
-  @include raleway;
+  @extend %raleway;
   font: {
     weight: $medium;
     size: 20px;
   }
 
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     font-size: 16px;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
   }
 }
