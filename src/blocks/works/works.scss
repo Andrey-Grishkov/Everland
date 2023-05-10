@@ -1,0 +1,10 @@
+@import "../root.scss";
+
+.works {
+  @include flex(column, center, center);
+  padding: $paddingSectionVertical 0;
+  background-color: $lightGrey;
+  &__title {
+    @extend %mainTitleH2;
+  }
+}

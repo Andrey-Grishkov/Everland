@@ -21,12 +21,15 @@ $marginTextIconButton: 10px;
 $paddingSectionHorizontal: 40px;
 // Вертикальные отступы в секциях
 $paddingSectionVertical: 100px;
+// Радиус для карточек
+$borderRadius: 30px;
 
 @media screen and (max-width: 1439px) {
   $marginBlocks: 100px;
   $marginTitleContent: 32px;
   $marginCardTitleText: 10px;
   $paddingSectionVertical: 50px;
+  $borderRadius: 20px;
 }
 
 @media screen and (max-width: 767px) {

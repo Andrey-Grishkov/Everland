@@ -1,3 +1,16 @@
 @import "../vendor/normalize.css";
 
 @import "../blocks/header/header.scss";
+
+// Враперы для растяжения цвета секций на всю ширину
+@import "../blocks/wrapper/wrapper.scss";
+
+// Контейнер для карточек в grid элементе
+@import "../blocks/cards-container/cards-container.scss";
+
+// Стили для карточек
+@import "../blocks/card/card.scss";
+@import "../blocks/card/_type/card_type_works.scss";
+
+// Импорт секций
+@import "../blocks/works/works.scss";
