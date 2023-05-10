@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Everland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+
+<body class="root">
   <header class="header">
+    <div class="header__logo"></div>
+    <button class="header__menu-button">
+      <div class="header__menu-button_image"></div>
+      <div class="header__menu-button_label">Меню</div>
+    </button>
+    <div class="header__button-container">
+      <button class="header__button">Платформа</button>
+      <button class="header__button">Поддержать</button>
+    </div>
   </header>
-  <main  class="main">
-    <nav class="menu"></nav>
+  <main class="main">
+    <nav class="menu">
+      <ul class="menu__container">
+        <li class="menu__item"><a href="#" class="menu__link">Для кого</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Направления работы</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Преимущества</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Основые цифры</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Спецпроект</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Истории</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Агентство</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
+      </ul>
+    </nav>
     <section class="description">
       <ul class="cards-container">
         <li class="card card_type_description"></li>
@@ -67,4 +89,5 @@
   <footer class="footer"></footer>
   <div class="burger-popup"></div>
 </body>
+
 </html>
