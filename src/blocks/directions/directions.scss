@@ -1,9 +1,8 @@
 @import "../root.scss";
 
-.works {
+.directions {
   @include flex(column, center, center);
   padding: 100px 0;
-  background-color: $lightGrey;
   &__title {
     @extend %mainTitleH2;
   }

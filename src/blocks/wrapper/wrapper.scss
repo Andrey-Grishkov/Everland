@@ -2,5 +2,8 @@
 
 .wrapper {
   max-width: 1440px;
-  padding: 0 $paddingSectionHorizontal;
+  padding: 0 40px;
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+  }
 }

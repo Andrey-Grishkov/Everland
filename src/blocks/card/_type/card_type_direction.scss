@@ -1,0 +1,34 @@
+@import "../../root.scss";
+
+.card_type_directions {
+  @include grid;
+  gap: 100px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: minmax(min-content, max-content);
+
+  @media screen and (max-width: 1439px) {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__title {
+    @extend %mainTitleH3;
+  }
+
+  &__subtitle {
+    @extend %mainTextStyle;
+    margin-top: 20px;
+    @media screen and (max-width: 1439px) {
+      margin-top: 10px;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+    justify-self: start;
+  }
+}

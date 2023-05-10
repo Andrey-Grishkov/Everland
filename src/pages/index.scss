@@ -8,9 +8,17 @@
 // Контейнер для карточек в grid элементе
 @import "../blocks/cards-container/cards-container.scss";
 
+// Цвета карточек
+@import "../blocks/card/_color/card_color_blue.scss";
+@import "../blocks/card/_color/card_color_orange.scss";
+@import "../blocks/card/_color/card_color_green.scss";
+@import "../blocks/card/_color/card_color_purple.scss";
+
 // Стили для карточек
 @import "../blocks/card/card.scss";
 @import "../blocks/card/_type/card_type_works.scss";
+@import "../blocks/card/_type/card_type_direction.scss";
 
 // Импорт секций
 @import "../blocks/works/works.scss";
+@import "../blocks/directions/directions.scss";
