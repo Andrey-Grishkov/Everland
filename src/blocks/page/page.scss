@@ -1,6 +1,7 @@
 .page {
   box-sizing: border-box;
+  font-family: $fontFamily;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: $backgroundColor;
   min-width: 320px;
 }

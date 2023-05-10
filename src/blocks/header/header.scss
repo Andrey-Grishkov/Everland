@@ -1,12 +1,9 @@
 .header {
   box-sizing: border-box;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center);
   padding: 16px 40px 16px;
-  background-color: #fff;
+  background-color: $backgroundColor;
 
 }
 
@@ -20,13 +17,10 @@
 }
 
 .header__menu-button {
+  @include flex(row, space-between, center);
   border: none;
-  background-color: #fff;
+  background-color: $backgroundColor;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   gap: 12px;
 }
 
@@ -39,11 +33,9 @@
 }
 
 .header__menu-button_label {
+  @extend %bigTextStyle;
   box-sizing: border-box;
   display: block;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 130%;
 }
 
 .header__menu-button_image_active {
@@ -51,10 +43,8 @@
 }
 
 .header__button-container {
+  @include flex(row, space-between, center);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   gap: 16px;
 }
 
@@ -116,11 +106,5 @@
     gap: 8px;
     flex: 1 1 auto;
     justify-content: flex-end;
-  }
-
-  .header__menu-button_label {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 120%;
   }
 }
