@@ -98,7 +98,7 @@ $purplePressed: #4935B5;
   }
 }
 
-%raleway {
+@mixin raleway {
   font-family: $fontFamily;
   line-height: 120%;
   margin: 0;
@@ -109,7 +109,7 @@ $purplePressed: #4935B5;
 
 // Тут стили всех шрифтов
 %mainTitleH1 {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 72px;
@@ -125,7 +125,7 @@ $purplePressed: #4935B5;
 }
 
 %mainTitleH2 {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 64px;
@@ -141,7 +141,7 @@ $purplePressed: #4935B5;
 }
 
 %mainTitleH3 {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 36px;
@@ -157,7 +157,7 @@ $purplePressed: #4935B5;
 }
 
 %mainTitleH4 {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 34px;
@@ -173,7 +173,7 @@ $purplePressed: #4935B5;
 }
 
 %mainTitleH5 {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 24px;
@@ -181,7 +181,7 @@ $purplePressed: #4935B5;
 }
 
 %bigTextStyle {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $bold;
     size: 20px;
@@ -197,7 +197,7 @@ $purplePressed: #4935B5;
 }
 
 %mainTextStyle {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $regular;
     size: 20px;
@@ -213,7 +213,7 @@ $purplePressed: #4935B5;
 }
 
 %smallTextStyle {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $medium;
     size: 18px;
@@ -229,7 +229,7 @@ $purplePressed: #4935B5;
 }
 
 %buttonTextStyle {
-  @extend %raleway;
+  @include raleway;
   font: {
     weight: $medium;
     size: 20px;
