@@ -26,12 +26,11 @@
 }
 
 .digits__item-header {
+  @extend %mainTitleH4;
   margin: 0;
   padding: 0;
   margin-bottom: 5px;
-  @extend %mainTitleH4;
   color: $fontColor;
-
 }
 
 .digits__item-header-bold {
