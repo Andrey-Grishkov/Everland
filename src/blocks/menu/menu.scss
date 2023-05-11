@@ -24,12 +24,12 @@
 .menu__link {
   @extend %bigTextStyle;
   text-decoration: none;
-  color: #000;
+  color: $fontColor;
 }
 
 .menu__link:hover {
   text-decoration: underline;
-  color: #000;
+  color: $fontColor;
 }
 
 .menu__link:visited {
