@@ -1,0 +1,43 @@
+.digits {
+  background-color: $buttonHoverColor;
+  padding: $marginBlocks $paddingSectionHorizontal 0;
+}
+
+.digits__container {
+  margin-top: $marginTitleContent;
+  @include flex(row, space-between, center);
+}
+
+.digits__header {
+  @extend %mainTitleH2;
+}
+
+.digits__image {
+  max-width: 555px;
+  width: calc(100% - 2 * $paddingSectionHorizontal);
+}
+
+.digits__item-grid {
+  width: 670px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.digits__item-header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  @extend %mainTitleH4;
+  color: $fontColor;
+
+}
+
+.digits__item-header-bold {
+  color: $blue;
+}
+
+.digits__item-text {
+  @extend %mainTextStyle;
+}
