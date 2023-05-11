@@ -5,6 +5,7 @@
   color: $fontColor;
   background-color: $backgroundColor;
   display: grid;
+  grid-template-columns: 100%;
   justify-content: center;
   min-width: 320px;
   -webkit-text-size-adjust: 100%;
