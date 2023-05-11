@@ -1,7 +1,15 @@
 .page {
   box-sizing: border-box;
+  width: 100%;
   font-family: $fontFamily;
-  min-height: 100vh;
+  color: #333;
   background-color: $backgroundColor;
+  display: grid;
+  justify-content: center;
   min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
