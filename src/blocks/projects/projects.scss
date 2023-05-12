@@ -1,0 +1,64 @@
+@import "../root.scss";
+
+.projects {
+  max-width: 1440px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto 0;
+  padding: 0 40px;
+  &__title {
+    @extend %mainTitleH2;
+    @extend %zeroSpaces;
+  }
+  &__text-container {
+    grid-area: textContainer;
+  }
+  &__presentation {
+    grid-area: textPresentation;
+    @extend %smallTextStyle;
+    @extend %zeroSpaces;
+  }
+  &__subtitle {
+    @extend %mainTextStyle;
+    margin: 20px 0 0;
+    max-width: 427px;
+  }
+  &__image {
+    grid-area: projectImage;
+    display: block;
+    border-radius: 30px;
+    width: 555px;
+    height: 393px;
+  }
+  &__observe {
+    grid-area: observe;
+    width: min-content;
+  }
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+  &__absolute {
+    position: absolute;
+    bottom: 30px;
+    gap: 8px;
+    left: 0;
+    right: 0;
+    @include flex(row, center, center);
+  }
+
+  &__arrow {
+    background-image: url("../icons/arrowForward.png");
+    background-color: $darkGrey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    width: 35px;
+    height: 35px;
+    &_back {
+      transform: scale(-1, 1);
+    }
+  }
+}

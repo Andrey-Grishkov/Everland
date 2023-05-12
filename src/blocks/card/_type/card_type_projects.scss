@@ -1,0 +1,19 @@
+@import "../../projects/projects.scss";
+@import "../../root.scss";
+
+.card_type_project {
+  display: grid;
+  background-color: $lightBlue;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  grid-template-rows: minmax(min-content, max-content);
+  grid-template-areas: 
+  "textPresentation projectImage"
+  "textContainer projectImage"
+  "observe projectImage";
+  &__disabled {
+    display: none;
+    visibility: hidden;
+  }
+}

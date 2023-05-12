@@ -37,4 +37,10 @@
       padding: 0 $paddingSectionHorizontalMobile;
     }
   }
+
+  &_type_projects {
+    display: flex;
+    width: fit-content;
+    gap: 0;
+  }
 }

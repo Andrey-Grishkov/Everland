@@ -158,19 +158,30 @@
       </div>
     </section>
     <section class="projects">
-      <ul class="card-container">
-        <li class="card card_type_project">
-          <p class="">Наши спецпроекты</p>
-          <h2 class="projects__title">Фотопроект "Семья как семья"</h2>
-          <p class="projects__subtitle">Фотопроект Алексея Горшенина включает в себя восемь историй людей и семей, где один или оба супруга имеют инвалидность</p>
-          <div class="projects__image-container">
+      <div class="projects__container">
+        <div class="projects__absolute">
+          <button class="projects__arrow projects__arrow_back"></button>
+          <button class="projects__arrow"></button>
+        </div>
+        <ul class="cards-container cards-container_type_projects">
+          <li class="card card_type_project">
+            <p class="projects__presentation">Наши спецпроекты</p>
+            <div class="projects__text-container">
+              <h2 class="projects__title">Фотопроект "Семья&nbsp;как&nbsp;семья"</h2>
+              <p class="projects__subtitle">Фотопроект Алексея Горшенина включает в себя восемь историй людей и семей, где один или оба супруга имеют инвалидность</p>
+            </div>
+            <img class="projects__image" src="<%=require('./images/projects-photo-first.png')%>" alt="Мужик с собакой">
+            <button class="projects__observe" type="button">Посмотреть</button>
+          </li>
+          <li class="card card_type_project card_type_projects__disabled">
+            <p class="projects__presentation">Наши спецпроекты</p>
+            <h2 class="projects__title">Фотопроект "Семья&nbsp;как&nbsp;семья"</h2>
+            <p class="projects__subtitle">Фотопроект Алексея Горшенина включает в себя восемь историй людей и семей, где один или оба супруга имеют инвалидность</p>
             <img class="projects__image">
-            <button class="projects__left-arrow" type="button"></button>
-            <button class="projects__right-arrow" type="button"></button>
-          </div>
-          <button class="projects__observe" type="button">Посмотреть</button>
-        </li>
-      </ul>
+            <button class="projects__observe" type="button">Посмотреть</button>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="motivation">
       <ul class="card-container">
