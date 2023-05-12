@@ -10,6 +10,27 @@
 @import "../blocks/logo/logo.scss";
 @import "../blocks/social-icon/social-icon.scss";
 @import "../blocks/menu/menu.scss";
+
+// Враперы для растяжения цвета секций на всю ширину
+@import "../blocks/wrapper/wrapper.scss";
+
+// Контейнер для карточек в grid элементе
+@import "../blocks/cards-container/cards-container.scss";
+
+// Цвета карточек
+@import "../blocks/card/_color/card_color_blue.scss";
+@import "../blocks/card/_color/card_color_orange.scss";
+@import "../blocks/card/_color/card_color_green.scss";
+@import "../blocks/card/_color/card_color_purple.scss";
+
+// Стили для карточек
+@import "../blocks/card/card.scss";
+@import "../blocks/card/_type/card_type_works.scss";
+@import "../blocks/card/_type/card_type_direction.scss";
+
+// Импорт секций
+@import "../blocks/works/works.scss";
+@import "../blocks/directions/directions.scss";
 @import "../blocks/digits/digits.scss";
 
 @import "../blocks/footer/footer.scss";
