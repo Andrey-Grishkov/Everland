@@ -1,0 +1,10 @@
+@import "../root.scss";
+
+.wrapper {
+  max-width: 1440px;
+  box-sizing: border-box;
+  padding: 0 40px;
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+  }
+}
