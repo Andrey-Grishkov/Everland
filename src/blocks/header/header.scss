@@ -5,13 +5,6 @@
   padding: 16px 40px 16px;
   background-color: $backgroundColor;
 
-  &__logo {
-    display: block;
-    height: 30px;
-    width: 180px;
-    background: url("../images/Logo.svg") 0 0/contain no-repeat;
-  }
-
   &__menu {
     @include flex(row, space-between, center);
     border: none;
@@ -23,10 +16,10 @@
   &__menu-image {
     height: 25px;
     width: 25px;
-    background: url("../images/header__menu-image.svg") 0 0/contain no-repeat;
+    background: url("../images/header/header__menu-image.svg") 0 0/contain no-repeat;
 
     &_active {
-      background-image: url("../images/header__menu-image_active.svg");
+      background-image: url("../images/header/header__menu-image_active.svg");
     }
   }
 
@@ -67,11 +60,6 @@
       order: 99;
     }
 
-    &__logo {
-      height: 24px;
-      width: 140px;
-    }
-
     &__button {
       height: 34px;
       width: 134px;
@@ -101,11 +89,6 @@
     &__button {
       height: 34px;
       width: 134px;
-    }
-
-    &__logo {
-      height: 24px;
-      width: 140px;
     }
   }
 }
