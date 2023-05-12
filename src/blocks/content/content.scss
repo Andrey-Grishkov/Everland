@@ -1,0 +1,4 @@
+.content {
+  @include flex(column, center, center);
+  width: 100%;
+}
