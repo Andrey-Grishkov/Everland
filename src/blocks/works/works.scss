@@ -2,15 +2,16 @@
 
 .works {
   @include flex(column, center, center);
-  padding: 100px 0;
+  padding: $paddingSectionVertical 0;
   background-color: $lightGrey;
   &__title {
     @extend %mainTitleH2;
+    @extend %zeroSpaces;
   }
   @media screen and (max-width: 1439px) {
-    padding: 50px 0;
+    padding: $paddingSectionVerticalTablet 0;
   }
   @media screen and (max-width: 767px) {
-    padding: 32px 0;
+    padding: $paddingSectionVerticalMobile 0;
   }
 }

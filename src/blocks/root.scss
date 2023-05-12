@@ -106,6 +106,9 @@ $purplePressed: #4935B5;
 @mixin raleway {
   font-family: $fontFamily;
   line-height: 120%;
+}
+
+%zeroSpaces {
   margin: 0;
   padding: 0;
 }

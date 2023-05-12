@@ -3,31 +3,38 @@
 .cards-container {
   max-width: 1440px;
   @include grid;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   &_type_works {
     grid-template-columns: repeat(3, 1fr);
-    list-style-type: none;
-    padding: 0;
-    margin: 50px 0 0;
+    margin: $marginTitleContent 0 0;
     @media screen and (max-width: 1439px) {
-      margin-top: 32px;
+      margin-top: $marginTitleContentTablet;
       grid-template-columns: repeat(1, 1fr);
     }
     @media screen and (max-width: 900px) {
       max-width: 450px;
     }
     @media screen and (max-width: 767px) {
-      margin-top: 24px;
+      margin-top: $marginTitleContentMobile;
       max-width: none;
     }
   }
   
   &_type_directions {
+    grid-template-columns: repeat(3, 1fr);
+    margin: $marginTitleContent 0 0;
+    padding: 0 $paddingSectionHorizontal;
     @media screen and (max-width: 1439px) {
+      margin-top: $marginTitleContentTablet;
       grid-template-columns: repeat(2, 1fr);
       max-width: none;
     }
     @media screen and (max-width: 767px) {
+      margin-top: $marginTitleContentMobile;
       grid-template-columns: repeat(1, 1fr);
+      padding: 0 $paddingSectionHorizontalMobile;
     }
   }
 }
