@@ -17,13 +17,14 @@
 
   &__title {
     @extend %mainTitleH3;
+    @extend %zeroSpaces;
   }
 
   &__subtitle {
     @extend %mainTextStyle;
-    margin-top: 20px;
+    margin: $marginCardTitleText 0 0;
     @media screen and (max-width: 1439px) {
-      margin-top: 10px;
+      margin-top: $marginCardTitleTextTablet;
     }
   }
 

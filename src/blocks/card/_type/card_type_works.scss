@@ -18,15 +18,6 @@
   grid-template-rows: minmax(min-content, max-content);
   background-color: $backgroundColor;
 
-  @media screen and (max-width: 1439px) {
-    gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  @media screen and (max-width: 767px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   &__icon {
     width: 64px;
     height: 64px;
@@ -35,7 +26,6 @@
       width: 48px;
       height: 48px;
     }
-    // Этот код выдаёт ошибку при подключении модуля. Как будто бы scss не умеет работать с png картинками.
     &_driver {
       background-image: url("../icons/blue-driver.png");
       @extend %backgoundIcon;
@@ -51,18 +41,28 @@
   }
   &__title {
     @extend %mainTitleH3;
+    @extend %zeroSpaces;
   }
 
   &__subtitle {
     @extend %mainTextStyle;
-    margin-top: 20px;
+    margin: $marginCardTitleText 0 0;
     @media screen and (max-width: 1439px) {
-      margin-top: 10px;
+      margin-top: $marginCardTitleTextTablet;
     }
   }
 
   &__button {
     align-self: flex-end;
     justify-self: start;
+  }
+
+  @media screen and (max-width: 1439px) {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

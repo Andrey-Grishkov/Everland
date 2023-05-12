@@ -1,6 +1,7 @@
 .digits {
   @extend %limitedWidthSection;
   padding: $marginBlocks $paddingSectionHorizontal 0;
+  margin: 0 auto;
 
   &__container {
     box-sizing: border-box;
@@ -11,6 +12,7 @@
 
   &__title {
     @extend %mainTitleH2;
+    @extend %zeroSpaces;
   }
 
   &__image-container {
@@ -56,6 +58,7 @@
 
   &__item-text {
     @extend %mainTextStyle;
+    @extend %zeroSpaces;
   }
 }
 
