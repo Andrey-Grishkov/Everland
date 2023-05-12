@@ -2,6 +2,7 @@
 
 .works {
   @include flex(column, center, center);
+  align-self: stretch;
   padding: $paddingSectionVertical 0;
   background-color: $lightGrey;
   &__title {

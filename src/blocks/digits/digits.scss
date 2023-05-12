@@ -1,7 +1,6 @@
 .digits {
   @extend %limitedWidthSection;
   padding: $marginBlocks $paddingSectionHorizontal 0;
-  margin: 0 auto;
 
   &__container {
     box-sizing: border-box;
