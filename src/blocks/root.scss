@@ -7,6 +7,8 @@ $regular: 400;
 
 
 // Система отступов
+
+// На разрешение экрана от 1440px
 // Отступ между блоками
 $marginBlocks: 150px;
 // Отступ от заголовка до основного контента в секции
@@ -22,20 +24,18 @@ $paddingSectionHorizontal: 40px;
 // Вертикальные отступы в секциях
 $paddingSectionVertical: 100px;
 
-@media screen and (max-width: 1439px) {
-  $marginBlocks: 100px;
-  $marginTitleContent: 32px;
-  $marginCardTitleText: 10px;
-  $paddingSectionVertical: 50px;
-}
+// На разрешение экрана в диапазоне от 768 до 1439 пикселей. Ко всем именам добавлено слово Tablet.
+$marginBlocksTablet: 100px;
+$marginTitleContentTablet: 32px;
+$marginCardTitleTextTablet: 10px;
+$paddingSectionVerticalTablet: 50px;
 
-@media screen and (max-width: 767px) {
-  $marginBlocks: 64px;
-  $marginTitleContent: 24px;
-  $paddingInCard: 24px;
-  $paddingSectionHorizontal: 10px;
-  $paddingSectionVertical: 32px;
-}
+// На разрешение экрана в диапазоне от 320 до 768px. Ко всем именам добавлено слово Mobile
+$marginBlocksMobile: 64px;
+$marginTitleContentMobile: 24px;
+$paddingInCardMobile: 24px;
+$paddingSectionHorizontalMobile: 10px;
+$paddingSectionVerticalMobile: 32px;
 
 
 
