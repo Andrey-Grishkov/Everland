@@ -23,7 +23,7 @@
       <button class="header__button">Поддержать</button>
     </div>
   </header>
-  <main class="main">
+  <main class="content">
     <nav class="menu">
       <ul class="menu__container">
         <li class="menu__item"><a href="#" class="menu__link">Для кого</a></li>
@@ -58,7 +58,7 @@
       </ul>
     </section>
     <section class="digits">
-      <h2 class="digits__header">Everland в цифрах</h2>
+      <h2 class="digits__title">Everland в цифрах</h2>
       <div class="digits__container">
         <picture class="digits__image-container">
           <source srcset="<%=require('./images/Digits_2x.png')%>" media="(min-width: 1440px)" />
@@ -66,24 +66,24 @@
           <img class="digits__image" src="<%=require('./images/Digits.png')%>"
             alt="Сотрудники компании, мужчина, женщина" />
         </picture>
-        <div class="digits__item-grid">
-          <article class="digits__item">
+        <ul class="digits__items">
+          <li class="digits__item">
             <h3 class="digits__item-header"><span class="digits__item-header_bold">380+</span> человек</h3>
             <p class="digits__item-text">прошли обучение и получили работу в разных статусах</p>
-          </article>
-          <article class="digits__item">
+          </li>
+          <li class="digits__item">
             <h3 class="digits__item-header"><span class="digits__item-header_bold">1200+</span> человек</h3>
             <p class="digits__item-text">наше сообщество ― люди с разными видами инвалидности</p>
-          </article>
-          <article class="digits__item">
+          </li>
+          <li class="digits__item">
             <h3 class="digits__item-header"><span class="digits__item-header_bold">35 000</span> рублей</h3>
             <p class="digits__item-text">средний заработок в проекте/в рамках работы агентства</p>
-          </article>
-          <article class="digits__item">
+          </li>
+          <li class="digits__item">
             <h3 class="digits__item-header"><span class="digits__item-header_bold">3</span> недели</h3>
             <p class="digits__item-text">нужно, чтобы получить первую оплату после прокачки в Everland</p>
-          </article>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="projects">

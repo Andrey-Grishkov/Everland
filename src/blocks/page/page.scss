@@ -4,10 +4,8 @@
   font-family: $fontFamily;
   color: $fontColor;
   background-color: $backgroundColor;
-  display: grid;
-  grid-template-columns: 100%;
-  justify-content: center;
-  min-width: 320px;
+  @include flex(column, center, center);
+  min-width: 303px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

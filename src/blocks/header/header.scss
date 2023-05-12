@@ -1,5 +1,5 @@
 .header {
-  box-sizing: border-box;
+  @extend %limitedWidthSection;
   margin: 0;
   @include flex(row, space-between, center);
   padding: 16px 40px 16px;
