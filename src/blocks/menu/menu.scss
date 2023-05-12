@@ -1,12 +1,11 @@
 .menu {
   @extend %limitedWidthSection;
-  padding: 0px 42px 0px;
+  padding: 0px $paddingSectionHorizontal 0px;
   height: 50px;
 
   &__container {
     @include flex(row, space-between, center);
-    margin: 0;
-    padding: 0;
+    @extend %zeroSpaces;
     list-style-type: none;
     height: 100%;
     box-sizing: border-box;
@@ -15,8 +14,7 @@
 
   &__item {
     display: block;
-    margin: 0;
-    padding: 0;
+    @extend %zeroSpaces;
   }
 
   &__link {
