@@ -13,7 +13,7 @@
 
 <body class="page">
   <header class="header">
-    <a href="#" class="header__logo"></a>
+    <a href="#" class="logo logo_header"></a>
     <button class="header__menu">
       <div class="header__menu-image"></div>
       <div class="header__menu-label">Меню</div>
@@ -61,9 +61,9 @@
       <h2 class="digits__title">Everland в цифрах</h2>
       <div class="digits__container">
         <picture class="digits__image-container">
-          <source srcset="<%=require('./images/Digits_2x.png')%>" media="(min-width: 1440px)" />
-          <source srcset="<%=require('./images/Digits.png')%>" media="(max-width: 1439px)" />
-          <img class="digits__image" src="<%=require('./images/Digits.png')%>"
+          <source srcset="<%=require('./images/digits/digits_2x.png')%>" media="(min-width: 1440px)" />
+          <source srcset="<%=require('./images/digits/digits.png')%>" media="(max-width: 1439px)" />
+          <img class="digits__image" src="<%=require('./images/digits/digits.png')%>"
             alt="Сотрудники компании, мужчина, женщина" />
         </picture>
         <ul class="digits__items">
@@ -114,7 +114,53 @@
     <section class="donations">
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__info-container">
+      <div>
+        <a href="#" class="logo logo_footer"></a>
+        <p class="footer__about">Платформа Everland — инклюзивный социальный предпринимательский
+          проект.<br />Реализуется ООО&nbsp«ЭВЕРЛЭНД», АНО&nbsp«Пространство равных возможностей».</p>
+      </div>
+      <div class="footer__links-container">
+        <ul>
+          <li>О проекте</li>
+          <li>Услуги</li>
+          <li>Людям с инвалидностью</li>
+        </ul>
+        <ul>
+          <li>Программы</li>
+          <li>Платформа</li>
+          <li>Мы благодарим</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__section-title">При поддержке</h3>
+        <div class="footer__logo-container">
+          <img src="<%=require('./images/footer/beeline.svg')%>" alt="Билайн">
+          <img src="<%=require('./images/footer/grant_fund.svg')%>" alt="Фонд Президентских Грантов">
+        </div>
+        <div>
+          <p>+7 (495) 646 04 28</p>
+          <p>Гоголевский бульвар, дом 8, строение 2, офис 8, Москва, Россия.</p>
+          <p>+7 (985) 473 08 93</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__section-title">Подписывайтесь на нас в соцсетях</h3>
+        <div class="footer__logo-container">
+          <a href="https://telegram.org" target="_blank" class="social-icon social-icon_telegram"></a>
+          <a href="https://vk.com" target="_blank" class="social-icon social-icon_vk"></a>
+        </div>
+        <p>© ООО «ЭВЕРЛЭНД», АНО «Пространство равных возможностей». Если не указано иначе, все материалы сайта доступны
+          по лицензии Creative Commons CC-BY-SA 3.0</p>
+      </div>
+    </div>
+    <div class="footer__studio-container">
+      <a href="https://practicum.yandex.ru/" target="_blank"><img src="<%=require('./images/footer/practicum.svg')%>"
+          alt="Яндекс Практикум"></a>
+      <p>сделано при участии Яндекс Практикума</p>
+    </div>
+  </footer>
   <div class="burger-popup"></div>
 </body>
 
