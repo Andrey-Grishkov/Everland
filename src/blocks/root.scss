@@ -109,6 +109,12 @@ $purplePressed: #4935B5;
 }
 
 
+%limitedWidthSection {
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+}
+
 
 // Тут стили всех шрифтов
 %mainTitleH1 {
