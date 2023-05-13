@@ -1,0 +1,9 @@
+.advantage {
+  @extend %limitedWidthSection;
+  padding: 50px $paddingSectionHorizontal 0;
+
+  &__title {
+    @extend %mainTitleH2;
+    @extend %zeroSpaces;
+  }
+}

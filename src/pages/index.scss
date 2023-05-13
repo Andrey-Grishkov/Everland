@@ -26,8 +26,15 @@
 @import "../blocks/card/_type/card_type_works.scss";
 @import "../blocks/card/_type/card_type_direction.scss";
 
+// Контейнер аккордеона
+@import "../blocks/accordion-container/accordion-container.scss";
+
+// Аккордеон
+@import "../blocks/accordion/accordion.scss";
+
 // Импорт секций
 @import "../blocks/works/works.scss";
 @import "../blocks/directions/directions.scss";
+@import "../blocks/advantage/advantage.scss";
 @import "../blocks/digits/digits.scss";
 
