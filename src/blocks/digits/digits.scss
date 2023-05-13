@@ -11,7 +11,6 @@
 
   &__title {
     @extend %mainTitleH2;
-    @extend %zeroSpaces;
   }
 
   &__image-container {
@@ -27,8 +26,7 @@
   &__items {
     width: 100%;
     min-width: 670px;
-    margin: 0;
-    padding: 0;
+    @extend %zeroSpaces;
     list-style-type: none;
     display: grid;
     grid-template-columns: auto auto;
@@ -38,8 +36,7 @@
   }
 
   &__item {
-    margin: 0;
-    padding: 0;
+    @extend %zeroSpaces;
     max-width: 340px;
   }
 
@@ -57,13 +54,12 @@
 
   &__item-text {
     @extend %mainTextStyle;
-    @extend %zeroSpaces;
   }
 }
 
 @media screen and (max-width: 1439px) {
   .digits {
-    padding: 100px 40px 0;
+    padding: $marginBlocksTablet $paddingSectionHorizontal 0;
 
     &__container {
       gap: 0px;
@@ -78,7 +74,7 @@
 
 @media screen and (max-width: 767px){
   .digits {
-    padding: 64px 15px 0;
+    padding: $marginBlocksMobile $paddingSectionHorizontalMobile 0;
 
     &__container {
       margin-top: 24px;
