@@ -2,16 +2,16 @@
 
 // secondary-transparent
 $uikit-btn-secondary-trans-default-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-default-brcolor: #333333;
-$uikit-btn-secondary-trans-default-txtcolor: #333333;
+$uikit-btn-secondary-trans-default-brcolor: $darkGrey; //#333333;
+$uikit-btn-secondary-trans-default-txtcolor: $darkGrey; //#333333;
 
 $uikit-btn-secondary-trans-hover-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-hover-brcolor: #333333;
-$uikit-btn-secondary-trans-hover-txtcolor: #333333;
+$uikit-btn-secondary-trans-hover-brcolor: $darkGrey; //#333333;
+$uikit-btn-secondary-trans-hover-txtcolor: $darkGrey; //#333333;
 
-$uikit-btn-secondary-trans-pressed-bgcolor: #333333;
-$uikit-btn-secondary-trans-pressed-brcolor: #333333;
-$uikit-btn-secondary-trans-pressed-txtcolor: #FFFFFF;
+$uikit-btn-secondary-trans-pressed-bgcolor: $darkGrey; //#333333;
+$uikit-btn-secondary-trans-pressed-brcolor: $darkGrey; //#333333;
+$uikit-btn-secondary-trans-pressed-txtcolor: $backgroundColor; //#FFFFFF;
 
 .button_type_secondary-transparent {
   @extend %button_type_basic;

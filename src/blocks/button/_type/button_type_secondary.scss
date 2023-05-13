@@ -1,17 +1,17 @@
 @import "./button_type_basic";
 
 // secondary
-$uikit-btn-secondary-default-bgcolor: #FFF;
-$uikit-btn-secondary-default-brcolor: #0C4BA0;
-$uikit-btn-secondary-default-txtcolor: #0C4BA0;
+$uikit-btn-secondary-default-bgcolor: $backgroundColor; //#FFF;
+$uikit-btn-secondary-default-brcolor: $blue; //#0C4BA0;
+$uikit-btn-secondary-default-txtcolor: $blue; //#0C4BA0;
 
-$uikit-btn-secondary-hover-bgcolor: #FFF;
-$uikit-btn-secondary-hover-brcolor: #00275C;
-$uikit-btn-secondary-hover-txtcolor: #00275C;
+$uikit-btn-secondary-hover-bgcolor: $backgroundColor; //#FFF;
+$uikit-btn-secondary-hover-brcolor: $bluePressed; //#00275C;
+$uikit-btn-secondary-hover-txtcolor: $bluePressed; //#00275C;
 
-$uikit-btn-secondary-pressed-bgcolor: #00275C;
-$uikit-btn-secondary-pressed-brcolor: #00275C;
-$uikit-btn-secondary-pressed-txtcolor: #FFFFFF;
+$uikit-btn-secondary-pressed-bgcolor: $bluePressed; //#00275C;
+$uikit-btn-secondary-pressed-brcolor: $bluePressed; //#00275C;
+$uikit-btn-secondary-pressed-txtcolor: $backgroundColor; //#FFFFFF;
 
 .button_type_secondary {
   @extend %button_type_basic;

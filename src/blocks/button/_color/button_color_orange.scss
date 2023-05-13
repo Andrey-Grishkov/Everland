@@ -1,13 +1,13 @@
 @import "../_type/button_type_link";
 
 // orange
-$uikit_btn_link_orange_default_bgcolor: #FEEFEA;
+$uikit_btn_link_orange_default_bgcolor: $lightPink; //#FEEFEA;
 $uikit_btn_link_orange_default_txtcolor: rgb(233, 133, 9);
 
-$uikit_btn_link_orange_hover_bgcolor: #E98509;
+$uikit_btn_link_orange_hover_bgcolor: $orange; //#E98509;
 $uikit_btn_link_orange_hover_txtcolor: rgb(255, 255, 255);
 
-$uikit_btn_link_orange_pressed_bgcolor: #864A00;
+$uikit_btn_link_orange_pressed_bgcolor: $orangePressed; //#864A00;
 $uikit_btn_link_orange_pressed_txtcolor: rgb(255, 255, 255);
 
 .button_color_orange {

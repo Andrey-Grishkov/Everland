@@ -20,13 +20,13 @@
 @use "sass:map";
 @import "../button";
 
-$uikit-btn-slider1-default-bgcolor: #0C4BA0;
-$uikit-btn-slider1-hover-bgcolor: #4183DC;
-$uikit-btn-slider1-pressed-bgcolor: #00275C;
+$uikit-btn-slider1-default-bgcolor: $blue; //#0C4BA0;
+$uikit-btn-slider1-hover-bgcolor: $buttonHoverColor; //#4183DC;
+$uikit-btn-slider1-pressed-bgcolor: $bluePressed; //#00275C;
 
-$uikit-btn-slider2-default-bgcolor: #333333;
-$uikit-btn-slider2-hover-bgcolor: #0C4BA0;
-$uikit-btn-slider2-pressed-bgcolor: #00275C;
+$uikit-btn-slider2-default-bgcolor: $darkGrey; //#333333;
+$uikit-btn-slider2-hover-bgcolor: $blue; //#0C4BA0;
+$uikit-btn-slider2-pressed-bgcolor: $bluePressed; //#00275C;
 
 $uikit-btn-slider-disabled-bgcolor: #C4C4C4;
 $uikit-btn-slider-disabled-arrowColor: rgba(38, 38, 38, 0.5);

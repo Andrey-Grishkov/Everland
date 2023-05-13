@@ -1,13 +1,13 @@
 @import "../_type/button_type_link";
 
 // purple
-$uikit_btn_link_purple_default_bgcolor: #EAE6FF;
+$uikit_btn_link_purple_default_bgcolor: $lightPurple; //#EAE6FF;
 $uikit_btn_link_purple_default_txtcolor: rgb(139, 117, 255);;
 
-$uikit_btn_link_purple_hover_bgcolor: #8B75FF;
+$uikit_btn_link_purple_hover_bgcolor: $purple; //#8B75FF;
 $uikit_btn_link_purple_hover_txtcolor: rgb(255, 255, 255);
 
-$uikit_btn_link_purple_pressed_bgcolor: #4935B5;
+$uikit_btn_link_purple_pressed_bgcolor: $purplePressed; //#4935B5;
 $uikit_btn_link_purple_pressed_txtcolor: rgb(255, 255, 255);
 
 

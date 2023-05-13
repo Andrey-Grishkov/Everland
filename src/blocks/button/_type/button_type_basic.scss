@@ -12,7 +12,7 @@
 
 @import "../button";
 
-$uikit-btn-bg-disabled: #F5F5F5;
+$uikit-btn-bg-disabled: $lightGrey; //#F5F5F5;
 $uikit-btn-br-disabled: #C4C4C4;
 $uikit-btn-txt-disabled: rgba(38, 38, 38, 0.5);
 
