@@ -112,7 +112,7 @@ $uikit-btn-slider-border-radius: (
 }
 
 @include button_type_slider_mixin("desktop");
-@media screen and (max-width: 1039px) {
+@media screen and (max-width: 1439px) {
   @include button_type_slider_mixin("mobile");
 }
 
