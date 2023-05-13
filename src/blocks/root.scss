@@ -126,6 +126,7 @@ $purplePressed: #4935B5;
 // Тут стили всех шрифтов
 %mainTitleH1 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 72px;
@@ -142,6 +143,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH2 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 64px;
@@ -158,6 +160,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH3 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 36px;
@@ -174,6 +177,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH4 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 34px;
@@ -190,6 +194,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH5 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 24px;
@@ -198,6 +203,7 @@ $purplePressed: #4935B5;
 
 %bigTextStyle {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 20px;
@@ -214,6 +220,7 @@ $purplePressed: #4935B5;
 
 %mainTextStyle {
   @include raleway;
+
   font: {
     weight: $regular;
     size: 20px;
@@ -230,6 +237,7 @@ $purplePressed: #4935B5;
 
 %smallTextStyle {
   @include raleway;
+
   font: {
     weight: $medium;
     size: 18px;
@@ -246,6 +254,7 @@ $purplePressed: #4935B5;
 
 %buttonTextStyle {
   @include raleway;
+
   font: {
     weight: $medium;
     size: 20px;
@@ -257,5 +266,19 @@ $purplePressed: #4935B5;
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
+  }
+}
+
+%textLinkStyle {
+  text-decoration-color: $backgroundColor;
+  color: $fontColor;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    text-decoration-color: $blue;
+    color: $blue;
   }
 }

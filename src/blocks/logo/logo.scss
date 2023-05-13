@@ -2,12 +2,12 @@
   display: block;
   background: url("../images/shared/logo.svg") 0 0/contain no-repeat;
 
-  &_header {
+  &_size_small {
     height: 30px;
     width: 180px;
   }
 
-  &_footer {
+  &_size_big {
     height: 46px;
     width: 265px;
   }
@@ -16,12 +16,12 @@
 // Tablet + mobile
 @media screen and (max-width: 1439px) {
   .logo {
-    &_header {
+    &_size_small {
       height: 24px;
       width: 140px;
     }
 
-  &_footer {
+    &_size_big {
       height: 24px;
       width: 140px;
     }
@@ -29,6 +29,4 @@
 }
 
 // Mobile
-@media screen and (max-width: 767px) {
-
-}
+@media screen and (max-width: 767px) {}

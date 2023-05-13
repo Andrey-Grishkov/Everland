@@ -13,7 +13,7 @@
 
 <body class="page">
   <header class="header">
-    <a href="#" class="logo logo_header"></a>
+    <a href="#" class="logo logo_size_small"></a>
     <button class="header__menu">
       <div class="header__menu-image"></div>
       <div class="header__menu-label">Меню</div>
@@ -199,13 +199,13 @@
   <footer class="footer">
     <div class="footer__info-container">
       <div>
-        <a href="#" class="logo logo_footer"></a>
+        <a href="#" class="logo logo_size_big"></a>
         <p class="footer__about">Платформа Everland — инклюзивный социальный предпринимательский
           проект.<br />Реализуется ООО&nbsp«ЭВЕРЛЭНД», АНО&nbsp«Пространство равных возможностей».</p>
       </div>
-      <div class="footer__links-container">
+      <nav class="footer__links-container">
         <ul class="footer__links-column">
-          <li class="footer__link-item"><a href="#" class="footer__link">О проекте</a></li>
+          <li class="footer__link-item"><a href="#tre" class="footer__link">О проекте</a></li>
           <li class="footer__link-item"><a href="#" class="footer__link">Услуги</a></li>
           <li class="footer__link-item"><a href="#" class="footer__link">Людям с&nbspинвалидностью</a></li>
         </ul>
@@ -214,15 +214,15 @@
           <li class="footer__link-item"><a href="#" class="footer__link">Платформа</a></li>
           <li class="footer__link-item"><a href="#" class="footer__link">Мы благодарим</a></li>
         </ul>
-      </div>
+      </nav>
       <div>
         <h3 class="footer__section-title">При поддержке</h3>
-        <div class="footer__logo-container footer__logo-container_sponsor">
+        <nav class="footer__logo-container footer__logo-container_sponsor">
           <a href="#" target="_blank"><img class="footer__sponsor-logo"
               src="<%=require('./images/footer/beeline.svg')%>" alt="Билайн"></a>
           <a href="#" target="_blank"><img class="footer__sponsor-logo"
               src="<%=require('./images/footer/grant_fund.svg')%>" alt="Фонд Президентских Грантов"></a>
-        </div>
+        </nav>
         <div class="footer__contacts">
           <p class="footer__contact footer__contact_phone">+7&nbsp(495)&nbsp646&nbsp04&nbsp28</p>
           <p class="footer__contact footer__contact_phone">+7&nbsp(985)&nbsp473&nbsp08&nbsp93</p>
@@ -233,10 +233,10 @@
       </div>
       <div>
         <h3 class="footer__section-title">Подписывайтесь на нас в соцсетях</h3>
-        <div class="footer__logo-container footer__logo-container_social">
-          <a href="https://telegram.org" target="_blank" class="social-icon social-icon_telegram"></a>
-          <a href="https://vk.com" target="_blank" class="social-icon social-icon_vk"></a>
-        </div>
+        <nav class="footer__logo-container footer__logo-container_social">
+          <a href="https://telegram.org" target="_blank" class="social-icon social-icon_type_telegram"></a>
+          <a href="https://vk.com" target="_blank" class="social-icon social-icon_type_vk"></a>
+        </nav>
         <p class="footer__licence-text">©&nbspООО&nbsp«ЭВЕРЛЭНД», АНО&nbsp«Пространство равных возможностей». Если не
           указано иначе,
           все материалы сайта доступны по лицензии Creative Commons CC-BY-SA&nbsp3.0</p>

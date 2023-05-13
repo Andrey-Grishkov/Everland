@@ -6,10 +6,11 @@
   background-color: $backgroundColor;
 
   &__menu {
-    @include flex(row, space-between, center);
+    @include flex(row, flex-end, center);
+    margin: 0;
     border: none;
     background-color: $backgroundColor;
-    padding: 0;
+    flex-basis: 215px;
     gap: 12px;
   }
 
@@ -58,6 +59,7 @@
 
     &__menu {
       order: 99;
+      flex-basis: unset;
     }
 
     &__button {

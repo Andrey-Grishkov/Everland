@@ -19,17 +19,7 @@
 
   &__link {
     @extend %bigTextStyle;
-    text-decoration: none;
-    color: $fontColor;
-
-    &:hover {
-      text-decoration: underline;
-      color: $fontColor;
-    }
-
-    &:visited {
-      text-decoration: none;
-    }
+    @extend %textLinkStyle;
   }
 }
 
