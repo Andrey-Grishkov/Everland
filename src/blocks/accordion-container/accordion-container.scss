@@ -1,6 +1,6 @@
 .accordion-container {
   margin: 0;
-  padding: $marginTitleContent $paddingSectionHorizontal 0;
+  padding: $marginTitleContent 0;
   @include flex(row, space-between, center);
   row-gap: 20px;
   list-style-type: none;

@@ -1,0 +1,22 @@
+.accordion {
+  @include flex(row, space-between, center);
+  box-sizing: border-box;
+  width: 670px;
+  height: 100px;
+  padding: 0 20px;
+  border: 2px solid $borderColor;
+  border-radius: $borderRadius;
+
+  &__title {
+    @extend %zeroSpaces;
+    @extend %mainTitleH3;
+  }
+
+  &__button {
+    width: 45px;
+    height: 45px;
+    background-color: $superLightBlue;
+    border-radius: 20px;
+    border: 0;
+  }
+}
