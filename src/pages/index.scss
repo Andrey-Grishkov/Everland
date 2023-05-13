@@ -31,6 +31,8 @@
 
 // Аккордеон
 @import "../blocks/accordion/accordion.scss";
+@import "../blocks/accordion/_state/accordion_state_close.scss";
+@import "../blocks/accordion/_state/accordion_state_open.scss";
 
 // Импорт секций
 @import "../blocks/works/works.scss";

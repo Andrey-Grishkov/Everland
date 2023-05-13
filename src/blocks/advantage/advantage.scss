@@ -6,4 +6,8 @@
     @extend %mainTitleH2;
     @extend %zeroSpaces;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 32px $paddingSectionHorizontalMobile 0;
+  }
 }
