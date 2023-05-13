@@ -1,3 +1,15 @@
 @import "../vendor/normalize.css";
 
 @import "../blocks/header/header.scss";
+
+
+//---------- Buttons -------------
+@import "../blocks/button/button";
+@import "../blocks/button/_type/button_type_basic";
+@import "../blocks/button/_type/button_type_link";
+@import "../blocks/button/_type/button_type_slider";
+@import "../blocks/button/_type/button_type_accordion";
+
+
+
+//--------------------------------

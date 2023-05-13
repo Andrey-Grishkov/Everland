@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Everland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 </head>
 <body>
   <header class="header">
@@ -66,5 +67,65 @@
   </main>
   <footer class="footer"></footer>
   <div class="burger-popup"></div>
+
+<!-- TODO Все что ниже удалить после окончания разработки -->
+<hr>
+  <h1>UI Kit</h1>
+  <h2>Buttons</h2>
+
+    <table style="border: 1px solid gray; width: 95vw; margin: auto">
+      <caption style="font-size: 24px; font-weight: bold">Mobile/Tablet и Desktop (от 1440px)</caption>
+      <thead >
+        <tr style="border: 1px solid gray;">
+          <th style="width: 64px;border: 1px solid gray;"><u>Primary</u><br> для основных действий</th>
+          <th style="width: 64px;border: 1px solid gray;"><u>Secondary</u><br> Может стоять в одном ряду с primary</th>
+          <th style="width: 64px;border: 1px solid gray;"><u>Secondary</u><br> Может стоять в одном ряду с primary. Используется, если фон цветной</th>
+          <th colspan="5" style="border: 1px solid gray">Link</th>
+          <th colspan="2" style="border: 1px solid gray">Slider</th>
+          <th style="border: 1px solid gray">Accordeon</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><button class="button button_type_basic-primary">Default</button></td>
+          <td><button class="button button_type_basic-secondary">Default</button></td>
+          <td><button class="button button_type_basic-secondary-transparent">Default</button></td>
+          <td><a href="#" class="button button_type_link-white">Default </a></td>
+          <td><a href="#" class="button button_type_link-blue">Default</a></td>
+          <td><a href="#" class="button button_type_link-orange">Default</a></td>
+          <td><a href="#" class="button button_type_link-green">Default</a></td>
+          <td><a href="#" class="button button_type_link-purple">Default</a></td>
+          <td><button class="button button_type_slider-1-left"></button><button class="button button_type_slider-1-right"></button></td>
+          <td><button class="button button_type_slider-2-left"></button><button class="button button_type_slider-2-right"></button></td>
+          <td><button class="button button_type_accordion"></button></td>
+        </tr>
+        <tr>
+          <td><button class="button button_type_basic-primary pressed" >Pressed</button></td>
+          <td><button class="button button_type_basic-secondary pressed" >Pressed</button></td>
+          <td><button class="button button_type_basic-secondary-transparent pressed" >Pressed</button></td>
+          <td><a href="#" class="button button_type_link-white pressed">Pressed</a></td>
+          <td><a href="#" class="button button_type_link-blue pressed">Pressed</a></td>
+          <td><a href="#" class="button button_type_link button_type_link-orange pressed">Pressed</a></td>
+          <td><a href="#" class="button button_type_link-green pressed">Pressed</a></td>
+          <td><a href="#" class="button button_type_link-purple pressed">Pressed</a></td>
+          <td><button class="button button_type_slider-1-left pressed"></button><button class="button button_type_slider-1-right pressed"></button></td>
+          <td><button class="button button_type_slider-2-left pressed"></button><button class="button button_type_slider-2-right pressed"></button></td>
+          <td><button class="button button_type_accordion pressed"></button></td>
+        </tr>
+        <tr>
+          <td><button class="button button_type_basic-primary" disabled>Disabled</button></td>
+          <td><button class="button button_type_basic-secondary" disabled>Disabled</button></td>
+          <td><button class="button button_type_basic-secondary-transparent" disabled>Disabled</button></td>
+          <td><a href="#" class="button button_type_link-white disabled">Disabled</a></td>
+          <td><a href="#" class="button button_type_link-blue disabled">Disabled</a></td>
+          <td><a href="#" class="button button_type_link-orange disabled">Disabled</a></td>
+          <td><a href="#" class="button button_type_link-green disabled">Disabled</a></td>
+          <td><a href="#" class="button button_type_link-purple disabled">Disabled</a></td>
+          <td><button class="button button_type_slider-1-left" disabled></button><button class="button button_type_slider-1-right" disabled></button></td>
+          <td><button class="button button_type_slider-2-left" disabled></button><button class="button button_type_slider-2-right" disabled></button></td>
+          <td><button class="button button_type_accordion" disabled></button></td>
+        </tr>
+      </tbody>
+    </table>
 </body>
 </html>

@@ -1,0 +1,84 @@
+@use "sass:map";
+@import "../button";
+
+$uikit-btn-slider1-default-bgcolor: #0C4BA0;
+$uikit-btn-slider1-hover-bgcolor: #4183DC;
+$uikit-btn-slider1-pressed-bgcolor: #00275C;
+
+$uikit-btn-slider2-default-bgcolor: #333333;
+$uikit-btn-slider2-hover-bgcolor: #0C4BA0;
+$uikit-btn-slider2-pressed-bgcolor: #00275C;
+
+$uikit-btn-slider-disabled-bgcolor: #C4C4C4;
+$uikit-btn-slider-disabled-arrowColor: rgba(38, 38, 38, 0.5);
+$uikit-btn-slider-arrowColor: rgb(255, 255, 255);
+
+$uikit-btn-slider-arrows-size: (
+  "mobile": 10px,
+  "desktop": 17px,
+);
+
+@mixin addArrow($env,$arrowColor:$uikit-btn-slider-arrowColor) {
+  &:after {
+    content: '';
+    @include arrow($arrowColor);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: map.get($uikit-btn-slider-arrows-size, $env);
+    width: map.get($uikit-btn-slider-arrows-size, $env);
+  }
+}
+
+@mixin sliderBtn($bgColor,$hoverColor, $pressedColor, $env, $left: false) {
+  background-color: $bgColor;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  @include addArrow($env);
+  &:hover {
+    background-color: $hoverColor;
+  }
+  &:disabled, &.disabled {
+    @include addArrow($env, $uikit-btn-slider-disabled-arrowColor);
+    background-color: $uikit-btn-slider-disabled-bgcolor;
+  }
+  &.pressed {
+    background-color: $pressedColor;
+  }
+  @if $left {
+    transform: rotate(180deg);
+  }
+}
+
+@mixin button_type_slider_mixin($env) {
+  .button_type_slider {
+    &-1 {
+      &-left {
+        @include sliderBtn($uikit-btn-slider1-default-bgcolor, $uikit-btn-slider1-hover-bgcolor,
+          $uikit-btn-slider1-pressed-bgcolor, $env, true);
+      }
+      &-right {
+        @include sliderBtn($uikit-btn-slider1-default-bgcolor, $uikit-btn-slider1-hover-bgcolor,
+          $uikit-btn-slider1-pressed-bgcolor, $env, false);
+      }
+    }
+    &-2 {
+      &-left {
+        @include sliderBtn($uikit-btn-slider2-default-bgcolor, $uikit-btn-slider2-hover-bgcolor,
+          $uikit-btn-slider2-pressed-bgcolor, $env, true);
+      }
+      &-right {
+        @include sliderBtn($uikit-btn-slider2-default-bgcolor, $uikit-btn-slider2-hover-bgcolor,
+          $uikit-btn-slider2-pressed-bgcolor, $env, false);
+      }
+    }
+  }
+}
+
+@include button_type_slider_mixin("desktop");
+@media screen and (max-width: 1439px) {
+  @include button_type_slider_mixin("mobile");
+}
+
