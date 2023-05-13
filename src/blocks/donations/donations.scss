@@ -1,0 +1,89 @@
+.donations {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 691px minmax(30px, 117px) 488px minmax(0px, 64px);
+  grid-template-rows: max-content 1fr; 
+  row-gap: $marginTitleContent; 
+  padding: $paddingSectionVertical $paddingSectionHorizontal;
+  background-color: $lightBlue;
+
+  @media screen and (max-width: 1319px) {
+    grid-template-columns: 691px 30px 488px;
+  }
+
+  @media screen and (max-width: 1289px) {
+    grid-template-columns: minmax(300px, 1208px);
+    grid-template-rows: max-content 1fr 1fr;
+    row-gap: calc($marginTitleContentTablet - 8px);
+    justify-items: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: calc($paddingSectionVerticalTablet - 5px) $paddingSectionHorizontal calc($paddingSectionVerticalTablet + 5px);
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: calc($paddingSectionVerticalMobile - 1px) $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
+  }
+
+  &__title {
+    @extend %zeroSpaces;
+    @extend %mainTitleH2;
+    grid-column: 1 / span 4;
+
+    @media screen and (max-width: 1319px) {
+      grid-column: 1 / span 3;
+    }
+
+    @media screen and (max-width: 1289px) {
+      grid-column: 1;
+    }
+  }
+
+  &__form {
+    border-radius: $borderRadius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backgroundColor;
+    padding: $paddingInCard 23px $paddingInCard 17px;
+
+    @media screen and (max-width: 1439px) {
+      padding: $paddingInCard;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: calc($paddingInCardMobile + 8px) 20px;
+      border-radius: $borderRadiusMobile;
+    }
+  }
+
+  &__text {
+    white-space: pre-line;
+  }
+
+  //----------//
+
+  &__history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3;
+
+    @media screen and (max-width: 1289px) {
+      max-width: 531px;
+      padding-top: 26px;
+      grid-column: 1;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding-top: 8px;
+    }
+  }
+
+  &__donate-sum {
+    white-space: pre-line;
+  }
+}
