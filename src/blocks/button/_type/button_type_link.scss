@@ -1,78 +1,29 @@
 // UI Kit --- кнопки ссылок на внешние ресурсы
+/*
+ Использование:
+      <a href="#" class="button button_type_link button_color_white">Default</a>
+      <a href="#" class="button button_type_link button_color_blue">Blue</a>
+      <a href="#" class="button button_type_link button_color_orange">Orange</a>
+      <a href="#" class="button button_type_link button_color_green">Green</a>
+      <a href="#" class="button button_type_link button_color_purple">Purple</a>
+   Для того что бы сделать кнопку нажатой добавить класс button_pressed:
+      <a href="#" class="button button_type_link button_color_white button_pressed">Default</a>
+   Для дективации добавить к кнопке сласс button_disabled:
+      <a href="#" class="button button_type_link button_color_white button_disabled">Default</a>
+ */
 
-// white
-$uikit_btn_link_white_default_bgcolor: #FFF;
-$uikit_btn_link_white_default_txtcolor: rgb(51, 51, 51);;
 
-$uikit_btn_link_white_hover_bgcolor: #FFF;
-$uikit_btn_link_white_hover_txtcolor: rgb(0, 39, 92);;
-
-$uikit_btn_link_white_pressed_bgcolor: #FFF;
-$uikit_btn_link_white_pressed_txtcolor: rgb(12, 75, 160);;
-
-$uikit_btn_link_white_disabled_bgcolor: #FFF;
-
-// blue
-$uikit_btn_link_blue_default_bgcolor: #E7F0FF;
-$uikit_btn_link_blue_default_txtcolor: rgb(12, 75, 160);
-
-$uikit_btn_link_blue_hover_bgcolor: #0C4BA0;
-$uikit_btn_link_blue_hover_txtcolor: rgb(255, 255, 255);
-
-$uikit_btn_link_blue_pressed_bgcolor: #00275C;
-$uikit_btn_link_blue_pressed_txtcolor: rgb(255, 255, 255);
-
-// orange
-$uikit_btn_link_orange_default_bgcolor: #FEEFEA;
-$uikit_btn_link_orange_default_txtcolor: rgb(233, 133, 9);
-
-$uikit_btn_link_orange_hover_bgcolor: #E98509;
-$uikit_btn_link_orange_hover_txtcolor: rgb(255, 255, 255);
-
-$uikit_btn_link_orange_pressed_bgcolor: #864A00;
-$uikit_btn_link_orange_pressed_txtcolor: rgb(255, 255, 255);
-
-// green
-$uikit_btn_link_green_default_bgcolor: #DAEFD5;
-$uikit_btn_link_green_default_txtcolor: rgb(49, 155, 23);;
-
-$uikit_btn_link_green_hover_bgcolor: #319B17;
-$uikit_btn_link_green_hover_txtcolor: rgb(255, 255, 255);
-
-$uikit_btn_link_green_pressed_bgcolor: #0E4900;
-$uikit_btn_link_green_pressed_txtcolor: rgb(255, 255, 255);
-
-// purple
-$uikit_btn_link_purple_default_bgcolor: #EAE6FF;
-$uikit_btn_link_purple_default_txtcolor: rgb(139, 117, 255);;
-
-$uikit_btn_link_purple_hover_bgcolor: #8B75FF;
-$uikit_btn_link_purple_hover_txtcolor: rgb(255, 255, 255);
-
-$uikit_btn_link_purple_pressed_bgcolor: #4935B5;
-$uikit_btn_link_purple_pressed_txtcolor: rgb(255, 255, 255);
+@import "../button";
 
 $uikit-link-disabled-bg: #C4C4C4;
 $uikit-link-disabled-txt: rgba(38, 38, 38, 0.5);
 
-$uikit-arrow-size: 16px;
-
-@media screen and (max-width: 1439px) {
-  $uikit-arrow-size: 14px;
-//  TODO переделать
-}
-
-
+$uikit-arrow-size: 15px;
 
 @mixin btn_link($bgColor,$txtColor) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  gap: 10px;
+
   background-color: $bgColor;
   color: $txtColor;
-  text-decoration: none;
   &:after {
     content:'' ;
     @include arrow($txtColor);
@@ -90,73 +41,22 @@ $uikit-arrow-size: 16px;
   } @else {
     @include btn_link($uikit-link-disabled-bg, $uikit-link-disabled-txt);
   }
-  cursor: unset;
 }
 
 .button_type_link {
-  &-white {
-    @include btn_link($uikit_btn_link_white_default_bgcolor, $uikit_btn_link_white_default_txtcolor);
-    &:hover {
-      @include btn_link($uikit_btn_link_white_hover_bgcolor, $uikit_btn_link_white_pressed_txtcolor);
-    }
-    &:disabled, &.disabled {
-      @include link_disabled($uikit_btn_link_white_disabled_bgcolor);
-    }
-    &.pressed {
-      @include btn_link($uikit_btn_link_white_pressed_bgcolor, $uikit_btn_link_white_pressed_txtcolor);
-    }
-  }
-  /////////////////
-  &-blue {
-    @include btn_link($uikit_btn_link_blue_default_bgcolor, $uikit_btn_link_blue_default_txtcolor);
-    &:hover {
-      @include btn_link($uikit_btn_link_blue_hover_bgcolor, $uikit_btn_link_blue_pressed_txtcolor);
-    }
-    &:disabled, &.disabled {
-      @include link_disabled;
-    }
-    &.pressed {
-      @include btn_link($uikit_btn_link_blue_pressed_bgcolor, $uikit_btn_link_blue_pressed_txtcolor);
-    }
-  }
-  ////////////////
-  &-orange {
-    @include btn_link($uikit_btn_link_orange_default_bgcolor, $uikit_btn_link_orange_default_txtcolor);
-    &:hover {
-      @include btn_link($uikit_btn_link_orange_hover_bgcolor, $uikit_btn_link_orange_pressed_txtcolor);
-    }
-    &:disabled, &.disabled {
-      @include link_disabled;
-    }
-    &.pressed {
-      @include btn_link($uikit_btn_link_orange_pressed_bgcolor, $uikit_btn_link_orange_pressed_txtcolor);
-    }
-  }
-  ////////////////
-  &-green {
-    @include btn_link($uikit_btn_link_green_default_bgcolor, $uikit_btn_link_green_default_txtcolor);
-    &:hover {
-      @include btn_link($uikit_btn_link_green_hover_bgcolor, $uikit_btn_link_green_pressed_txtcolor);
-    }
-    &:disabled, &.disabled {
-      @include link_disabled;
-    }
-    &.pressed {
-      @include btn_link($uikit_btn_link_green_pressed_bgcolor, $uikit_btn_link_green_pressed_txtcolor);
-    }
-  }
-  ////////////////
-  &-purple {
-    @include btn_link($uikit_btn_link_purple_default_bgcolor, $uikit_btn_link_purple_default_txtcolor);
-    &:hover {
-      @include btn_link($uikit_btn_link_purple_hover_bgcolor, $uikit_btn_link_purple_pressed_txtcolor);
-    }
-    &:disabled, &.disabled {
-      @include link_disabled;
-    }
-    &.pressed {
-      @include btn_link($uikit_btn_link_purple_pressed_bgcolor, $uikit_btn_link_purple_pressed_txtcolor);
-    }
-  }
+  height: $uikit-btn-desktop-heigth;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  gap: 10px;
+  text-decoration: none;
 }
 
+@media screen and (max-width: 1439px) {
+  .button_type_link {
+    height: $uikit-btn-mobile-heigth;
+  }
+}

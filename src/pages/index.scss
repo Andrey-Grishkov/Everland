@@ -6,10 +6,17 @@
 //---------- Buttons -------------
 @import "../blocks/button/button";
 @import "../blocks/button/_type/button_type_basic";
+@import "../blocks/button/_type/button_type_primary";
+@import "../blocks/button/_type/button_type_secondary";
+@import "../blocks/button/_type/button_type_secondary-transparent";
 @import "../blocks/button/_type/button_type_link";
 @import "../blocks/button/_type/button_type_slider";
 @import "../blocks/button/_type/button_type_accordion";
 
-
+@import "../blocks/button/_color/button_color_white";
+@import "../blocks/button/_color/button_color_blue";
+@import "../blocks/button/_color/button_color_green";
+@import "../blocks/button/_color/button_color_orange";
+@import "../blocks/button/_color/button_color_purple";
 
 //--------------------------------

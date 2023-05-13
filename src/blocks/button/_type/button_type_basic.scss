@@ -1,54 +1,16 @@
-// UI Kit --- Базовые кнопки
+// UI Kit --- Стандартные кнопки:
 /*
  Использование:
-   Стандартные кнопки:
-      <button class="button_type_basic-primary">Default</button>
-      <button class="button_type_basic-secondary">Default</button>
-      <button class="button_type_basic-secondary-transparent">Default</button>
+      <button class="button button_type_primary">Default</button>
+      <button class="button button_type_secondary">Default</button>
+      <button class="button button_type_secondary-transparent">Default</button>
    Для того что бы сделать кнопку нажатой добавить класс pressed:
-      <button class="button_type_basic-primary pressed">Default</button>
+      <button class="button button_type_primary pressed">Default</button>
    Для дективации достаточно добавить к кнопке атрибут disable:
-      <button class="button_type_basic-primary" disabled>Disabled</button>
+      <button class="button button_type_primary disabled" disabled>Disabled</button>
  */
 
-// primary
-$uikit-btn-primary-default-bgcolor: #0C4BA0;
-$uikit-btn-primary-default-brcolor: #0C4BA0;
-$uikit-btn-primary-default-txtcolor: #FFFFFF;
-
-$uikit-btn-primary-hover-bgcolor: #4183DC;
-$uikit-btn-primary-hover-brcolor: #4183DC;
-$uikit-btn-primary-hover-txtcolor: #FFFFFF;
-
-$uikit-btn-primary-pressed-bgcolor: #00275C;
-$uikit-btn-primary-pressed-brcolor: #00275C;
-$uikit-btn-primary-pressed-txtcolor: #FFFFFF;
-
-// secondary
-$uikit-btn-secondary-default-bgcolor: #FFF;
-$uikit-btn-secondary-default-brcolor: #0C4BA0;
-$uikit-btn-secondary-default-txtcolor: #0C4BA0;
-
-$uikit-btn-secondary-hover-bgcolor: #FFF;
-$uikit-btn-secondary-hover-brcolor: #00275C;
-$uikit-btn-secondary-hover-txtcolor: #00275C;
-
-$uikit-btn-secondary-pressed-bgcolor: #00275C;
-$uikit-btn-secondary-pressed-brcolor: #00275C;
-$uikit-btn-secondary-pressed-txtcolor: #FFFFFF;
-
-// secondary-transparent
-$uikit-btn-secondary-trans-default-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-default-brcolor: #333333;
-$uikit-btn-secondary-trans-default-txtcolor: #333333;
-
-$uikit-btn-secondary-trans-hover-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-hover-brcolor: #333333;
-$uikit-btn-secondary-trans-hover-txtcolor: #333333;
-
-$uikit-btn-secondary-trans-pressed-bgcolor: #333333;
-$uikit-btn-secondary-trans-pressed-brcolor: #333333;
-$uikit-btn-secondary-trans-pressed-txtcolor: #FFFFFF;
+@import "../button";
 
 $uikit-btn-bg-disabled: #F5F5F5;
 $uikit-btn-br-disabled: #C4C4C4;
@@ -56,7 +18,6 @@ $uikit-btn-txt-disabled: rgba(38, 38, 38, 0.5);
 
 @mixin button_disabled() {
   @include btn-basic($uikit-btn-bg-disabled, $uikit-btn-txt-disabled, 2px, $uikit-btn-br-disabled);
-  cursor: unset;
 }
 
 @mixin btn-basic($bg-color, $txt-color, $br-size, $br-color){
@@ -65,61 +26,15 @@ $uikit-btn-txt-disabled: rgba(38, 38, 38, 0.5);
   color: $txt-color;
 }
 
-.button_type_basic {
-  &-primary {
-    @include btn-basic($uikit-btn-primary-default-bgcolor, $uikit-btn-primary-default-txtcolor,
-      2px, $uikit-btn-primary-default-brcolor);
-
-    &:hover {
-      @include btn-basic($uikit-btn-primary-hover-bgcolor, $uikit-btn-primary-hover-txtcolor,
-        2px, $uikit-btn-primary-hover-brcolor);
-    }
-
-    &:disabled, &.disabled {
-      @include button_disabled;
-    }
-
-    &.pressed {
-      @include btn-basic($uikit-btn-primary-pressed-bgcolor, $uikit-btn-primary-pressed-txtcolor,
-        2px, $uikit-btn-primary-pressed-brcolor);
-    }
-  }
-
-  &-secondary {
-    @include btn-basic($uikit-btn-secondary-default-bgcolor, $uikit-btn-secondary-default-txtcolor,
-      1px, $uikit-btn-secondary-default-brcolor);
-
-    &:hover {
-      @include btn-basic($uikit-btn-secondary-hover-bgcolor, $uikit-btn-secondary-hover-txtcolor,
-        1px, $uikit-btn-secondary-hover-brcolor);
-    }
-
-    &:disabled, &.disabled {
-      @include button_disabled;
-    }
-
-    &.pressed {
-      @include btn-basic($uikit-btn-secondary-pressed-bgcolor, $uikit-btn-secondary-pressed-txtcolor,
-        1px, $uikit-btn-secondary-pressed-brcolor);
-    }
-  }
-
-  &-secondary-transparent {
-    @include btn-basic($uikit-btn-secondary-trans-default-bgcolor, $uikit-btn-secondary-trans-default-txtcolor,
-      1px, $uikit-btn-secondary-trans-default-brcolor);
-    &:hover {
-      @include btn-basic($uikit-btn-secondary-trans-hover-bgcolor, $uikit-btn-secondary-trans-hover-txtcolor,
-        2px, $uikit-btn-secondary-trans-hover-brcolor);
-    }
-    &:disabled, &.disabled {
-      @include button_disabled;
-    }
-    &.pressed {
-      @include btn-basic($uikit-btn-secondary-trans-pressed-bgcolor, $uikit-btn-secondary-trans-pressed-txtcolor,
-        1px, $uikit-btn-secondary-trans-pressed-brcolor);
-    }
-  }
+%button_type_basic {
+  height: $uikit-btn-desktop-heigth;
+  border-radius: 10px;
+  padding: 12px 16px;
 }
 
-
+@media screen and (max-width: 1439px) {
+  %button_type_basic {
+    height: $uikit-btn-mobile-heigth;
+  }
+}
 

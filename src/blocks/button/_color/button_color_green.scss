@@ -1,0 +1,24 @@
+@import "../_type/button_type_link";
+
+// green
+$uikit_btn_link_green_default_bgcolor: #DAEFD5;
+$uikit_btn_link_green_default_txtcolor: rgb(49, 155, 23);;
+
+$uikit_btn_link_green_hover_bgcolor: #319B17;
+$uikit_btn_link_green_hover_txtcolor: rgb(255, 255, 255);
+
+$uikit_btn_link_green_pressed_bgcolor: #0E4900;
+$uikit_btn_link_green_pressed_txtcolor: rgb(255, 255, 255);
+
+.button_color_green {
+  @include btn_link($uikit_btn_link_green_default_bgcolor, $uikit_btn_link_green_default_txtcolor);
+  &:hover {
+    @include btn_link($uikit_btn_link_green_hover_bgcolor, $uikit_btn_link_green_pressed_txtcolor);
+  }
+  &:disabled, &.button_disabled {
+    @include link_disabled;
+  }
+  &.button_pressed {
+    @include btn_link($uikit_btn_link_green_pressed_bgcolor, $uikit_btn_link_green_pressed_txtcolor);
+  }
+}

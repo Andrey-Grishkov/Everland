@@ -1,3 +1,22 @@
+// UI Kit --- кнопки для слайдеров
+/*
+ Использование:
+  Тип1 (слева на макете UI Kit):
+    Стрелка влево:
+      <button class="button button_type_slider-1-left"></button>
+    Стрелка вправо:
+      <button class="button button_type_slider-1-right"></button>
+  Тип2 (справа на макете UI Kit):
+    Стрелка влево:
+      <button class="button button_type_slider-2-left"></button>
+    Стрелка вправо:
+      <button class="button button_type_slider-2-right"></button>
+   Для того что бы сделать кнопку нажатой добавить класс button_pressed:
+      <a href="#" class="button button_type_link button_color_white button_pressed">Default</a>
+   Для дективации добавить к кнопке сласс button_disabled:
+      <a href="#" class="button button_type_link button_color_white button_disabled">Default</a>
+ */
+
 @use "sass:map";
 @import "../button";
 
@@ -18,12 +37,23 @@ $uikit-btn-slider-arrows-size: (
   "desktop": 17px,
 );
 
+$uikit-btn-slider-size: (
+  "mobile": 24px,
+  "desktop": 35px,
+);
+
+$uikit-btn-slider-border-radius: (
+  "mobile": 6px,
+  "desktop": 10px,
+);
+
 @mixin addArrow($env,$arrowColor:$uikit-btn-slider-arrowColor) {
   &:after {
-    content: '';
+    content: ' ';
     @include arrow($arrowColor);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     display: block;
     height: map.get($uikit-btn-slider-arrows-size, $env);
     width: map.get($uikit-btn-slider-arrows-size, $env);
@@ -32,19 +62,23 @@ $uikit-btn-slider-arrows-size: (
 
 @mixin sliderBtn($bgColor,$hoverColor, $pressedColor, $env, $left: false) {
   background-color: $bgColor;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: map.get($uikit-btn-slider-border-radius, $env);
   border: 0;
-  cursor: pointer;
+  height: map.get($uikit-btn-slider-size, $env);
+  width: map.get($uikit-btn-slider-size, $env);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include addArrow($env);
+
   &:hover {
     background-color: $hoverColor;
   }
-  &:disabled, &.disabled {
+  &:disabled, &.button_disabled {
     @include addArrow($env, $uikit-btn-slider-disabled-arrowColor);
     background-color: $uikit-btn-slider-disabled-bgcolor;
   }
-  &.pressed {
+  &.button_pressed {
     background-color: $pressedColor;
   }
   @if $left {
@@ -78,7 +112,7 @@ $uikit-btn-slider-arrows-size: (
 }
 
 @include button_type_slider_mixin("desktop");
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1039px) {
   @include button_type_slider_mixin("mobile");
 }
 

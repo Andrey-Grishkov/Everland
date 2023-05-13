@@ -1,0 +1,31 @@
+@import "./button_type_basic";
+
+// secondary-transparent
+$uikit-btn-secondary-trans-default-bgcolor: rgba(0,0,0,0);
+$uikit-btn-secondary-trans-default-brcolor: #333333;
+$uikit-btn-secondary-trans-default-txtcolor: #333333;
+
+$uikit-btn-secondary-trans-hover-bgcolor: rgba(0,0,0,0);
+$uikit-btn-secondary-trans-hover-brcolor: #333333;
+$uikit-btn-secondary-trans-hover-txtcolor: #333333;
+
+$uikit-btn-secondary-trans-pressed-bgcolor: #333333;
+$uikit-btn-secondary-trans-pressed-brcolor: #333333;
+$uikit-btn-secondary-trans-pressed-txtcolor: #FFFFFF;
+
+.button_type_secondary-transparent {
+  @extend %button_type_basic;
+  @include btn-basic($uikit-btn-secondary-trans-default-bgcolor, $uikit-btn-secondary-trans-default-txtcolor,
+    1px, $uikit-btn-secondary-trans-default-brcolor);
+  &:hover {
+    @include btn-basic($uikit-btn-secondary-trans-hover-bgcolor, $uikit-btn-secondary-trans-hover-txtcolor,
+      2px, $uikit-btn-secondary-trans-hover-brcolor);
+  }
+  &:disabled, &.disabled {
+    @include button_disabled;
+  }
+  &.button_pressed {
+    @include btn-basic($uikit-btn-secondary-trans-pressed-bgcolor, $uikit-btn-secondary-trans-pressed-txtcolor,
+      1px, $uikit-btn-secondary-trans-pressed-brcolor);
+  }
+}

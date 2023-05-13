@@ -6,8 +6,6 @@ $uikit-btn-mobile-heigth: 44px;   // для таблетной версии ис
 $uikit-btn-mobile-font-size: 14px;
 
 .button {
-  height: $uikit-btn-desktop-heigth;
-  border-radius: 10px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-feature-settings: 'pnum' on, 'lnum' on;
@@ -15,20 +13,22 @@ $uikit-btn-mobile-font-size: 14px;
   line-height: 120%;
   font-size: $uikit-btn-desktop-font-size;
   box-sizing: border-box;
-  padding: 12px 16px;
   cursor: pointer;
+  &:disabled, &.button_disabled {
+    cursor: unset;
+  }
 }
 
 @media screen and (max-width: 1439px) {
   .button {
-    height: $uikit-btn-mobile-heigth;
     font-size: $uikit-btn-mobile-font-size;
   }
 }
+
 @mixin arrow($color) {
   background-image: url('data:image/svg+xml;utf8,<svg fill="#{$color}" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"/></svg>');
 }
 
-$uikit-btn-slider1-desktop-size: 17px;
+
 
 
