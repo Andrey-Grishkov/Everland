@@ -1,0 +1,96 @@
+.header {
+  @extend %limitedWidthSection;
+  margin: 0;
+  @include flex(row, space-between, center);
+  padding: 16px $paddingSectionHorizontal 16px;
+  background-color: $backgroundColor;
+
+  &__menu {
+    @include flex(row, flex-end, center);
+    margin: 0;
+    border: none;
+    background-color: $backgroundColor;
+    flex-basis: 215px;
+    gap: 12px;
+  }
+
+  &__menu-image {
+    height: 25px;
+    width: 25px;
+    background: url("../images/header/header__menu-image.svg") 0 0/contain no-repeat;
+
+    &_active {
+      background-image: url("../images/header/header__menu-image_active.svg");
+    }
+  }
+
+  &__menu-label {
+    @extend %bigTextStyle;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  &__button-container {
+    @include flex(row, space-between, center);
+    box-sizing: border-box;
+    gap: 16px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 0;
+    display: block;
+    height: 48px;
+    width: 180px;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1439px) {
+  .header {
+    padding: 18px 40px 18px;
+    gap: 24px;
+
+    &__menu {
+      order: 99;
+      flex-basis: unset;
+    }
+
+    &__button {
+      height: 34px;
+      width: 134px;
+    }
+
+    &__button-container {
+      gap: 8px;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 10px 15px 10px;
+
+    &__menu-label {
+      display: none;
+    }
+
+    &__button-container {
+      display: none;
+    }
+
+    &__button {
+      height: 34px;
+      width: 134px;
+    }
+  }
+}
