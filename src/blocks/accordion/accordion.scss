@@ -3,16 +3,17 @@
   flex-wrap: wrap;
   width: 670px;
   box-sizing: border-box;
-  padding: 30px 20px;
+  padding: 26px 20px;
   border: 2px solid $borderColor;
   border-radius: $borderRadius;
-  row-gap: 10px;
+  align-self: self-start;
+  overflow: hidden;
+  transition: padding .5s;
 
   @media screen and (max-width: 1439px) {
     width: 100%;
     border-radius: 20px;
-    row-gap: 20px;
-    padding: 20px;
+    padding: 16px;
   }
   @media screen and (max-width: 767px) {
     padding: 17px 20px 17px 16px;
@@ -22,14 +23,24 @@
   &__title {
     @extend %zeroSpaces;
     @extend %mainTitleH3;
-
+    line-height: 1.2;
     @media screen and (max-width: 767px) {
       width: 200px;
     }
   }
 
   &__text {
-    @extend %zeroSpaces;
+    margin: 0;
     @extend %mainTextStyle;
+    transition: transform .5s, visibility .5s, max-height .5s;
+    overflow: hidden;
+    transform: scaleY(0);
+    visibility: hidden;
+    padding-top: 10px;
+    max-height: 0;
+
+    @media screen and (max-width: 1439px) {
+      padding-top: 20px;
+    }
   }
 }

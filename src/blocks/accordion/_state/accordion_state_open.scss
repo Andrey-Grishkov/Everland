@@ -10,6 +10,12 @@
   }
 
   >.accordion__text {
+    transform: scaleY(1);
     visibility: visible;
+    // padding-top: 10px;
+
+    // @media screen and (max-width: 1439px) {
+    //   padding-top: 20px;
+    // }
   }
 }

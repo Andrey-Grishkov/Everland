@@ -12,6 +12,7 @@
 
   &__title {
     @extend %mainTitleH2;
-    @extend %zeroSpaces;
+    margin-top: 0;
+    margin-bottom: $marginTitleContent;
   }
 }

@@ -1,12 +1,5 @@
 .accordion_state_close {
-  height: 100px;
-
-  @media screen and (max-width: 1439px) {
-    height: fit-content;
-  }
-
   >.accordion__text {
-    display: none;
     visibility: hidden;
   }
 }
