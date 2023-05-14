@@ -62,6 +62,44 @@
     }
   }
 
+  &__explonation {
+    box-sizing: border-box;
+    position: absolute;
+    top: -100px;
+    left: 230px;
+    width: 647px;
+    height: 62px;
+    padding: 18px 15.5px;
+    background-color: #ffffff;
+    border-radius: 4px 4px 4px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .1s, opacity .1s ease-out;
+
+    @media screen and (max-width: 1289px) {
+      top: -94px;
+      left: 0;
+      height: 56px;
+      max-width: 647px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 582px) {
+      top: -108px;
+      height: 70px;
+    }
+
+    &-text {
+      @extend %zeroSpaces;
+      @extend %mainTextStyle;
+    }
+
+    &_opened {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
   &__number {
     display: flex;
     justify-content: space-between;
@@ -79,6 +117,7 @@
   }
 
   &__sum {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 48px) 1fr;
@@ -88,6 +127,24 @@
     border-top: 1px solid $borderColor;
     margin: 0 0 24px;
     padding: 0;
+
+    .donations__input {
+      grid-column: 2 / span 3;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .2s, opacity .2s ease-out;
+      max-width: none;
+
+      &_opened {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 120px;
+      }
+    }
 
     @media screen and (max-width: 1439px) {
       margin-bottom: 14px;
@@ -112,6 +169,10 @@
         &:nth-of-type(5) {
           grid-column: span 2;
         }
+      }
+
+      .donations__input {
+        grid-column: 1 / span 2;
       }
 
       .donations__text {
@@ -395,6 +456,7 @@
       background-color: transparent;
       border: 1px #DADADA solid;
       border-radius: 10px;
+      cursor: pointer;
 
       &:hover {
         background-color: #DADADA;
