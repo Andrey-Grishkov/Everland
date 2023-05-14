@@ -16,11 +16,11 @@
     justify-items: center;
     grid-template-columns: minmax(300px, 1208px);
     grid-template-rows: max-content 1fr 578px;
-    row-gap: calc($marginTitleContentTablet - 8px);
+    row-gap: 24px;
   }
 
   @media screen and (max-width: 1024px) {
-    padding: calc($paddingSectionVerticalTablet - 5px) $paddingSectionHorizontal calc($paddingSectionVerticalTablet + 5px);
+    padding: 45px $paddingSectionHorizontal 55px;
   }
 
   @media screen and (max-width: 767px) {
@@ -28,7 +28,7 @@
   }
 
   @media screen and (max-width: 425px) {
-    padding: calc($paddingSectionVerticalMobile - 1px) $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
+    padding: 33px $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
   }
 
   &__title {
@@ -49,9 +49,10 @@
     box-sizing: border-box;
     max-width: 651px;
     border-radius: $borderRadius;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, flex-start, center);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     background-color: $backgroundColor;
     padding: $paddingInCard 23px $paddingInCard 17px;
 
@@ -74,7 +75,7 @@
     width: 647px;
     height: 62px;
     padding: 18px 15.5px;
-    background-color: #ffffff;
+    background-color: $backgroundColor;
     border-radius: 4px 4px 4px 0;
     visibility: hidden;
     opacity: 0;
@@ -105,8 +106,9 @@
   }
 
   &__number {
-    display: flex;
-    justify-content: space-between;
+    @include flex(row, space-between, flex-start);
+    // display: flex;
+    // justify-content: space-between;
     column-gap: 20px;
     position: relative;
     @extend %fieldsetSizes;
@@ -148,6 +150,13 @@
         position: absolute;
         top: 120px;
       }
+
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      -moz-appearance: textfield;
     }
 
     @media screen and (max-width: 1439px) {
@@ -199,8 +208,9 @@
   }
 
   &__payment {
-    display: flex;
-    align-items: center;
+    @include flex(row, flex-start, center);
+    // display: flex;
+    // align-items: center;
     column-gap: 8px;
     @extend %fieldsetSizes;
     border: none;
@@ -275,8 +285,9 @@
   }
 
   &__data {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, flex-start, flex-start);
+    // display: flex;
+    // flex-direction: column;
     row-gap: 20px;
     @extend %fieldsetSizes;
     border: none;
@@ -328,7 +339,7 @@
     opacity: 0;
 
     &:checked + &-label {
-      border-color: #0C4BA0;
+      border-color: $blue;
     }
 
     &-label {
@@ -336,7 +347,7 @@
       max-height: 48px;
       @extend %buttonTextStyle;
       display: inline-flex;
-      column-gap: 10px;
+      column-gap: $marginTextIconButton;
       cursor: pointer;
       padding: 12px 0;
       justify-content: center;
@@ -346,7 +357,7 @@
       width: 100%;
 
       &:hover {
-        border-color: #00275C;
+        border-color: $bluePressed;
       }
 
       @media screen and (max-width: 1439px) {
@@ -402,7 +413,7 @@
 
     box-sizing: border-box;
     outline: none;
-    border: 1px solid #DADADA;
+    border: 1px solid $borderColor;
     border-radius: 10px;
     padding: 11px 20px;
     max-width: 455px;
@@ -418,7 +429,7 @@
     }
 
     &:focus {
-      outline: 1px solid #333333;
+      outline: 1px solid $fontColor;
     }
 
     &:nth-of-type(2) {
@@ -432,9 +443,10 @@
     opacity: 0;
 
     &-checkbox {
-      display: flex;
+      @include flex(row, flex-start, center);
+      // display: flex;
       column-gap: 8px;
-      align-items: center;
+      // align-items: center;
       
       &:nth-of-type(2) {
         margin-top: -2px;
@@ -446,7 +458,7 @@
     }
 
     &:checked + &-label {
-      background-color: #DADADA;
+      background-color: $borderColor;
       background-image: url("../icons/check.svg");
       background-position: center;
       background-repeat: no-repeat;
@@ -458,12 +470,12 @@
       min-width: 25px;
       height: 25px;
       background-color: transparent;
-      border: 1px #DADADA solid;
+      border: 1px $borderColor solid;
       border-radius: 10px;
       cursor: pointer;
 
       &:hover {
-        background-color: #DADADA;
+        background-color: $borderColor;
       }
     }
 
@@ -495,10 +507,11 @@
   &__history {
     position: relative;
     padding-top: 38px;
-    display: flex;
+    @include flex(column, flex-start, center);
+    // display: flex;
     row-gap: 74px;
-    flex-direction: column;
-    align-items: center;
+    // flex-direction: column;
+    // align-items: center;
     grid-column: 3;
 
     @media screen and (max-width: 1439px) {
@@ -553,8 +566,9 @@
   &__list {
     @extend %zeroSpaces;
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, flex-start, flex-start);
+    // display: flex;
+    // flex-direction: column;
     row-gap: 28px;
 
     @media screen and (max-width: 1439px) {
@@ -595,8 +609,8 @@
     &-dots {
       display: inline-block;
       width: 152px;
-      border-bottom: 1px #333333 dotted;
-      margin-left: 10px;
+      border-bottom: 1px $fontColor dotted;
+      margin-left: $marginTextIconButton;
 
       @media screen and (max-width: 1439px) {
         width: 164px;
@@ -609,7 +623,7 @@
 
     &-sum {
       @extend %zeroSpaces;
-      margin-left: 10px;
+      margin-left: $marginTextIconButton;
     }
 
     &-time {

@@ -205,8 +205,12 @@
           <input class="donations__button" type="radio" id="other" name="sum">
           <label for="other" class="donations__button-label">Другая сумма</label>
           <!-- В js нужно будет добавлять класс donations__input_opened при нажатой кнопке "Другая сумма" -->
-          <input class="donations__input" type="number" name="sum" value="" placeholder="Введите сумму">
-          <p class="donations__text">Регулярные пожертвования очень важны для Everland. Это&nbsp;то, что помогает нашим программам работать бесперебойно, что открывает новые востребованные проекты, что максимально эффективно решает социальную задачу. Если вы&nbsp;захотите поддерживать наши программы постоянно, то&nbsp;каждый месяц с&nbsp;вашей карты будет списываться указанная вами сумма.</p>
+          <input class="donations__input donations__input_opened" type="number" name="sum" value="" placeholder="Введите сумму">
+          <p class="donations__text">
+            Регулярные пожертвования очень важны для Everland. Это&nbsp;то, что помогает нашим программам работать бесперебойно, что
+            открывает новые востребованные проекты, что максимально эффективно решает социальную задачу. Если вы&nbsp;захотите поддерживать
+            наши программы постоянно, то&nbsp;каждый месяц с&nbsp;вашей карты будет списываться указанная вами сумма.
+          </p>
         </fieldset>
         <fieldset class="donations__payment">
           <legend class="donations__form-title">Способ оплаты</legend>
