@@ -5,8 +5,8 @@
   display: grid;
   background-color: $lightBlue;
   gap: 20px;
-  width: 100%;
   justify-content: space-between;
+  align-items: flex-start;
   grid-template-rows: minmax(min-content, max-content);
   grid-template-areas: 
   "textPresentation projectImage"
@@ -15,5 +15,16 @@
   &__disabled {
     display: none;
     visibility: hidden;
+  }
+  @media screen and (max-width: 1439px) {
+    gap: 10px 30px;
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-areas: 
+    "textPresentation"
+    "projectImage"
+    "textContainer"
+    "observe";
+    gap: 30px;
   }
 }

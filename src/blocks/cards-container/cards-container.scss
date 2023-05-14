@@ -40,7 +40,8 @@
 
   &_type_projects {
     display: flex;
-    width: fit-content;
+    flex-flow: row nowrap;
+    scroll-behavior: smooth;
     gap: 0;
   }
 }

@@ -6,8 +6,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 150px auto 0;
-  padding: 0 40px;
+  margin: $marginBlocks auto 0;
+  padding: 0 $paddingSectionHorizontal;
+  @media screen and (max-width: 1439px) {
+    margin-top: $marginBlocksTablet;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: $marginBlocksMobile;
+    padding: 0 $paddingSectionHorizontalMobile;
+  }
   &__title {
     @extend %mainTitleH2;
     @extend %zeroSpaces;
@@ -24,6 +31,9 @@
     @extend %mainTextStyle;
     margin: 20px 0 0;
     max-width: 427px;
+    @media screen and (max-width: 1439px) {
+      margin-top: 10px;
+    }
   }
   &__image {
     grid-area: projectImage;
@@ -31,14 +41,29 @@
     border-radius: 30px;
     width: 555px;
     height: 393px;
+    align-self: center;
+    @media screen and (max-width: 1439px) {
+      width: 259px;
+      height: 284px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      height: auto;
+    }
   }
   &__observe {
     grid-area: observe;
     width: min-content;
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
   }
   &__container {
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
   &__absolute {
     position: absolute;
@@ -47,6 +72,12 @@
     left: 0;
     right: 0;
     @include flex(row, center, center);
+    @media screen and (max-width: 767px) {
+      top: 24px;
+      right: 24px;
+      left: auto;
+      bottom: auto;
+    }
   }
 
   &__arrow {
@@ -59,6 +90,11 @@
     height: 35px;
     &_back {
       transform: scale(-1, 1);
+    }
+    @media screen and (max-width: 1439px) {
+      width: 24px;
+      height: 24px;
+      background-size: 10px 10px;
     }
   }
 }
