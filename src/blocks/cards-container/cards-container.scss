@@ -41,6 +41,7 @@
   &_type_projects {
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
     scroll-behavior: smooth;
     gap: 0;
   }

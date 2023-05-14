@@ -1,6 +1,6 @@
 import {sliderContainer, projectsContainer} from "../utils/constants.js";
 function moveLeft() {
-  sliderContainer.scrollLeft += -projectsContainer.offsetWidth-60;
+  sliderContainer.scrollLeft += -projectsContainer.offsetWidth;
 }
 
 function moveRight() {
