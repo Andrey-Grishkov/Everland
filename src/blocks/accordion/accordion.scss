@@ -28,20 +28,6 @@
     }
   }
 
-  &__button {
-    @extend %zeroSpaces;
-    width: 45px;
-    height: 45px;
-    background-color: $superLightBlue;
-    border-radius: 20px;
-    border: 0;
-
-    @media screen and (max-width: 1439px) {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
   &__text {
     @extend %zeroSpaces;
     @extend %mainTextStyle;

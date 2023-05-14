@@ -1,18 +1,19 @@
 .accordion-container {
   margin: 0;
-  padding: $marginTitleContent 0 0 0;
+  padding-top: $marginTitleContent;
+  padding-left: 0;
   @include flex(row, center, flex-start);
-  row-gap: 20px;
-  column-gap: 20px;
+  gap: 20px 20px;
   list-style-type: none;
   flex-wrap: wrap;
 
   @media screen and (max-width: 1439px) {
-    padding: $marginTitleContentTablet 0 0 0;
+    gap: 20px 0;
+    padding-top: $marginTitleContentTablet;
   }
 
   @media screen and (max-width: 767px) {
-    row-gap: 16px;
-    padding: $marginTitleContentMobile 0 0 0;
+    gap: 16px 0;
+    padding-top: $marginTitleContentMobile;
   }
 }
