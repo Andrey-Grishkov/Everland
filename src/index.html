@@ -183,7 +183,7 @@
       <form class="donations__form">
         <fieldset class="donations__number">
           <input class="donations__button" type="radio" id="monthly" name="number" required>
-          <label for="monthly" class="donations__button-label">Ежемесячно<img class="donations__explanation" src="./images/question.svg" alt="?"></label>
+          <label for="monthly" class="donations__button-label">Ежемесячно<img src="./images/question.svg" alt="?"></label>
           <input class="donations__button" type="radio" id="one-time" name="number">
           <label for="one-time" class="donations__button-label">Разово</label>
         </fieldset>
@@ -199,18 +199,16 @@
           <label for="rub-1000" class="donations__button-label">1000&#8381;</label>
           <input class="donations__button" type="radio" id="other" name="sum">
           <label for="other" class="donations__button-label">Другая сумма</label>
-          <p class="donations__text">Регулярные пожертвования очень важны для Everland. Это то, что помогает нашим программам работать бесперебойно, что открывает новые востребованные проекты, что максимально эффективно решает социальную задачу.
-            Если вы захотите поддерживать наши программы постоянно, то каждый месяц с вашей карты будет списываться указанная вами сумма.
-          </p>
+          <p class="donations__text">Регулярные пожертвования очень важны для Everland. Это&nbsp;то, что помогает нашим программам работать бесперебойно, что открывает новые востребованные проекты, что максимально эффективно решает социальную задачу. Если вы&nbsp;захотите поддерживать наши программы постоянно, то&nbsp;каждый месяц с&nbsp;вашей карты будет списываться указанная вами сумма.</p>
         </fieldset>
         <fieldset class="donations__payment">
           <legend class="donations__form-title">Способ оплаты</legend>
           <input class="donations__button" type="radio" id="bank-card" name="payment" required>
-          <label for="bank-card" class="donations__button-label"><img class="donations__payment-img" src="./images/payment-systems.svg" alt="MIR, Maestro, Visa, MasterCard"></label>
+          <label for="bank-card" class="donations__button-label"><img src="./images/payment-systems.svg" alt="MIR, Maestro, Visa, MasterCard"></label>
           <input class="donations__button" type="radio" id="ymoney" name="payment">
-          <label for="ymoney" class="donations__button-label"><img class="donations__payment-img" src="./images/yoomoney.svg" alt="YooMoney"></label>
+          <label for="ymoney" class="donations__button-label"><img src="./images/yoomoney.svg" alt="YooMoney"></label>
           <input class="donations__button" type="radio" id="wmoney" name="payment">
-          <label for="wmoney" class="donations__button-label"><img class="donations__payment-img" src="./images/webmoney.svg" alt="WebMoney"></label>
+          <label for="wmoney" class="donations__button-label"><img src="./images/webmoney.svg" alt="WebMoney"></label>
           <button class="donations__next" type="button" aria-label="Другие способы оплаты"></button>
         </fieldset>
         <fieldset class="donations__data">
@@ -219,12 +217,18 @@
             maxlength="100" value="">
           <input class="donations__input" type="email" name="data" placeholder="myemail@example.com" required minlength="2"
             maxlength="100" value="">
-          <input class="donations__agree" type="checkbox" id="offer" name="agree" required>
-          <label for="offer" class="donations__button-label_type_checkbox">Соглашаюсь с офертой</label>
-          <input class="donations__agree" type="checkbox" id="personal-data" name="agree" required>
-          <label for="personal-data" class="donations__button-label_type_checkbox">Соглашаюсь на обработку моих персональных данных</label>
+          <div class="donations__agree-checkbox">
+            <input class="donations__agree" type="checkbox" id="offer" name="agree" required>
+            <label for="offer" class="donations__agree-label"></label>
+            <p class="donations__agree-text">Соглашаюсь с <span class="donations__agree-text_color_blue">офертой</span></p>
+          </div>
+          <div class="donations__agree-checkbox">
+            <input class="donations__agree" type="checkbox" id="personal-data" name="agree" required>
+            <label for="personal-data" class="donations__agree-label"></label>
+            <p class="donations__agree-text">Соглашаюсь на <span class="donations__agree-text_color_blue">обработку моих персональных данных</span></p>
+          </div>
         </fieldset>
-        <button class="button_type_basic button_color_blue" type="submit">Поддержать</button>
+        <button class="button button_type_basic button_color_blue" type="submit">Поддержать</button>
       </form>
       <div class="donations__history">
         <div class="donations__gradient-opacity"></div>
