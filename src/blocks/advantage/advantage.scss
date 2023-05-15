@@ -14,5 +14,13 @@
     @extend %mainTitleH2;
     margin-top: 0;
     margin-bottom: $marginTitleContent;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: $marginTitleContentTablet;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: $marginTitleContentMobile;
+    }
   }
 }

@@ -10,14 +10,12 @@
 
   @media screen and (max-width: 1439px) {
     gap: 20px 0;
-    padding-top: $marginTitleContentTablet;
     max-width: 1439px;
     max-height: 640px;
   }
 
   @media screen and (max-width: 767px) {
     gap: 16px 0;
-    padding-top: $marginTitleContentMobile;
     max-width: 767px;
   }
 }
