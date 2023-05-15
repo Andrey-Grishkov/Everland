@@ -190,8 +190,53 @@
     </section>
     <section class="news">
       <h2 class="news__title">Новости</h2>
-      <a class="news__link"><button class="news__link-button">Все новости</button></a>
+      <a class="news__link-container" href="#">
+        <button class="news__link">Все новости</button>
+      </a>
       <ul class="cards-container cards-container_type_news">
+        <li class="card card_type_news card_color_white">
+          <p class="news__item-topic">Тема</p>
+          <picture class="news__item-image-container">
+            <source srcset="<%=require('./images/news/item-photo-1_2x.png')%>" media="(min-width: 1440px)" />
+            <source srcset="<%=require('./images/news/item-photo-1.png')%>" media="(max-width: 1439px)" />
+            <img class="news__item-image" src="<%=require('./images/news/item-photo-1.png')%>"
+              alt="Новость, открытка, поздравление" />
+          </picture>
+          <div class="news__item-info-container">
+            <h4 class="news__item-title">Ура! Новое партнерство — с PepsiCo</h4>
+            <p class="news__item-text">Everland совместно с PepsiCo приняли участие в акции «Благотворительность вместо
+              сувениров»</p>
+          </div>
+          <p class="news__item-date">20 сентября 2021</p>
+        </li>
+        <li class="card card_type_news card_color_green">
+          <p class="news__item-topic">Тема</p>
+          <div class="news__item-info-container">
+            <h4 class="news__item-title">Трехдневный интенсив для КСО-менеджеров «Бизнес и инклюзия: как строить
+              эффективные программы»</h4>
+            <p class="news__item-text">Эксперты с инвалидностью, представители бизнеса и некоммерческих организаций
+              поговорили о том, что такое
+              инклюзия, рассмотрели подходы к трудоустройству людей с инвалидностью, обсудили проблемы, к которым нужно
+              быть готовым, и поделились успешными кейсами</p>
+          </div>
+          <p class="news__item-date">20 сентября 2021</p>
+        </li>
+        <li class="card card_type_news card_color_white">
+          <p class="news__item-topic">Тема</p>
+          <div class="news__item-info-container">
+            <h4 class="news__item-title">Тестируем супермаркеты на доступность</h4>
+            <p class="news__item-text">Everland совместно с торговой сетью «Перекресток» провели аудит продуктовых
+              магазинов на доступность для
+              людей с разными видами инвалидности</p>
+          </div>
+          <picture class="news__item-image-container">
+            <source srcset="<%=require('./images/news/item-photo-2_2x.png')%>" media="(min-width: 1440px)" />
+            <source srcset="<%=require('./images/news/item-photo-2.png')%>" media="(max-width: 1439px)" />
+            <img class="news__item-image" src="<%=require('./images/news/item-photo-2.png')%>"
+              alt="Супермаркет, продавцы, витрина" />
+          </picture>
+          <p class="news__item-date">20 сентября 2021</p>
+        </li>
       </ul>
     </section>
     <section class="donations">

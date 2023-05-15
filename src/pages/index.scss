@@ -22,14 +22,17 @@
 @import "../blocks/card/_color/card_color_orange.scss";
 @import "../blocks/card/_color/card_color_green.scss";
 @import "../blocks/card/_color/card_color_purple.scss";
+@import "../blocks/card/_color/card_color_white.scss";
 
 // Стили для карточек
 @import "../blocks/card/card.scss";
 @import "../blocks/card/_type/card_type_works.scss";
 @import "../blocks/card/_type/card_type_direction.scss";
+@import "../blocks/card/_type/card_type_news.scss";
 
 // Импорт секций
 @import "../blocks/works/works.scss";
 @import "../blocks/directions/directions.scss";
 @import "../blocks/digits/digits.scss";
+@import "../blocks/news/news.scss";
 @import "../blocks/footer/footer.scss";
