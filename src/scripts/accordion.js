@@ -1,12 +1,12 @@
-function closeOpenedAccordion() {
-  const openedAccordion = document.querySelector('.accordion_state_open');
-  closeAccordion(openedAccordion);
+function checkOpenedAccordion(accordion) {
+  const accordionContainer = accordion.closest('.accordion-container');
+  if (accordionContainer.querySelectorAll('.accordion_state_open').length !== 0) {
+    const openedAccordion = accordionContainer.querySelector('.accordion_state_open');
+    closeAccordion(openedAccordion);
+  }
 }
 
 function openAccordion(accordion) {
-  if (document.querySelectorAll('.accordion_state_open').length > 0) {
-    closeOpenedAccordion();
-  }
   accordion.classList.remove('accordion_state_close');
   accordion.classList.add('accordion_state_open');
   const accordionText = accordion.querySelector('.accordion__text');
@@ -23,6 +23,7 @@ function closeAccordion(accordion) {
 function handleAccordionClick(evt) {
   const accordion = evt.target.closest('.accordion');
   if (accordion.classList.contains('accordion_state_close')) {
+    checkOpenedAccordion(accordion);
     openAccordion(accordion)
   } else {
     closeAccordion(accordion);
