@@ -1,19 +1,23 @@
 .accordion-container {
   margin: 0;
   padding-left: 0;
+  list-style-type: none;
   @include flex(column, center, start);
   gap: 20px;
-  list-style-type: none;
   flex-wrap: wrap;
-  max-height: 380px;
+  max-height: 440px;
+  max-width: 1440px;
 
   @media screen and (max-width: 1439px) {
     gap: 20px 0;
     padding-top: $marginTitleContentTablet;
+    max-width: 1439px;
+    max-height: 640px;
   }
 
   @media screen and (max-width: 767px) {
     gap: 16px 0;
     padding-top: $marginTitleContentMobile;
+    max-width: 767px;
   }
 }

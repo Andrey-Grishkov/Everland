@@ -23,24 +23,23 @@
   &__title {
     @extend %zeroSpaces;
     @extend %mainTitleH3;
-    line-height: 1.2;
     @media screen and (max-width: 767px) {
-      width: 200px;
+      max-width: 200px;
     }
   }
 
   &__text {
     margin: 0;
     @extend %mainTextStyle;
-    transition: transform .5s, visibility .5s, max-height .5s;
+    transition: transform .5s, visibility .5s, max-height .5s, padding-top .5s;
     overflow: hidden;
-    transform: scaleY(0);
     visibility: hidden;
-    padding-top: 10px;
     max-height: 0;
+  }
 
-    @media screen and (max-width: 1439px) {
-      padding-top: 20px;
+  &_ordered {
+    @media screen and (min-width: 1440px) {
+      order:1;
     }
   }
 }
