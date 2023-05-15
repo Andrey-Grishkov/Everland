@@ -1,40 +1,62 @@
 @import "../root.scss";
 
 .cards-container {
-  max-width: 1440px;
   @include grid;
-  list-style-type: none;
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-top: $marginTitleContent;
+  list-style-type: none;
+
+  @media screen and (max-width: 1439px) {
+    padding-top: $marginTitleContentTablet;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: $marginTitleContentMobile;
+  }
+
   &_type_works {
     grid-template-columns: repeat(3, 1fr);
-    margin: $marginTitleContent 0 0;
+
     @media screen and (max-width: 1439px) {
-      margin-top: $marginTitleContentTablet;
       grid-template-columns: repeat(1, 1fr);
     }
+
     @media screen and (max-width: 900px) {
       max-width: 450px;
     }
+
     @media screen and (max-width: 767px) {
-      margin-top: $marginTitleContentMobile;
-      max-width: none;
+      max-width: unset;
     }
   }
-  
+
   &_type_directions {
     grid-template-columns: repeat(3, 1fr);
-    margin: $marginTitleContent 0 0;
-    padding: 0 $paddingSectionHorizontal;
+
     @media screen and (max-width: 1439px) {
-      margin-top: $marginTitleContentTablet;
       grid-template-columns: repeat(2, 1fr);
-      max-width: none;
+      max-width: unset;
     }
+
     @media screen and (max-width: 767px) {
-      margin-top: $marginTitleContentMobile;
       grid-template-columns: repeat(1, 1fr);
-      padding: 0 $paddingSectionHorizontalMobile;
+    }
+  }
+
+  &_type_news {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 1;
+
+    @media screen and (max-width: 1439px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

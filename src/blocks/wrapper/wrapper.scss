@@ -1,13 +1,10 @@
 @import "../root.scss";
 
 .wrapper {
-  max-width: 1440px;
-  box-sizing: border-box;
-  
-  &_type_grey {
-    padding: 0 $paddingSectionHorizontal;
-    @media screen and (max-width: 767px) {
-      padding: 0 $paddingSectionHorizontalMobile;
-    }
+  @extend %limitedWidthSection;
+  padding: 0 $paddingSectionHorizontal;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 $paddingSectionHorizontalMobile;
   }
 }
