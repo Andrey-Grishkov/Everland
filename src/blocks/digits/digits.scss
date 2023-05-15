@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 1439px) {
   .digits {
-    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
+    padding: $marginBlocksTablet $paddingSectionHorizontal 0;
 
     &__container {
       gap: 0px;
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 767px) {
   .digits {
-    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+    padding: $marginBlocksMobile $paddingSectionHorizontalMobile 0;
 
     &__container {
       margin-top: 24px;
