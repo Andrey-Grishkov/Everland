@@ -1,0 +1,61 @@
+// UI Kit --- кнопки ссылок на внешние ресурсы
+/*
+ Использование:
+      <a href="#" class="button button_type_link button_color_white">Default</a>
+      <a href="#" class="button button_type_link button_color_blue">Blue</a>
+      <a href="#" class="button button_type_link button_color_orange">Orange</a>
+      <a href="#" class="button button_type_link button_color_green">Green</a>
+      <a href="#" class="button button_type_link button_color_purple">Purple</a>
+   Для того что бы сделать кнопку нажатой добавить класс button_pressed:
+      <a href="#" class="button button_type_link button_color_white button_pressed">Default</a>
+   Для дективации добавить к кнопке класс button_disabled:
+      <a href="#" class="button button_type_link button_color_white button_disabled">Default</a>
+ */
+
+
+@import "../button";
+
+$uikitLinkDisabledBg: $buttonDisabledHardColor; //#C4C4C4;
+$uikitLinkDisabledTxt: rgba(38, 38, 38, 0.5);
+$uikitArrowSize: 15px;
+
+@mixin btn_link($bgColor,$txtColor) {
+  background-color: $bgColor;
+  color: $txtColor;
+  &:after {
+    content:'' ;
+    @include arrow($txtColor);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: $uikitArrowSize;
+    width: $uikitArrowSize;
+  }
+}
+
+@mixin link_disabled($bgColor: false) {
+  @if $bgColor {
+    @include btn_link($bgColor, $uikitLinkDisabledTxt);
+  } @else {
+    @include btn_link($uikitLinkDisabledBg, $uikitLinkDisabledTxt);
+  }
+}
+
+.button_type_link {
+  height: $uikitBtnDesktopHeigth;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  gap: $marginTextIconButton; //10px;
+  text-decoration: none;
+  @media screen and (max-width: 1439px) {
+  & {
+    height: $uikitBtnMobileHeigth;
+  }
+}
+}
+
+
