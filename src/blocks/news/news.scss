@@ -10,93 +10,44 @@
     grid-column: 1 / span 2;
   }
 
+  &__link-container {
+    display: block;
+    grid-column: 6 / end;
+    grid-row: 1 / span 1;
+
+  }
+
   &__link {
-    @extend %zeroSpaces;
-    border: none;
-    background-color: $backgroundColor;
-    color: $blue;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &-container {
-      display: block;
-      grid-column: 6 / end;
-      grid-row: 1 / span 1;
-      width: 194px;
-      height: 48px;
-      border: 1px solid $blue;
-      border-radius: 10px;
-    }
+    width: 194px;
+    height: 48px;
   }
+}
 
-  &__item {
-    &-topic {
-      @extend %smallTextStyle;
-      color: $darkGrey;
-    }
-
-    &-info-container {
-      flex: 1;
-    }
-
-    &-title {
-      @extend %mainTitleH4;
-      padding-bottom: 20px;
-    }
-
-    &-text {
-      @extend %mainTextStyle;
-    }
-
-    &-date {
-      @extend %smallTextStyle;
-      color: $grey;
-      opacity: 0.5;
-    }
-
-    &-image-container {
-      box-sizing: border-box;
-      width: 100%;
-    }
-
-    &-image {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 380px;
-      object-fit: contain;
-      border-radius: 30px;
-    }
-  }
-
-  @media screen and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
+  .news {
     padding: $paddingSectionVerticalTablet $paddingSectionHorizontal 56px;
 
+    &__link-container {
+      grid-column: 3 / span 2;
+      grid-row: 3 / span 1;
+      justify-self: center;
+      margin-top: 32px;
+    }
+
     &__link {
-      &-container {
-        grid-column: 3 / span 2;
-        grid-row: 3 / span 1;
-        justify-self: center;
-        margin-top: 32px;
-        width: 200px;
-        height: 44px;
-      }
+      width: 200px;
+      height: 44px;
     }
   }
+}
 
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .news {
     padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
     grid-template-columns: repeat(1, 1fr);
 
-    &__link {
-      &-container {
-        grid-column: unset;
-      }
+    &__link-container {
+      grid-column: unset;
     }
 
     &__item-image {
