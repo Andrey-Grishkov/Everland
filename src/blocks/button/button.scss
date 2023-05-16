@@ -1,28 +1,16 @@
 // UI Kit -- Общие свойства кнопок
 @import "../root";
 
-$uikit-btn-desktop-heigth: 48px;
-$uikit-btn-desktop-font-size: 20px;
-$uikit-btn-mobile-heigth: 44px;   // для таблетной версии используются мобильные кнопки
-$uikit-btn-mobile-font-size: 14px;
+$uikitBtnDesktopHeigth: 48px;
+$uikitBtnMobileHeigth: 44px;   // для таблетной версии используются мобильные кнопки
 
 .button {
-  font-family: $fontFamily;
-  font-style: normal;
+  @extend %buttonTextStyle;
   font-feature-settings: 'pnum' on, 'lnum' on;
-  font-weight: $medium;
-  line-height: 120%;
-  font-size: $uikit-btn-desktop-font-size;
   box-sizing: border-box;
   cursor: pointer;
   &:disabled, &.button_disabled {
     cursor: unset;
-  }
-}
-
-@media screen and (max-width: 1439px) {
-  .button {
-    font-size: $uikit-btn-mobile-font-size;
   }
 }
 

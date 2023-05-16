@@ -16,38 +16,21 @@
    Для дективации добавить к кнопке сласс button_disabled:
       <a href="#" class="button button_type_link button_color_white button_disabled">Default</a>
  */
-
-@use "sass:map";
 @import "../button";
 
-$uikit-btn-slider1-default-bgcolor: $blue; //#0C4BA0;
-$uikit-btn-slider1-hover-bgcolor: $buttonHoverColor; //#4183DC;
-$uikit-btn-slider1-pressed-bgcolor: $bluePressed; //#00275C;
+$uikitBtnSlider1DefaultBgcolor: $blue; //#0C4BA0;
+$uikitBtnSlider1HoverBgcolor: $buttonHoverColor; //#4183DC;
+$uikitBtnSlider1PressedBgcolor: $bluePressed; //#00275C;
 
-$uikit-btn-slider2-default-bgcolor: $darkGrey; //#333333;
-$uikit-btn-slider2-hover-bgcolor: $blue; //#0C4BA0;
-$uikit-btn-slider2-pressed-bgcolor: $bluePressed; //#00275C;
+$uikitBtnSlider2DefaultBgcolor: $darkGrey; //#333333;
+$uikitBtnSlider2HoverBgcolor: $blue; //#0C4BA0;
+$uikitBtnSlider2PressedBgcolor: $bluePressed; //#00275C;
 
-$uikit-btn-slider-disabled-bgcolor: #C4C4C4;
-$uikit-btn-slider-disabled-arrowColor: rgba(38, 38, 38, 0.5);
-$uikit-btn-slider-arrowColor: rgb(255, 255, 255);
+$uikitBtnSliderDisabledBgcolor: $buttonDisabledHardColor; //#C4C4C4;
+$uikitBtnSliderDisabledArrowColor: rgba(38, 38, 38, 0.5);
+$uikitBtnSliderArrowColor: rgb(255, 255, 255);
 
-$uikit-btn-slider-arrows-size: (
-  "mobile": 10px,
-  "desktop": 17px,
-);
-
-$uikit-btn-slider-size: (
-  "mobile": 24px,
-  "desktop": 35px,
-);
-
-$uikit-btn-slider-border-radius: (
-  "mobile": 6px,
-  "desktop": 10px,
-);
-
-@mixin addArrow($env,$arrowColor:$uikit-btn-slider-arrowColor) {
+@mixin addArrow($arrowColor:$uikitBtnSliderArrowColor) {
   &:after {
     content: ' ';
     @include arrow($arrowColor);
@@ -55,28 +38,36 @@ $uikit-btn-slider-border-radius: (
     background-size: cover;
     background-position: center center;
     display: block;
-    height: map.get($uikit-btn-slider-arrows-size, $env);
-    width: map.get($uikit-btn-slider-arrows-size, $env);
+    height: 17px;
+    width: 17px;
+    @media screen and (max-width: 1439px) {
+      height: 10px;
+      width: 10px;
+    }
   }
 }
 
-@mixin sliderBtn($bgColor,$hoverColor, $pressedColor, $env, $left: false) {
+@mixin sliderBtn($bgColor,$hoverColor, $pressedColor, $left: false) {
   background-color: $bgColor;
-  border-radius: map.get($uikit-btn-slider-border-radius, $env);
+  border-radius: 10px;
   border: 0;
-  height: map.get($uikit-btn-slider-size, $env);
-  width: map.get($uikit-btn-slider-size, $env);
+  height: 35px;
+  width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include addArrow($env);
-
+  @include addArrow;
+  @media screen and (max-width: 1439px) {
+    border-radius: 6px;
+    height: 24px;
+    width: 24px;
+  }
   &:hover {
     background-color: $hoverColor;
   }
-  &:disabled, &.button_disabled {
-    @include addArrow($env, $uikit-btn-slider-disabled-arrowColor);
-    background-color: $uikit-btn-slider-disabled-bgcolor;
+  &.button_disabled {
+    @include addArrow($uikitBtnSliderDisabledArrowColor);
+    background-color: $uikitBtnSliderDisabledBgcolor;
   }
   &.button_pressed {
     background-color: $pressedColor;
@@ -86,33 +77,30 @@ $uikit-btn-slider-border-radius: (
   }
 }
 
-@mixin button_type_slider_mixin($env) {
-  .button_type_slider {
-    &-1 {
-      &-left {
-        @include sliderBtn($uikit-btn-slider1-default-bgcolor, $uikit-btn-slider1-hover-bgcolor,
-          $uikit-btn-slider1-pressed-bgcolor, $env, true);
-      }
-      &-right {
-        @include sliderBtn($uikit-btn-slider1-default-bgcolor, $uikit-btn-slider1-hover-bgcolor,
-          $uikit-btn-slider1-pressed-bgcolor, $env, false);
-      }
+.button_type_slider {
+  &-1 {
+    &-left {
+      @include sliderBtn($uikitBtnSlider1DefaultBgcolor, $uikitBtnSlider1HoverBgcolor,
+        $uikitBtnSlider1PressedBgcolor, true);
     }
-    &-2 {
-      &-left {
-        @include sliderBtn($uikit-btn-slider2-default-bgcolor, $uikit-btn-slider2-hover-bgcolor,
-          $uikit-btn-slider2-pressed-bgcolor, $env, true);
-      }
-      &-right {
-        @include sliderBtn($uikit-btn-slider2-default-bgcolor, $uikit-btn-slider2-hover-bgcolor,
-          $uikit-btn-slider2-pressed-bgcolor, $env, false);
-      }
+    &-right {
+      @include sliderBtn($uikitBtnSlider1DefaultBgcolor, $uikitBtnSlider1HoverBgcolor,
+        $uikitBtnSlider1PressedBgcolor);
+    }
+  }
+  &-2 {
+    &-left {
+      @include sliderBtn($uikitBtnSlider2DefaultBgcolor, $uikitBtnSlider2HoverBgcolor,
+        $uikitBtnSlider2PressedBgcolor, true);
+    }
+    &-right {
+      @include sliderBtn($uikitBtnSlider2DefaultBgcolor, $uikitBtnSlider2HoverBgcolor,
+        $uikitBtnSlider2PressedBgcolor);
     }
   }
 }
 
-@include button_type_slider_mixin("desktop");
-@media screen and (max-width: 1439px) {
-  @include button_type_slider_mixin("mobile");
-}
+
+
+
 

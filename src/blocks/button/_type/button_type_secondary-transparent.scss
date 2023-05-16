@@ -1,31 +1,31 @@
 @import "./button_type_basic";
 
 // secondary-transparent
-$uikit-btn-secondary-trans-default-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-default-brcolor: $darkGrey; //#333333;
-$uikit-btn-secondary-trans-default-txtcolor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransDefaultBgColor: rgba(0,0,0,0);
+$uikitBtnSecondaryTransDefaultBrColor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransDefaultTxtColor: $darkGrey; //#333333;
 
-$uikit-btn-secondary-trans-hover-bgcolor: rgba(0,0,0,0);
-$uikit-btn-secondary-trans-hover-brcolor: $darkGrey; //#333333;
-$uikit-btn-secondary-trans-hover-txtcolor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransHoverBgColor: rgba(0,0,0,0);
+$uikitBtnSecondaryTransHoverBrColor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransHoverTxtColor: $darkGrey; //#333333;
 
-$uikit-btn-secondary-trans-pressed-bgcolor: $darkGrey; //#333333;
-$uikit-btn-secondary-trans-pressed-brcolor: $darkGrey; //#333333;
-$uikit-btn-secondary-trans-pressed-txtcolor: $backgroundColor; //#FFFFFF;
+$uikitBtnSecondaryTransPressedBgColor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransPressedBrColor: $darkGrey; //#333333;
+$uikitBtnSecondaryTransPressedTxtColor: $backgroundColor; //#FFFFFF;
 
 .button_type_secondary-transparent {
-  @extend %button_type_basic;
-  @include btn-basic($uikit-btn-secondary-trans-default-bgcolor, $uikit-btn-secondary-trans-default-txtcolor,
-    1px, $uikit-btn-secondary-trans-default-brcolor);
+ @include button_type_basic;
+  @include btn-basic($uikitBtnSecondaryTransDefaultBgColor, $uikitBtnSecondaryTransDefaultTxtColor,
+    1px, $uikitBtnSecondaryTransDefaultBrColor);
   &:hover {
-    @include btn-basic($uikit-btn-secondary-trans-hover-bgcolor, $uikit-btn-secondary-trans-hover-txtcolor,
-      2px, $uikit-btn-secondary-trans-hover-brcolor);
+    @include btn-basic($uikitBtnSecondaryTransHoverBgColor, $uikitBtnSecondaryTransHoverTxtColor,
+      2px, $uikitBtnSecondaryTransHoverBrColor);
   }
-  &:disabled, &.disabled {
+  &.button_disabled {
     @include button_disabled;
   }
   &.button_pressed {
-    @include btn-basic($uikit-btn-secondary-trans-pressed-bgcolor, $uikit-btn-secondary-trans-pressed-txtcolor,
-      1px, $uikit-btn-secondary-trans-pressed-brcolor);
+    @include btn-basic($uikitBtnSecondaryTransPressedBgColor, $uikitBtnSecondaryTransPressedTxtColor,
+      0px, $uikitBtnSecondaryTransPressedBrColor);
   }
 }

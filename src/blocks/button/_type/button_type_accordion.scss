@@ -8,30 +8,15 @@
       <button class="button button_type_accordion" disabled></button>
  */
 
-@use "sass:map";
-
 $uikit-btn-accordion-plusColor: rgb(12, 75, 160);
 $uikit-btn-accordion-plusColor-alt: rgb(255, 255, 255);
 $uikit-btn-accordion-plusColor-disabled: rgba(38, 38, 38, 0.5);
-
-$uikit-btn-accordion-plus-size: (
-  "mobile": 10px,
-  "desktop": 17px,
-);
-$uikit-btn-accordion-padding: (
-  "mobile": 10px,
-  "desktop": 14px,
-);
-$uikit-btn-accordion-size: (
-  "mobile": 32px,
-  "desktop": 45px,
-);
 
 @mixin plus($color) {
   background-image: url('data:image/svg+xml;utf8,<svg stroke="#{$color}" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.5 19V10.5M10.5 10.5V2M10.5 10.5H19M10.5 10.5H2" stroke-width="4" stroke-linecap="round"/></svg>');
 }
 
-@mixin addPlus($env, $rotate:false, $plusColor:rgb(255,255,255)){
+@mixin addPlus($rotate:false, $plusColor:rgb(255,255,255)){
   &:after {
     content: '';
     @include plus($plusColor);
@@ -39,39 +24,44 @@ $uikit-btn-accordion-size: (
     background-size: cover;
     background-position: center center;
     display: block;
-    height: map.get($uikit-btn-accordion-plus-size, $env);
-    width: map.get($uikit-btn-accordion-plus-size, $env);
+    height: 17px;
+    width: 17px;
+    @media screen and (max-width: 1439px) {
+      height: 12px;
+      width: 12px;
+    }
     @if $rotate {
        transform: rotate(45deg);
     }
   }
 }
+
 .button_type_accordion {
   background-color: #E7F0FF;
   border: 0;
-  display: block;
-}
-@mixin button_type_accordion_mixin($env) {
-  .button_type_accordion {
-    border-radius: 50%;
-    padding: map.get($uikit-btn-accordion-padding, $env);
-    @include addPlus($env, false, $uikit-btn-accordion-plusColor);
-    &:hover {
-      background-color: #0C4BA0;
-      @include addPlus($env);
-    }
-    &.button_pressed {
-      background-color: #0C4BA0;
-      @include addPlus($env, true);
-    }
-    &:disabled, &.button_disabled {
-      background-color: #C4C4C4;
-      @include addPlus($env, false, $uikit-btn-accordion-plusColor-disabled);
-    }
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include addPlus(false, $uikit-btn-accordion-plusColor);
+  &:hover {
+    background-color: #0C4BA0;
+    @include addPlus();
+  }
+  &.button_pressed {
+    background-color: #0C4BA0;
+    @include addPlus(true);
+  }
+  &.button_disabled {
+    background-color: #C4C4C4;
+    @include addPlus(false, $uikit-btn-accordion-plusColor-disabled);
+  }
+  @media screen and (max-width: 1439px) {
+    height: 32px;
+    width: 32px;
   }
 }
 
-@include button_type_accordion_mixin("desktop");
-@media screen and (max-width: 1439px) {
-  @include button_type_accordion_mixin("mobile");
-}

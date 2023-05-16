@@ -8,20 +8,18 @@
       <a href="#" class="button button_type_link button_color_purple">Purple</a>
    Для того что бы сделать кнопку нажатой добавить класс button_pressed:
       <a href="#" class="button button_type_link button_color_white button_pressed">Default</a>
-   Для дективации добавить к кнопке сласс button_disabled:
+   Для дективации добавить к кнопке класс button_disabled:
       <a href="#" class="button button_type_link button_color_white button_disabled">Default</a>
  */
 
 
 @import "../button";
 
-$uikit-link-disabled-bg: #C4C4C4;
-$uikit-link-disabled-txt: rgba(38, 38, 38, 0.5);
-
-$uikit-arrow-size: 15px;
+$uikitLinkDisabledBg: $buttonDisabledHardColor; //#C4C4C4;
+$uikitLinkDisabledTxt: rgba(38, 38, 38, 0.5);
+$uikitArrowSize: 15px;
 
 @mixin btn_link($bgColor,$txtColor) {
-
   background-color: $bgColor;
   color: $txtColor;
   &:after {
@@ -30,33 +28,34 @@ $uikit-arrow-size: 15px;
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    height: $uikit-arrow-size;
-    width: $uikit-arrow-size;
+    height: $uikitArrowSize;
+    width: $uikitArrowSize;
   }
 }
 
 @mixin link_disabled($bgColor: false) {
   @if $bgColor {
-    @include btn_link($bgColor, $uikit-link-disabled-txt);
+    @include btn_link($bgColor, $uikitLinkDisabledTxt);
   } @else {
-    @include btn_link($uikit-link-disabled-bg, $uikit-link-disabled-txt);
+    @include btn_link($uikitLinkDisabledBg, $uikitLinkDisabledTxt);
   }
 }
 
 .button_type_link {
-  height: $uikit-btn-desktop-heigth;
+  height: $uikitBtnDesktopHeigth;
   border-radius: 10px;
   padding: 12px 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  gap: 10px;
+  gap: $marginTextIconButton; //10px;
   text-decoration: none;
-}
-
-@media screen and (max-width: 1439px) {
-  .button_type_link {
-    height: $uikit-btn-mobile-heigth;
+  @media screen and (max-width: 1439px) {
+  & {
+    height: $uikitBtnMobileHeigth;
   }
 }
+}
+
+

@@ -71,6 +71,7 @@ $borderColor: #DADADA;
 // Цвет кнопок в состоянии hover и disabled
 $buttonHoverColor: #4183DC;
 $buttonDisabledColor: #CACACA;
+$buttonDisabledHardColor: #C4C4C4;
 
 // Цвет кнопок в состоянии pressed
 $bluePressed: #00275C;
@@ -253,8 +254,8 @@ $purplePressed: #4935B5;
 }
 
 %buttonTextStyle {
-  @include raleway;
-
+  font-family: $fontFamily;
+  line-height: 120%;
   font: {
     weight: $medium;
     size: 20px;

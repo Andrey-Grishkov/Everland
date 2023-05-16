@@ -1,34 +1,35 @@
 @import "./button_type_basic";
 
 // primary
-$uikit-btn-primary-default-bgcolor: $blue; //#0C4BA0;
-$uikit-btn-primary-default-brcolor: $blue; //#0C4BA0;
-$uikit-btn-primary-default-txtcolor: $backgroundColor; //#FFFFFF;
+$uikitBtnPrimaryDefaultBgcolor: $blue; //#0C4BA0;
+$uikitBtnPrimaryDefaultBrcolor: $blue; //#0C4BA0;
+$uikitBtnPrimaryDefaultTxtColor: $backgroundColor; //#FFFFFF;
 
-$uikit-btn-primary-hover-bgcolor: $buttonHoverColor; //#4183DC;
-$uikit-btn-primary-hover-brcolor: $buttonHoverColor; //#4183DC;
-$uikit-btn-primary-hover-txtcolor: $backgroundColor; //#FFFFFF;
+$uikitBtnPrimaryHoverBgcolor: $buttonHoverColor; //#4183DC;
+$uikitBtnPrimaryHoverBrColor: $buttonHoverColor; //#4183DC;
+$uikitBtnPrimaryHoverTxtColor: $backgroundColor; //#FFFFFF;
 
-$uikit-btn-primary-pressed-bgcolor: $bluePressed; //#00275C;
-$uikit-btn-primary-pressed-brcolor: $bluePressed; //#00275C;
-$uikit-btn-primary-pressed-txtcolor: $backgroundColor; //#FFFFFF;
+$uikitBtnPrimaryPressedBgColor: $bluePressed; //#00275C;
+$uikitBtnPrimaryPressedBrColor: $bluePressed; //#00275C;
+$uikitBtnPrimaryPressedTxtColor: $backgroundColor; //#FFFFFF;
 
 .button_type_primary {
-  @extend %button_type_basic;
-  @include btn-basic($uikit-btn-primary-default-bgcolor, $uikit-btn-primary-default-txtcolor,
-    2px, $uikit-btn-primary-default-brcolor);
+  @include button_type_basic;
+
+  @include btn-basic($uikitBtnPrimaryDefaultBgcolor, $uikitBtnPrimaryDefaultTxtColor,
+    0px, $uikitBtnPrimaryDefaultBrcolor);
 
   &:hover {
-    @include btn-basic($uikit-btn-primary-hover-bgcolor, $uikit-btn-primary-hover-txtcolor,
-      2px, $uikit-btn-primary-hover-brcolor);
+    @include btn-basic($uikitBtnPrimaryHoverBgcolor, $uikitBtnPrimaryHoverTxtColor,
+      0px, $uikitBtnPrimaryHoverBrColor);
   }
 
-  &:disabled, &.disabled {
+  &.button_disabled {
     @include button_disabled;
   }
 
   &.button_pressed {
-    @include btn-basic($uikit-btn-primary-pressed-bgcolor, $uikit-btn-primary-pressed-txtcolor,
-      2px, $uikit-btn-primary-pressed-brcolor);
+    @include btn-basic($uikitBtnPrimaryPressedBgColor, $uikitBtnPrimaryPressedTxtColor,
+      0px, $uikitBtnPrimaryPressedBrColor);
   }
 }

@@ -1,24 +1,24 @@
 @import "../_type/button_type_link";
 
 // blue
-$uikit_btn_link_blue_default_bgcolor: $lightBlue; //#E7F0FF;
-$uikit_btn_link_blue_default_txtcolor: rgb(12, 75, 160);
+$uikitBtnLinkBlueDefaultBgColor: $lightBlue; //#E7F0FF;
+$uikitBtnLinkBlueDefaultTxtColor: rgb(12, 75, 160);
 
-$uikit_btn_link_blue_hover_bgcolor: $blue; //#0C4BA0;
-$uikit_btn_link_blue_hover_txtcolor: rgb(255, 255, 255);
+$uikitBtnLinkBlueHoverBgColor: $blue; //#0C4BA0;
+$uikitBtnLinkBlueHoverTxtColor: rgb(255, 255, 255);
 
-$uikit_btn_link_blue_pressed_bgcolor: $bluePressed; //#00275C;
-$uikit_btn_link_blue_pressed_txtcolor: rgb(255, 255, 255);
+$uikitBtnLinkBluePressedBgColor: $bluePressed; //#00275C;
+$uikitBtnLinkBluePressedTxtColor: rgb(255, 255, 255);
 
 .button_color_blue {
-  @include btn_link($uikit_btn_link_blue_default_bgcolor, $uikit_btn_link_blue_default_txtcolor);
+  @include btn_link($uikitBtnLinkBlueDefaultBgColor, $uikitBtnLinkBlueDefaultTxtColor);
   &:hover {
-    @include btn_link($uikit_btn_link_blue_hover_bgcolor, $uikit_btn_link_blue_pressed_txtcolor);
+    @include btn_link($uikitBtnLinkBlueHoverBgColor, $uikitBtnLinkBluePressedTxtColor);
   }
-  &:disabled, &.button_disabled {
+  &.button_disabled {
     @include link_disabled;
   }
   &.button_pressed {
-    @include btn_link($uikit_btn_link_blue_pressed_bgcolor, $uikit_btn_link_blue_pressed_txtcolor);
+    @include btn_link($uikitBtnLinkBluePressedBgColor, $uikitBtnLinkBluePressedTxtColor);
   }
 }

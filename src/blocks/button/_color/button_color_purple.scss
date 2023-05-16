@@ -1,26 +1,26 @@
 @import "../_type/button_type_link";
 
 // purple
-$uikit_btn_link_purple_default_bgcolor: $lightPurple; //#EAE6FF;
-$uikit_btn_link_purple_default_txtcolor: rgb(139, 117, 255);;
+$uikitBtnLinkPurpleDefaultBgColor: $lightPurple; //#EAE6FF;
+$uikitBtnLinkPurpleDefaultTxtColor: rgb(139, 117, 255);;
 
-$uikit_btn_link_purple_hover_bgcolor: $purple; //#8B75FF;
-$uikit_btn_link_purple_hover_txtcolor: rgb(255, 255, 255);
+$uikitBtnLinkPurpleHoverBgColor: $purple; //#8B75FF;
+$uikitBtnLinkPurpleHoverTxtColor: rgb(255, 255, 255);
 
-$uikit_btn_link_purple_pressed_bgcolor: $purplePressed; //#4935B5;
-$uikit_btn_link_purple_pressed_txtcolor: rgb(255, 255, 255);
+$uikitBtnLinkPurplePressedBgColor: $purplePressed; //#4935B5;
+$uikitBtnLinkPurplePressedTxtColor: rgb(255, 255, 255);
 
 
 
 .button_color_purple {
-  @include btn_link($uikit_btn_link_purple_default_bgcolor, $uikit_btn_link_purple_default_txtcolor);
+  @include btn_link($uikitBtnLinkPurpleDefaultBgColor, $uikitBtnLinkPurpleDefaultTxtColor);
   &:hover {
-    @include btn_link($uikit_btn_link_purple_hover_bgcolor, $uikit_btn_link_purple_pressed_txtcolor);
+    @include btn_link($uikitBtnLinkPurpleHoverBgColor, $uikitBtnLinkPurplePressedTxtColor);
   }
-  &:disabled, &.button_disabled {
+  &.button_disabled {
     @include link_disabled;
   }
   &.button_pressed {
-    @include btn_link($uikit_btn_link_purple_pressed_bgcolor, $uikit_btn_link_purple_pressed_txtcolor);
+    @include btn_link($uikitBtnLinkPurplePressedBgColor, $uikitBtnLinkPurplePressedTxtColor);
   }
 }
