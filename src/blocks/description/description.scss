@@ -1,0 +1,64 @@
+.description {
+  @extend %limitedWidthSection;
+  padding: 51px $paddingSectionHorizontal 54px;
+}
+
+.description__slider-box {
+  position: relative;
+  margin-bottom: 86px;
+}
+
+.description__slider-control-box {
+  @include flex(row, center, center);
+  gap: 10px;
+  width: fit-content;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 0px;
+}
+
+.description__slider-button {
+  width: 35px;
+  height: 35px;
+}
+
+.donation__amount {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+
+  &:checked+.donation__pseudo-item {
+    border: 1px solid black;
+  }
+}
+
+.donation-checkbox {
+  @include flex(row, flex-start, center);
+  padding: 54px 58px 54px 30px;
+  gap: 40px;
+  border-radius: 10px;
+  background-color: $lightBlue;
+}
+
+.donation__pseudo-item {
+  display: block;
+  box-sizing: border-box;
+  background-color: $backgroundColor;
+  @extend %buttonTextStyle;
+  cursor: pointer;
+  padding: 12px 55px;
+  border-radius: 10px;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid red;
+    opacity: 0.8;
+  }
+}
+
+.donation__button {
+  flex: 1;
+}

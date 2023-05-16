@@ -41,9 +41,9 @@
   }
 
   &__about {
-    margin-top: 20px;
     display: block;
     @extend %smallTextStyle;
+    padding: 20px 0 0 0;
   }
 
   &__links-column {

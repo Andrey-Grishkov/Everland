@@ -19,8 +19,8 @@
       <div class="header__menu-label">Меню</div>
     </button>
     <div class="header__button-container">
-      <button class="header__button">Платформа</button>
-      <button class="header__button">Поддержать</button>
+      <button class="header__button button button_type_secondary">Платформа</button>
+      <button class="header__button button button_type_primary">Поддержать</button>
     </div>
   </header>
   <main class="content">
@@ -37,10 +37,47 @@
       </ul>
     </nav>
     <section class="description">
-      <ul class="cards-container">
-        <li class="card card_type_description"></li>
-      </ul>
-      <form class="donation-checkbox"></form>
+      <div class="description__slider-box">
+        <ul class="cards-container">
+          <li class="card card_type_description">
+            <h1><span>Everland</span> — социальный предпринимательский проект</h1>
+            <p>Мы работаем с 2016 года по России и СНГ и помогаем людям с инвалидностью устойчиво интегрироваться в
+              открытый рынок труда </p>
+            <div decription__image-box>
+              <picure></picure>
+              <picure></picure>
+            </div>
+          </li>
+        </ul>
+        <div class="description__slider-control-box"><button type="button"
+            class="description__slider-button button button_type_slider-1-left"></button><span>1/6</span><button
+            type="button"
+            class="description__slider-button description__slider-button_type_right button button_type_slider-1-right"></button>
+        </div>
+      </div>
+      <form class="donation-checkbox">
+        <label for="rub-250">
+          <input class="donation__amount" id="rub-250" name="sum" value="250" type="radio"></input>
+          <span class="donation__pseudo-item">250&#8381;</span>
+        </label>
+        <label for="rub-500">
+          <input class="donation__amount" id="rub-500" name="sum" value="500" type="radio"></input>
+          <span class="donation__pseudo-item">500&#8381;</span>
+        </label>
+        <label for="rub-750">
+          <input class="donation__amount" id="rub-750" name="sum" value="750" type="radio"></input>
+          <span class="donation__pseudo-item">750&#8381;</span>
+        </label>
+        <label for="rub-1000">
+          <input class="donation__amount" id="rub-1000" name="sum" value="1000" type="radio"></input>
+          <span class="donation__pseudo-item">1000&#8381;</span>
+        </label>
+        <label for="other">
+          <input class="donation__amount" id="other" name="sum" value="other" type="radio"></input>
+          <span class="donation__pseudo-item">Другая сумма</span>
+        </label>
+        <button type="button" class="button button_type_primary">Поддержать</button>
+      </form>
     </section>
     <section class="works">
       <div class="wrapper">
@@ -141,42 +178,42 @@
           <h3 class="accordion__title">Заработанные средства</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
         <li class="accordion accordion_state_close accordion_ordered">
           <h3 class="accordion__title">Крупные клиенты</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
         <li class="accordion accordion_state_close">
           <h3 class="accordion__title">Инклюзивность</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
         <li class="accordion accordion_state_close accordion_ordered">
           <h3 class="accordion__title">Свои исследования</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
         <li class="accordion accordion_state_close">
           <h3 class="accordion__title">Использование Digital</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
         <li class="accordion accordion_state_close accordion_ordered">
           <h3 class="accordion__title">Большой опыт</h3>
           <button class="accordion__button"></button>
           <p class="accordion__text">За время существования проекта с 2016 года социальная
-            предпринимательская  модель Everland доказала свою эффективность  - мы действительно
+            предпринимательская модель Everland доказала свою эффективность - мы действительно
             умеем давать работу людям с разными видами инвалидности</p>
         </li>
       </ul>
@@ -293,4 +330,5 @@
   </footer>
   <div class="burger-popup"></div>
 </body>
+
 </html>
