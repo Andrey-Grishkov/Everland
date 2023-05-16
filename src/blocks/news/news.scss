@@ -1,25 +1,57 @@
 .news {
   @extend %limitedWidthSection;
-  padding: $paddingSectionVertical $paddingSectionHorizontal 0;
+  padding: $paddingSectionVertical $paddingSectionHorizontal;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  background-color: blueviolet;
+  align-items: center;
 
   &__title {
     @extend %mainTitleH2;
+    grid-column: 1 / span 2;
   }
 
-  &__link {
+  &__link-container {
     display: block;
     grid-column: 6 / end;
     grid-row: 1 / span 1;
+
   }
 
-  @media screen and (max-width: 1439px) {
-    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal 56px;
+  &__link {
+    width: 194px;
+    height: 48px;
   }
+}
 
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 1439px) {
+  .news {
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
+
+    &__link-container {
+      grid-column: 3 / span 2;
+      grid-row: 3 / span 1;
+      justify-self: center;
+      margin-top: 32px;
+    }
+
+    &__link {
+      width: 200px;
+      height: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news {
     padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+    grid-template-columns: repeat(1, 1fr);
+
+    &__link-container {
+      grid-column: unset;
+    }
+
+    &__item-image {
+      border-radius: 20px;
+    }
   }
 }

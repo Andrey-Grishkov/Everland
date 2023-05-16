@@ -1,0 +1,14 @@
+.donations__number {
+  @include flex(row, space-between, flex-start);
+  column-gap: 20px;
+  position: relative;
+  @extend %fieldsetSizes;
+  border: none;
+  margin: 0 0 23px;
+  padding: 0;
+
+  @media screen and (max-width: 1439px) {
+    margin-bottom: 32px;
+    column-gap: 16px;
+  }
+}

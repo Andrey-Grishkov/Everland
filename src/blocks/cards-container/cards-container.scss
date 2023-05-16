@@ -57,6 +57,24 @@
 
     @media screen and (max-width: 767px) {
       grid-template-columns: repeat(1, 1fr);
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+
+  &_type_histories {
+    grid-area: cardsContainerHistories;
+    @include flex(column, center, center);
+    gap: 0;
+  }
+
+  &_type_about-person {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: cardsContainerAboutPerson;
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
+

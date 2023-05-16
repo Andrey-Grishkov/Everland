@@ -1,0 +1,7 @@
+.card__title_type_motivation {
+  grid-area: titleLong;
+  margin: 0;
+  @media screen and (max-width: 1439px) {
+    margin-top: 8px;
+  }
+}

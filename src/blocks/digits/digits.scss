@@ -21,6 +21,7 @@
 
   &__image {
     width: 100%;
+    border-radius: 30px;
   }
 
   &__items {
@@ -92,6 +93,10 @@
       row-gap: 16px;
       margin-bottom: 24px;
       min-width: unset;
+    }
+
+    &__image {
+      border-radius: 20px;
     }
   }
 }
