@@ -1,0 +1,26 @@
+@import "../_type/button_type_link";
+
+// white
+$uikitBtnLinkWhiteDefaultBgColor: $backgroundColor; //#FFF;
+$uikitBtnLinkWhiteDefaultTxtColor: rgb(51, 51, 51);;
+
+$uikitBtnLinkWhiteHoverBgColor: $backgroundColor; //#FFF;
+$uikitBtnLinkWhiteHoverTxtColor: rgb(0, 39, 92);;
+
+$uikitBtnLinkWhitePressedBgColor: $backgroundColor; //#FFF;
+$uikitBtnLinkWhitePressedTxtColor: rgb(12, 75, 160);;
+
+$uikitBtnLinkWhiteDisabledBgColor: $backgroundColor; //#FFF;
+
+.button_color_white {
+  @include btn_link($uikitBtnLinkWhiteDefaultBgColor, $uikitBtnLinkWhiteDefaultTxtColor);
+  &:hover {
+    @include btn_link($uikitBtnLinkWhiteHoverBgColor, $uikitBtnLinkWhitePressedTxtColor);
+  }
+  &.button_disabled {
+    @include link_disabled($uikitBtnLinkWhiteDisabledBgColor);
+  }
+  &.button_pressed {
+    @include btn_link($uikitBtnLinkWhitePressedBgColor, $uikitBtnLinkWhitePressedTxtColor);
+  }
+}

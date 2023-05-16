@@ -1,0 +1,31 @@
+@import "./button_type_basic";
+
+// secondary
+$uikitBtnSecondaryDefaultBgColor: $backgroundColor; //#FFF;
+$uikitBtnSecondaryDefaultBrColor: $blue; //#0C4BA0;
+$uikitBtnSecondaryDefaultTxtColor: $blue; //#0C4BA0;
+
+$uikitBtnSecondaryHoverBgColor: $backgroundColor; //#FFF;
+$uikitBtnSecondaryHoverBrColor: $bluePressed; //#00275C;
+$uikitBtnSecondaryHoverTxtColor: $bluePressed; //#00275C;
+
+$uikitBtnSecondaryPressedBgColor: $bluePressed; //#00275C;
+$uikitBtnSecondaryPressedBrColor: $bluePressed; //#00275C;
+$uikitBtnSecondaryPressedTxtColor: $backgroundColor; //#FFFFFF;
+
+.button_type_secondary {
+  @include button_type_basic;
+  @include btn-basic($uikitBtnSecondaryDefaultBgColor, $uikitBtnSecondaryDefaultTxtColor,
+    1px, $uikitBtnSecondaryDefaultBrColor);
+  &:hover {
+    @include btn-basic($uikitBtnSecondaryHoverBgColor, $uikitBtnSecondaryHoverTxtColor,
+      1px, $uikitBtnSecondaryHoverBrColor);
+  }
+  &.button_disabled {
+    @include button_disabled;
+  }
+  &.button_pressed {
+    @include btn-basic($uikitBtnSecondaryPressedBgColor, $uikitBtnSecondaryPressedTxtColor,
+      0px, $uikitBtnSecondaryPressedBrColor);
+  }
+}
