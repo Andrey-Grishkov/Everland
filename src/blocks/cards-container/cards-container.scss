@@ -21,7 +21,7 @@
       max-width: none;
     }
   }
-  
+
   &_type_directions {
     grid-template-columns: repeat(3, 1fr);
     margin: $marginTitleContent 0 0;
@@ -35,6 +35,20 @@
       margin-top: $marginTitleContentMobile;
       grid-template-columns: repeat(1, 1fr);
       padding: 0 $paddingSectionHorizontalMobile;
+    }
+  }
+
+  &_type_presentation {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1078px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      row-gap: 30px;
     }
   }
 }
