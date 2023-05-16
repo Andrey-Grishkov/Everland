@@ -7,13 +7,13 @@ console.log('Hello, World!');
 sliderInfiniteArrowLeft.addEventListener('click', () =>{
   moveLeft();
   /* sliderCardsInfinite.forEach((item) => {
-    item.style.order--;
+    item.style.order++;
   }); */
 });
 sliderInfiniteArrowRight.addEventListener('click', () => {
   moveRight();
   /* sliderCardsInfinite.forEach((item) => {
-    item.style.order++;
+    item.style.order--;
   }); */
 });
 
