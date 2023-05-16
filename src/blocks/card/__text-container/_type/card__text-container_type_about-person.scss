@@ -1,0 +1,8 @@
+.card__text-container_type_about-person {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+  gap: 20px;
+  @media screen and (max-width: 1439px) {
+    gap: 0;
+  }
+}

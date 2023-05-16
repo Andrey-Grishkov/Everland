@@ -38,6 +38,7 @@ $marginTitleContentMobile: 24px;
 $paddingInCardMobile: 24px;
 $paddingSectionHorizontalMobile: 10px;
 $paddingSectionVerticalMobile: 32px;
+$borderRadiusMobile: 20px;
 
 
 
@@ -60,7 +61,7 @@ $grey: #262626;
 $backgroundColor: #FFFFFF;
 
 // Основной текст шрифта
-$fontColor: #000000;
+$fontColor: #333333;
 
 // Цвет для фона блоков
 $lightGrey: #F5F5F5;
@@ -108,8 +109,6 @@ $purplePressed: #4935B5;
 @mixin raleway {
   font-family: $fontFamily;
   line-height: 120%;
-  margin: 0;
-  padding: 0;
 }
 
 %zeroSpaces {
@@ -257,6 +256,7 @@ $purplePressed: #4935B5;
 %buttonTextStyle {
   font-family: $fontFamily;
   line-height: 120%;
+
   font: {
     weight: $medium;
     size: 20px;
