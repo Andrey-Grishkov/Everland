@@ -1,0 +1,451 @@
+.donations {
+  &__form {
+    box-sizing: border-box;
+    max-width: 651px;
+    border-radius: $borderRadius;
+    @include flex(column, flex-start, center);
+    background-color: $backgroundColor;
+    padding: $paddingInCard 23px $paddingInCard 17px;
+
+    @media screen and (max-width: 1439px) {
+      padding: $paddingInCard;
+      max-width: 688px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: calc($paddingInCardMobile + 8px) 20px;
+      border-radius: $borderRadiusMobile;
+    }
+  }
+
+  &__explanation {
+    box-sizing: border-box;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 647px;
+    height: 62px;
+    padding: 18px 15.5px;
+    background-color: $backgroundColor;
+    border-radius: 4px 4px 4px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .1s, opacity .1s ease-out;
+
+    @media screen and (max-width: 1289px) {
+      top: -94px;
+      left: 0;
+      height: 56px;
+      max-width: 647px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 582px) {
+      top: -108px;
+      height: 70px;
+    }
+
+    &-text {
+      @extend %zeroSpaces;
+      @extend %mainTextStyle;
+    }
+
+    &-button:hover {
+      opacity: .8;
+    }
+  }
+
+  &:has(.donations__explanation-button:hover) .donations__explanation {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__number {
+    @include flex(row, space-between, flex-start);
+    column-gap: 20px;
+    position: relative;
+    @extend %fieldsetSizes;
+    border: none;
+    margin: 0 0 23px;
+    padding: 0;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 32px;
+      column-gap: 16px;
+    }
+  }
+
+  &__sum {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 48px) 1fr;
+    gap: 12px 5px;
+    @extend %fieldsetSizes;
+    border: none;
+    border-top: 1px solid $borderColor;
+    margin: 0 0 24px;
+    padding: 0;
+
+    .donations__input {
+      grid-column: 2 / span 3;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .2s, opacity .2s ease-out;
+      max-width: none;
+
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 120px;
+        border: 1px solid $blue;
+      }
+
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      -moz-appearance: textfield;
+    }
+
+    &:has(.donations__button:nth-of-type(5):checked) .donations__input {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 14px;
+      gap: 16px;
+      grid-template-rows: repeat(2, 44px) 1fr;
+    }
+  
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 44px) 1fr;
+
+      .donations__button-label {
+        &:nth-last-of-type(n) {
+          grid-column: 1;
+        }
+        
+        &:nth-of-type(2n) {
+          grid-column: 2;
+        }
+
+        &:nth-of-type(5) {
+          grid-column: span 2;
+        }
+      }
+
+      .donations__input {
+        grid-column: 1 / span 2;
+      }
+
+      .donations__text {
+        grid-column: span 2;
+        grid-row: 4;
+      }
+    }
+
+    .donations__form-title {
+      margin: 0 auto 16px;
+
+      @media screen and (max-width: 1439px) {
+        margin-bottom: 24px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__payment {
+    @include flex(row, flex-start, center);
+    column-gap: 8px;
+    @extend %fieldsetSizes;
+    border: none;
+    border-top: 1px solid $borderColor;
+    margin: 0 0 41px;
+    padding: 0 0 0 29px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 48px;
+      column-gap: 16px;
+      padding: 0;
+    }
+  
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 6px;
+    }
+
+    .donations__form-title {
+      margin: 0 auto 16px;
+      
+      @media screen and (max-width: 1439px) {
+        margin-bottom: 24px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .donations__button-label:nth-of-type(1) {
+      padding: 11px 0;
+
+      @media screen and (max-width: 767px) {
+        padding: 9px 0;
+      }
+    }
+
+    .donations__button-label:nth-of-type(2) {
+      margin: 0 10px;
+      padding: 17px 0;
+
+      @media screen and (max-width: 1439px) {
+        margin: 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin: 10px 0;
+        padding: 15px 0;
+      }
+    }
+
+    .donations__button-label:nth-of-type(3) {
+      padding: 16px 0;
+
+      @media screen and (max-width: 767px) {
+        padding: 14px 0;
+      }
+    }
+
+    .donations__button-label{
+      @media screen and (max-width: 1439px) {
+        max-height: 48px;
+      }
+
+      @media screen and (max-width: 767px) {
+        max-height: 44px;
+      }
+    }
+  }
+
+  &__data {
+    @include flex(column, flex-start, flex-start);
+    row-gap: 20px;
+    @extend %fieldsetSizes;
+    border: none;
+    border-top: 1px solid $borderColor;
+    padding: 0;
+    margin: 0 0 24px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 24px;
+      row-gap: 16px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+
+    .donations__form-title {
+      margin: 0 auto 28px;
+
+      @media screen and (max-width: 1439px) {
+        margin-bottom: 24px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__form-title {
+    @include raleway;
+    font: {
+      weight: $bold;
+      size: 24px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 20px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + &-label {
+      border-color: $blue;
+    }
+
+    &-label {
+      box-sizing: border-box;
+      max-height: 48px;
+      @extend %buttonTextStyle;
+      display: inline-flex;
+      column-gap: $marginTextIconButton;
+      cursor: pointer;
+      padding: 12px 0;
+      justify-content: center;
+      align-items: center;  
+      border: 1px solid #DADADA;
+      border-radius: 10px;
+      width: 100%;
+
+      &:hover {
+        border-color: $bluePressed;
+      }
+
+      @media screen and (max-width: 1439px) {
+        max-height: 44px;
+        padding: 12.5px 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding: 13.5px 0;
+      }
+    }
+  }
+
+  &__text {
+    @extend %smallTextStyle;
+    @extend %zeroSpaces;
+    margin-top: 4px;
+    grid-column: 1 / span 4;
+    grid-row: 3;
+
+    @media screen and (max-width: 1439px) {
+      margin-top: 3px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+
+  &__next {
+    border: none;
+    @extend %zeroSpaces;
+    min-width: 20px;
+    height: 20px;
+    background: transparent url("../icons/next-payment.svg") center no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    @media screen and (max-width: 767px) {
+      transform: rotate(90deg)
+    }
+  }
+
+  &__input {
+    font-family: $fontFamily;
+    line-height: 130%;
+    font: {
+      weight: $regular;
+      size: 20px;
+    }
+
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    padding: 11px 20px;
+    max-width: 455px;
+    width: 100%;
+    max-height: 48px;
+    display: block;
+
+    @media screen and (max-width: 1439px) {
+      font-size: 14px;
+      line-height: 120%;
+      padding: 13.5px 20px;
+      max-height: 44px;
+    }
+
+    &:focus {
+      outline: 1px solid $fontColor;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__agree {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &-checkbox {
+      @include flex(row, flex-start, center);
+      column-gap: 8px;
+      
+      &:nth-of-type(2) {
+        margin-top: -2px;
+
+        @media screen and (max-width: 767px) {
+          margin-top: -4px;
+        }
+      }
+    }
+
+    &:checked + &-label {
+      background: $borderColor url("../icons/check.svg") center no-repeat;
+    }
+
+    &-label {
+      box-sizing: border-box;
+      display: inline-block;
+      min-width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border: 1px $borderColor solid;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $borderColor;
+      }
+    }
+
+    &-text {
+      @extend %zeroSpaces;
+      font-family: $fontFamily;
+      line-height: 130%;
+      font: {
+        weight: $regular;
+        size: 20px;
+      }
+
+      @media screen and (max-width: 1439px) {
+        font: {
+          weight: $medium;
+          size: 12px;
+        }
+        line-height: 120%;
+      }
+
+      &_color_blue {
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+  }
+}

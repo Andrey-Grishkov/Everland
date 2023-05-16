@@ -182,13 +182,11 @@
       <h2 class="donations__title">Поддержите нас</h2>
       <form class="donations__form">
         <fieldset class="donations__number">
-          <!-- В js нужно будет добавлять класс donations__explonation_opened при нажатой кнопке вопроса -->
-          <div class="donations__explonation">
-            <p class="donations__explonation-text">Вы всегда можете отписаться от ежемесячного пожертвования</p>
+          <div class="donations__explanation">
+            <p class="donations__explanation-text">Вы всегда можете отписаться от ежемесячного пожертвования</p>
           </div>
           <input class="donations__button" type="radio" id="monthly" name="number" required>
-          <!-- В js нужно будет менять кнопку с вопросом в разных состояниях -->
-          <label for="monthly" class="donations__button-label">Ежемесячно<img src="./images/question.svg" alt="?"></label>
+          <label for="monthly" class="donations__button-label">Ежемесячно<img class="donations__explanation-button" src="./images/question.svg" alt="?"></label>
           <input class="donations__button" type="radio" id="one-time" name="number">
           <label for="one-time" class="donations__button-label">Разово</label>
         </fieldset>
@@ -204,8 +202,7 @@
           <label for="rub-1000" class="donations__button-label">1000&#8381;</label>
           <input class="donations__button" type="radio" id="other" name="sum">
           <label for="other" class="donations__button-label">Другая сумма</label>
-          <!-- В js нужно будет добавлять класс donations__input_opened при нажатой кнопке "Другая сумма" -->
-          <input class="donations__input donations__input_opened" type="number" name="sum" value="" placeholder="Введите сумму">
+          <input class="donations__input" type="number" name="sum" value="" placeholder="Введите сумму">
           <p class="donations__text">
             Регулярные пожертвования очень важны для Everland. Это&nbsp;то, что помогает нашим программам работать бесперебойно, что
             открывает новые востребованные проекты, что максимально эффективно решает социальную задачу. Если вы&nbsp;захотите поддерживать
@@ -231,12 +228,12 @@
           <div class="donations__agree-checkbox">
             <input class="donations__agree" type="checkbox" id="offer" name="agree" required>
             <label for="offer" class="donations__agree-label"></label>
-            <p class="donations__agree-text">Соглашаюсь с <span class="donations__agree-text_color_blue">офертой</span></p>
+            <p class="donations__agree-text">Соглашаюсь с <a class="donations__agree-text_color_blue" href="#">офертой</a></p>
           </div>
           <div class="donations__agree-checkbox">
             <input class="donations__agree" type="checkbox" id="personal-data" name="agree" required>
             <label for="personal-data" class="donations__agree-label"></label>
-            <p class="donations__agree-text">Соглашаюсь на <span class="donations__agree-text_color_blue">обработку моих персональных данных</span></p>
+            <p class="donations__agree-text">Соглашаюсь на <a class="donations__agree-text_color_blue" href="#">обработку моих персональных данных</a></p>
           </div>
         </fieldset>
         <button class="button button_type_basic button_color_blue" type="submit">Поддержать</button>

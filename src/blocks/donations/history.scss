@@ -1,0 +1,124 @@
+.donations {
+  &__history {
+    position: relative;
+    padding-top: 38px;
+    @include flex(column, flex-start, center);
+    row-gap: 74px;
+    grid-column: 3;
+
+    @media screen and (max-width: 1439px) {
+      padding-top: 26px;
+      row-gap: 32px;
+    }
+
+    @media screen and (max-width: 1289px) {
+      max-width: 531px;
+      grid-column: 1;
+      padding-top: 26px;
+      row-gap: 32px;
+      max-height: 552px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 767px) {
+      row-gap: 36px;
+      max-height: 361px;
+      padding-top: 8px;
+    }
+  }
+
+  &__gradient-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #E7F0FF -10%, transparent 70%);
+  }
+
+  &__subtitle {
+    text-align: center;
+    @extend %zeroSpaces;
+    @include raleway;
+    font: {
+      weight: $bold;
+      size: 34px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      min-height: 66px;
+    }
+  }
+
+  &__list {
+    @extend %zeroSpaces;
+    list-style: none;
+    @include flex(column, flex-start, flex-start);
+    row-gap: 28px;
+
+    @media screen and (max-width: 1439px) {
+      row-gap: 26px;
+    }
+
+    @media screen and (max-width: 767px) {
+      row-gap: 16px;
+    }
+  }
+
+  &__donate {
+    display: flex;
+    line-height: 130%;
+    font: {
+      family: $fontFamily;
+      weight: $regular;
+      size: 20px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+      line-height: 120%;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+    
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+
+    &-name {
+      @extend %zeroSpaces;
+    }
+
+    &-dots {
+      display: inline-block;
+      width: 152px;
+      border-bottom: 1px $fontColor dotted;
+      margin-left: $marginTextIconButton;
+
+      @media screen and (max-width: 1439px) {
+        width: 164px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 141px;
+      }
+    }
+
+    &-sum {
+      @extend %zeroSpaces;
+      margin-left: $marginTextIconButton;
+    }
+
+    &-time {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
