@@ -4,6 +4,7 @@
   padding: 50px 0;
   width: 100%;
   gap: 80px;
+  box-sizing: border-box;
   @include flex(row, space-between, center);
   @media screen and (max-width: 1439px) {
     padding: 32px 0 0;
@@ -31,6 +32,7 @@
     }
     @media screen and (max-width: 767px) {
       margin: 0 0 24px;
+      flex-direction: column;
     }
   }
 }
