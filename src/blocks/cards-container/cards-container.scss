@@ -37,4 +37,10 @@
       padding: 0 $paddingSectionHorizontalMobile;
     }
   }
+
+  &_type_histories {
+    grid-area: cardsContainerHistories;
+    @include flex(column, center, center);
+    gap: 0;
+  }
 }
