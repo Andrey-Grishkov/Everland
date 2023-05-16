@@ -1,6 +1,6 @@
 .news {
   @extend %limitedWidthSection;
-  padding: $paddingSectionVertical $paddingSectionHorizontal 0;
+  padding: $paddingSectionVertical $paddingSectionHorizontal;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 1439px) {
   .news {
-    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal 56px;
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
 
     &__link-container {
       grid-column: 3 / span 2;
