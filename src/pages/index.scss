@@ -31,9 +31,19 @@
 // Импорт секций
 @import "../blocks/works/works.scss";
 @import "../blocks/directions/directions.scss";
+@import "../blocks/advantage/advantage.scss";
 @import "../blocks/digits/digits.scss";
-@import "../blocks/footer/footer.scss";
 
+
+// Контейнер аккордеона
+@import "../blocks/accordion-container/accordion-container.scss";
+
+// Аккордеон
+@import "../blocks/accordion/accordion.scss";
+@import "../blocks/accordion/_state/accordion_state_close.scss";
+@import "../blocks/accordion/_state/accordion_state_open.scss";
+
+@import "../blocks/footer/footer.scss";
 
 //---------- Buttons -------------
 @import "../blocks/button/button";
@@ -51,3 +61,4 @@
 @import "../blocks/button/_color/button_color_orange";
 @import "../blocks/button/_color/button_color_purple";
 //--------------------------------
+
