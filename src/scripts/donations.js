@@ -81,7 +81,7 @@ function sendDonate() {
   const donate = createDonate();
 
   if(donate.number !== 'Ежемесячно') {
-    console.log(`Пользователь ${donate.name} пожертвовал ${donate.sum}.`);   
+    console.log(`Пользователь ${donate.name} пожертвовал ${donate.sum}.`);
     console.log(`Оплата была произведена с помощью: ${donate.payment}.`);
   } else {
     console.log(`Пользователь ${donate.name} подписался на ежемесячную оплату в размере ${donate.sum}.`);
