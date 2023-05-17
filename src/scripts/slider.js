@@ -1,3 +1,5 @@
+import {sliderCounter} from "./constants.js";
+
 function disableOneButton(leftArrow, rightArrow, count) {
   if (count === 0) {
     leftArrow.disabled = true;
@@ -16,6 +18,10 @@ function disableOneButton(leftArrow, rightArrow, count) {
 function disableButton(leftArrow, rightArrow, boolean) {
   leftArrow.disabled = boolean;
   rightArrow.disabled = boolean;
+}
+
+function countSlides(count) {
+  sliderCounter.textContent = `${count+1}/6`;
 }
 
 // Функция описывает сдвиг контейнера по процентам.
@@ -41,4 +47,4 @@ function moveRight(element, persent, count, leftArrow, rightArrow) {
   }, 500);
 }
 
-export {moveLeft, moveRight};
+export {moveLeft, moveRight, countSlides};

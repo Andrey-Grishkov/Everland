@@ -43,6 +43,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "core-js": "^3.30.2"
+    "core-js": "^3.30.2",
+    "html-replace-webpack-plugin": "^2.6.0"
   }
 }
