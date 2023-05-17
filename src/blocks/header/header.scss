@@ -8,14 +8,12 @@
   &__menu {
     @include flex(row, flex-end, center);
     @extend %zeroSpaces;
-    border: none;
-    background-color: $backgroundColor;
     flex-basis: 215px;
     gap: 12px;
 
     &:hover {
       cursor: pointer;
-      opacity: 0.8;
+      opacity: $linkHoverOpacity;
     }
   }
 
@@ -43,6 +41,7 @@
   }
 
   &__button {
+    @extend %buttonLinkStyle;
     height: 48px;
     width: 180px;
   }

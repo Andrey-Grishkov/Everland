@@ -7,6 +7,10 @@
   background-color: $blue;
   position: relative;
 
+  &:hover {
+    opacity: $linkHoverOpacity;
+  }
+
   &::before {
     position: absolute;
     top: -1px;

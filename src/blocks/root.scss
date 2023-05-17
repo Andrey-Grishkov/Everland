@@ -81,6 +81,8 @@ $orangePressed: #864A00;
 $greenPressed: #0E4900;
 $purplePressed: #4935B5;
 
+$linkHoverOpacity: 0.5;
+
 
 
 // Тут находятся все миксины
@@ -281,10 +283,17 @@ $purplePressed: #4935B5;
 
   &:hover {
     text-decoration: underline;
+    opacity: $linkHoverOpacity;
   }
 
   &:visited {
     text-decoration-color: $blue;
     color: $blue;
   }
+}
+
+%buttonLinkStyle {
+  display: block;
+  text-decoration: none;
+  text-align: center;
 }
