@@ -218,55 +218,53 @@
     <section class="histories">
       <h2 class="histories__title">Истории</h2>
       <button class="button button_type_secondary histories__button">Все истории</button>
-      <ul class="cards-container cards-container_type_histories">
-        <li class="card card_type_histories">
-          <img class="histories__image" src="<%=require('./images/histories/firstMax.png')%>" alt="Первый Максим">
-          <div class="histories__text-container">
-            <div class="histories__icon"></div>
-            <h3 class="histories__card-title-long">Мне интересно слушать интервью с людьми. Это мотивация и вдохновение, которых так не хватает</h3>
-            <p class="histories__card-subtitle-long">Максиму Гильфанову из Узбекистана 41 год. Диплом программиста и курсы по веб-дизайну не решили проблему с трудоустройством</p>
-            <button class="button button_type_link button_color_blue histories__card-button">История Максима</button>
+      <ul class="cards-container cards-container_type_histories cards-container_type_motivation">
+        <li class="card card_type_histories card_type_motivation">
+          <img class="card__image card__image_rounded card__image_type_motivation" src="<%=require('./images/histories/firstMax.png')%>" alt="Первый Максим">
+          <div class="card__text-container card__text-container_type_motivation">
+            <div class="card__icon card__icon_type_quote"></div>
+            <h3 class="card__title card__title_type_motivation">Мне интересно слушать интервью с людьми. Это мотивация и вдохновение, которых так не хватает</h3>
+            <p class="card__subtitle card__subtitle_type_motivation">Максиму Гильфанову из Узбекистана 41 год. Диплом программиста и курсы по веб-дизайну не решили проблему с трудоустройством</p>
+            <button class="button button_type_link button_color_blue card__button card__button_type_motivation">История Максима</button>
           </div>
         </li>
         <li class="card card_type_histories">
-          <img class="histories__image" src="<%=require('./images/histories/secondMax.png')%>" alt="Второй Максим">
-          <div class="histories__text-container">
-            <div class="histories__icon"></div>
-            <h3 class="histories__card-title-long">Платформа дала надежду: кто-то заинтересован в трудоустройстве инвалидов</h3>
-            <p class="histories__card-subtitle-long">Максиму Чернышову из Набережных Челнов 32 года. В детстве он неудачно сделал сальто и повредил позвоночник. С тех пор ему тяжело передвигаться на большие расстояния</p>
-            <button class="button button_type_link button_color_blue histories__card-button">История Максима</button>
+          <img class="card__image card__image_rounded card__image_type_motivation" src="<%=require('./images/histories/secondMax.png')%>" alt="Второй Максим">
+          <div class="card__text-container card__text-container_type_motivation">
+            <div class="card__icon card__icon_type_quote"></div>
+            <h3 class="card__title card__title_type_motivation">Платформа дала надежду: кто-то заинтересован в трудоустройстве инвалидов</h3>
+            <p class="card__subtitle card__subtitle_type_motivation">Максиму Чернышову из Набережных Челнов 32 года. В детстве он неудачно сделал сальто и повредил позвоночник. С тех пор ему тяжело передвигаться на большие расстояния</p>
+            <button class="button button_type_link button_color_blue card__button card__button_type_motivation">История Максима</button>
           </div>
         </li>
-        <li class="card card_type_histories">
-          <div class="card histories__short-stories">
-            <img class="histories__image histories__image-last" src="<%=require('./images/histories/Aysly.png')%>" alt="Айслу">
-            <div class="histories__text-article">
-              <p class="histories__card-subtitle-short">Айслу Асан</p>
-              <h3 class="histories__card-title-short">Когда хочется жить</h3>
-              <div class="histories__name-link">
-                <p class="histories__name">История Айслу</p>
-                <button class="histories__link-button"></button>
-              </div>
+      </ul>
+      <ul class="cards-container cards-container_type_about-person">
+        <li class="card card_type_about-person">
+          <img class="card__image card__image_rounded card__image_type_about-person" src="<%=require('./images/histories/Aysly.png')%>" alt="Айслу">
+          <div class="card__text-container card__text-container_type_about-person">
+            <p class="card__subtitle card__subtitle_type_about-person">Айслу Асан</p>
+            <h3 class="card__title card__title_type_about-person">Когда хочется жить</h3>
+            <div class="card__name-link">
+              <p class="card__name">История Айслу</p>
+              <button class="card__link-audio"></button>
             </div>
           </div>
-          <div class="card histories__short-stories">
-            <img class="histories__image histories__image-last" src="<%=require('./images/histories/Artem.png')%>" alt="Артём">
-            <div class="histories__text-article">
-              <p class="histories__card-subtitle-short">Артём Плаксин</p>
-              <h3 class="histories__card-title-short">Не видеть и смотреть в будущее</h3>
-              <div class="histories__name-link">
-                <p class="histories__name">История Артёма</p>
-                <button class="histories__link-button"></button>
-              </div>
+        </li>
+        <li class="card card_type_about-person">
+          <img class="card__image card__image_rounded card__image_type_about-person" src="<%=require('./images/histories/Artem.png')%>" alt="Артём">
+          <div class="card__text-container card__text-container_type_about-person">
+            <p class="card__subtitle card__subtitle_type_about-person">Артём Плаксин</p>
+            <h3 class="card__title card__title_type_about-person">Не видеть и смотреть в будущее</h3>
+            <div class="card__name-link">
+              <p class="card__name">История Артёма</p>
+              <button class="card__link-audio"></button>
             </div>
           </div>
         </li>
       </ul>
     </section>
     <section class="about-person">
-      <ul class="card-container">
-        <li class="card card_type_about-person"></li>
-      </ul>
+      
     </section>
     <section class="presentation">
       <ul class="card-container">

@@ -11,11 +11,13 @@
   list-style-type: none;
   grid-template-areas: 
   "title button"
-  "cardsContainerHistories cardsContainerHistories";
+  "cardsContainerHistories cardsContainerHistories"
+  "cardsContainerAboutPerson cardsContainerAboutPerson";
   @media screen and (max-width: 1439px) {
     grid-template-areas: 
     "title title"
     "cardsContainerHistories cardsContainerHistories"
+    "cardsContainerAboutPerson cardsContainerAboutPerson"
     "button button";
     padding: 100px 40px 50px;
   }
@@ -40,163 +42,6 @@
     }
     @media screen and (max-width: 767px) {
       width: 100%;
-    }
-  }
-  &__image {
-    border-radius: 50%;
-    width: 224px;
-    height: 224px;
-    @media screen and (max-width: 1439px) {
-      width: 204px;
-      height: 204px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 80px;
-      height: 80px;
-    }
-  }
-  &__image-last {
-    align-self: center;
-    @media screen and (max-width: 1439px) {
-      width: 120px;
-      height: 120px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 80px;
-      height: 80px;
-    }
-  }
-  &__text-container {
-    display: grid;
-    grid-template-areas: 
-    "quote titleLong"
-    ". subtitleLong"
-    ". cardButton";
-    gap: 20px;
-    @media screen and (max-width: 1439px) {
-      grid-template-areas: 
-      "quote quote"
-      "titleLong titleLong"
-      "subtitleLong subtitleLong"
-      "cardButton cardButton";
-      gap: 0;
-    }
-  }
-  &__icon {
-    background-image: url('../icons/Icon_quote.svg');
-    width: 60px;
-    height: 60px;
-    grid-area: quote;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 35px 27.5px;
-    @media screen and (max-width: 1439px) {
-      width: 28px;
-      height: 28px;
-      background-size: 28px 20px;
-      margin-bottom: 8px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 24px;
-      height: 24px;
-      background-size: 24px 17px;
-      margin-bottom: 10px;
-    }
-  }
-  &__card-title-long {
-    grid-area: titleLong;
-    margin: 0;
-    @extend %mainTitleH3;
-  }
-  &__card-subtitle-long {
-    grid-area: subtitleLong;
-    margin: 0;
-    @extend %mainTextStyle;
-    @media screen and (max-width: 1439px) {
-      margin-top: 20px;
-    }
-    @media screen and (max-width: 767px) {
-      margin-top: 16px;
-    }
-  }
-  &__card-button {
-    grid-area: cardButton;
-    margin: 0;
-    width: fit-content;
-    @media screen and (max-width: 1439px) {
-      margin-top: 20px;
-    }
-    @media screen and (max-width: 767px) {
-      margin-top: 16px;
-    }
-  }
-  &__short-stories {
-    @include flex(row, flex-start, center);
-    width: 100%;
-    box-sizing: border-box;
-    background-color: $lightPurple;
-    gap: 20px;
-    @media screen and (max-width: 1439px) {
-      gap: 16px;
-      padding: 20px;
-    }
-    @media screen and (max-width: 767px) {
-      padding: 16px;
-    }
-  }
-  &__text-article {
-    display: grid;
-    grid-template-rows: repeat(3, minmax(min-content, max-content));
-    gap: 20px;
-    @media screen and (max-width: 1439px) {
-      gap: 0;
-    }
-  }
-  &__name-link {
-    @include flex(row, flex-start, center);
-    gap: 10px;
-    @media screen and (max-width: 767px) {
-      margin-top: 8px;
-    }
-  }
-  &__card-subtitle-short {
-    @extend %bigTextStyle;
-    @extend %zeroSpaces;
-  }
-  &__card-title-short {
-    @extend %mainTitleH4;
-  }
-  &__name {
-    @extend %smallTextStyle;
-    @extend %zeroSpaces;
-  }
-  &__link-button {
-    border-radius: 50%;
-    background-color: #fff;
-    padding: 0;
-    border: 0;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    @media screen and (max-width: 1439px) {
-      width: 28px;
-      height: 28px;
-    }
-    &::after {
-      content: "";
-      display: block;
-      background-image: url(../icons/triangle.svg);
-      width: 8px;
-      height: 8px;
-      background-size: 8px 8px;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 0 auto;
-      @media screen and (max-width: 1439px) {
-        width: 5px;
-        height: 5px;
-        background-size: 5px 5px;
-      }
     }
   }
 }
