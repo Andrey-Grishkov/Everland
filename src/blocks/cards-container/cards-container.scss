@@ -61,25 +61,41 @@
     }
   }
 
-  &_type_histories {
-    grid-area: cardsContainerHistories;
-    @include flex(column, center, center);
-    gap: 0;
-  }
 
-  &_type_about-person {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-area: cardsContainerAboutPerson;
+  &_type_presentation {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1078px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @media screen and (max-width: 767px) {
       grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      row-gap: 30px;
     }
   }
+}
 
-  &_type_description {
-    grid-template-columns: repeat(6, 100%);
-    position: relative;
-    gap: unset;
+&_type_histories {
+  grid-area: cardsContainerHistories;
+  @include flex(column, center, center);
+  gap: 0;
+}
+
+&_type_about-person {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-area: cardsContainerAboutPerson;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+
+&_type_description {
+  grid-template-columns: repeat(6, 100%);
+  position: relative;
+  gap: unset;
+}
 }

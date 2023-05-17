@@ -17,7 +17,7 @@
   }
 
   &:checked + &-label {
-    background: $borderColor url("../icons/check.svg") center no-repeat;
+    background: $borderColor url("../icons/donations/check.svg") center no-repeat;
   }
 
   &-label {

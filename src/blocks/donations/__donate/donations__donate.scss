@@ -27,7 +27,7 @@
   &-dots {
     display: inline-block;
     width: 152px;
-    border-bottom: 1px $fontColor dotted;
+    border-bottom: 1px $darkGrey dotted;
     margin-left: $marginTextIconButton;
 
     @media screen and (max-width: 1439px) {

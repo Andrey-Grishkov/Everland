@@ -27,15 +27,15 @@
       height: 48px;
     }
     &_driver {
-      background-image: url("../icons/blue-driver.png");
+      background-image: url("../icons/card/blue-driver.svg");
       @extend %backgoundIcon;
     }
     &_suitcase {
-      background-image: url("../icons/orange-suitcase.png");
+      background-image: url("../icons/card/orange-suitcase.svg");
       @extend %backgoundIcon;
     }
     &_lover {
-      background-image: url("../icons/green-lover.png");
+      background-image: url("../icons/card/green-lover.svg");
       @extend %backgoundIcon;
     }
   }
