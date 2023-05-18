@@ -2,6 +2,7 @@
   box-sizing: border-box;
   display: grid;
   justify-content: center;
+  width: 100%;
   grid-template-columns: 691px minmax(30px, 117px) 488px minmax(0px, 64px);
   grid-template-rows: max-content 1fr; 
   row-gap: $marginTitleContent; 
