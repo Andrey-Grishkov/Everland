@@ -5,7 +5,7 @@
   @include flex(column, center, start);
   gap: 20px;
   flex-wrap: wrap;
-  max-height: 440px;
+  max-height: 460px;
   max-width: 1440px;
 
   @media screen and (max-width: 1439px) {
