@@ -55,8 +55,21 @@
 @import "../blocks/directions/directions.scss";
 @import "../blocks/advantage/advantage.scss";
 @import "../blocks/digits/digits.scss";
-@import "../blocks/histories/histories.scss";
 
+@import "../blocks/donations/donations.scss";
+@import "../blocks/donations/__form/form.scss";
+@import "../blocks/donations/__explanation/donations__explanation.scss";
+@import "../blocks/donations/__number/donations__number.scss";
+@import "../blocks/donations/__sum/donations__sum.scss";
+@import "../blocks/donations/__payment/donations__payment.scss";
+@import "../blocks/donations/__data/donations__data.scss";
+@import "../blocks/donations/__button/donations__button.scss";
+@import "../blocks/donations/__input/donations__input.scss";
+@import "../blocks/donations/__agree/donations__agree.scss";
+@import "../blocks/donations/__history/history.scss";
+@import "../blocks/donations/__donate/donations__donate.scss";
+
+@import "../blocks/histories/histories.scss";
 
 // Контейнер аккордеона
 @import "../blocks/accordion-container/accordion-container.scss";
@@ -84,4 +97,3 @@
 @import "../blocks/button/_color/button_color_orange";
 @import "../blocks/button/_color/button_color_purple";
 //--------------------------------
-

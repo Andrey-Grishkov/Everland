@@ -1,0 +1,30 @@
+.donations__data {
+  @include flex(column, flex-start, flex-start);
+  row-gap: 20px;
+  @extend %fieldsetSizes;
+  border: none;
+  border-top: 1px solid $borderColor;
+  padding: 0;
+  margin: 0 0 24px;
+
+  @media screen and (max-width: 1439px) {
+    margin-bottom: 24px;
+    row-gap: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+
+  .donations__form-title {
+    margin: 0 auto 28px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
+  }
+}
