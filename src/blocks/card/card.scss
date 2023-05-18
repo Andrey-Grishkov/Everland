@@ -3,12 +3,10 @@
 .card {
   padding: 30px;
   border-radius: 30px;
-  color: $darkGrey;
 
   &__item {
     &-topic {
       @extend %smallTextStyle;
-      color: $darkGrey;
     }
 
     &-info-container {
