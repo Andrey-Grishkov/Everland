@@ -3,9 +3,10 @@
 .projects {
   max-width: 1440px;
   box-sizing: border-box;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: $marginBlocks auto 0;
   padding: 0 $paddingSectionHorizontal;
   @media screen and (max-width: 1439px) {
@@ -38,6 +39,8 @@
   &__image {
     grid-area: projectImage;
     display: block;
+    object-fit: cover;
+    object-position: 100% 40%;
     border-radius: 30px;
     width: 555px;
     height: 393px;
@@ -47,6 +50,7 @@
       height: 284px;
       border-radius: 10px;
       object-fit: cover;
+      object-position: 50% 100%;
     }
     @media screen and (max-width: 767px) {
       width: 100%;
@@ -64,6 +68,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    box-sizing: border-box;
   }
   &__absolute {
     position: absolute;
@@ -77,24 +82,6 @@
       right: 24px;
       left: auto;
       bottom: auto;
-    }
-  }
-
-  &__arrow {
-    background-image: url("../icons/arrowForward.png");
-    background-color: $darkGrey;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 17px 17px;
-    width: 35px;
-    height: 35px;
-    &_back {
-      transform: scale(-1, 1);
-    }
-    @media screen and (max-width: 1439px) {
-      width: 24px;
-      height: 24px;
-      background-size: 10px 10px;
     }
   }
 }

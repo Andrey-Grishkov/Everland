@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   padding-top: $marginTitleContent;
   list-style-type: none;
 
@@ -46,16 +46,16 @@
     }
   }
 
-<<<<<<< HEAD
   &_type_projects {
     display: flex;
     flex-flow: row nowrap;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
     gap: 0;
   }
-}
-=======
+
   &_type_news {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / span 6;
@@ -88,4 +88,3 @@
   }
 }
 
->>>>>>> b243b1672f7814e2c8dedd91bedd134ac586d222

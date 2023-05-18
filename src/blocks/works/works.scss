@@ -3,6 +3,7 @@
 .works {
   @include flex(column, center, center);
   align-self: stretch;
+  box-sizing: border-box;
   background-color: $lightGrey;
   padding: $paddingSectionVertical 0;
 
