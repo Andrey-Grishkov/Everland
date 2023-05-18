@@ -1,0 +1,7 @@
+.accordion_state_close {
+  >.accordion__text {
+    visibility: hidden;
+    transform: scaleY(0);
+    padding-top: 0;
+  }
+}

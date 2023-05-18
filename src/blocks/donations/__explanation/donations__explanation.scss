@@ -1,0 +1,41 @@
+.donations__explanation {
+  box-sizing: border-box;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 647px;
+  height: 62px;
+  padding: 18px 15.5px;
+  background-color: $backgroundColor;
+  border-radius: 4px 4px 4px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .1s, opacity .1s ease-out;
+
+  @media screen and (max-width: 1289px) {
+    top: -94px;
+    left: 0;
+    height: 56px;
+    max-width: 647px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 582px) {
+    top: -108px;
+    height: 70px;
+  }
+
+  &-text {
+    @extend %zeroSpaces;
+    @extend %mainTextStyle;
+  }
+
+  &-button:hover {
+    opacity: .8;
+  }
+}
+
+.donations:has(.donations__explanation-button:hover) .donations__explanation {
+  visibility: visible;
+  opacity: 1;
+}

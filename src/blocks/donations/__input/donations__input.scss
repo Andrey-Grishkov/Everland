@@ -1,0 +1,33 @@
+.donations__input {
+  font-family: $fontFamily;
+  line-height: 130%;
+  font: {
+    weight: $regular;
+    size: 20px;
+  }
+
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+  padding: 11px 20px;
+  max-width: 455px;
+  width: 100%;
+  max-height: 48px;
+  display: block;
+
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+    line-height: 120%;
+    padding: 13.5px 20px;
+    max-height: 44px;
+  }
+
+  &:focus {
+    outline: 1px solid $fontColor;
+  }
+
+  &:nth-of-type(2) {
+    margin-bottom: 8px;
+  }
+}

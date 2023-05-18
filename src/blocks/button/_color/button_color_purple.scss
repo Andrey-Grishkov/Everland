@@ -1,0 +1,26 @@
+@import "../_type/button_type_link";
+
+// purple
+$uikitBtnLinkPurpleDefaultBgColor: $lightPurple; //#EAE6FF;
+$uikitBtnLinkPurpleDefaultTxtColor: rgb(139, 117, 255);;
+
+$uikitBtnLinkPurpleHoverBgColor: $purple; //#8B75FF;
+$uikitBtnLinkPurpleHoverTxtColor: rgb(255, 255, 255);
+
+$uikitBtnLinkPurplePressedBgColor: $purplePressed; //#4935B5;
+$uikitBtnLinkPurplePressedTxtColor: rgb(255, 255, 255);
+
+
+
+.button_color_purple {
+  @include btn_link($uikitBtnLinkPurpleDefaultBgColor, $uikitBtnLinkPurpleDefaultTxtColor);
+  &:hover {
+    @include btn_link($uikitBtnLinkPurpleHoverBgColor, $uikitBtnLinkPurplePressedTxtColor);
+  }
+  &.button_disabled {
+    @include link_disabled;
+  }
+  &.button_pressed {
+    @include btn_link($uikitBtnLinkPurplePressedBgColor, $uikitBtnLinkPurplePressedTxtColor);
+  }
+}

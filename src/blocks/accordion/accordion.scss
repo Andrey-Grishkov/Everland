@@ -1,0 +1,46 @@
+.accordion {
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  max-width: 670px;
+  box-sizing: border-box;
+  padding: 28px 18px;
+  border: 2px solid $borderColor;
+  border-radius: $borderRadius;
+  align-self: self-start;
+  overflow: hidden;
+  transition: padding .5s;
+
+  @media screen and (max-width: 1439px) {
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 18px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 17px 19px 17px 15px;
+    border: 1px solid $borderColor;
+    border-radius: 15px;
+  }
+
+  &__title {
+    @extend %zeroSpaces;
+    @extend %mainTitleH3;
+    @media screen and (max-width: 767px) {
+      max-width: 200px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    @extend %mainTextStyle;
+    transition: transform .5s, visibility .5s, max-height .5s, padding-top .5s;
+    overflow: hidden;
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  &_ordered {
+    @media screen and (min-width: 1440px) {
+      order:1;
+    }
+  }
+}

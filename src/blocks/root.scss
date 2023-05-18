@@ -38,6 +38,7 @@ $marginTitleContentMobile: 24px;
 $paddingInCardMobile: 24px;
 $paddingSectionHorizontalMobile: 10px;
 $paddingSectionVerticalMobile: 32px;
+$borderRadiusMobile: 20px;
 
 
 
@@ -54,12 +55,13 @@ $orange: #E98509;
 $green: #319B17;
 $purple: #8B75FF;
 $darkGrey: #333333;
+$grey: #262626;
 
 // Основной цвет бекграунда
 $backgroundColor: #FFFFFF;
 
 // Основной текст шрифта
-$fontColor: #000000;
+$fontColor: #333333;
 
 // Цвет для фона блоков
 $lightGrey: #F5F5F5;
@@ -71,6 +73,7 @@ $borderColor: #DADADA;
 // Цвет кнопок в состоянии hover и disabled
 $buttonHoverColor: #4183DC;
 $buttonDisabledColor: #CACACA;
+$buttonDisabledHardColor: #C4C4C4;
 
 // Цвет кнопок в состоянии pressed
 $bluePressed: #00275C;
@@ -106,6 +109,8 @@ $purplePressed: #4935B5;
 @mixin raleway {
   font-family: $fontFamily;
   line-height: 120%;
+  margin: 0;
+  padding: 0;
 }
 
 %zeroSpaces {
@@ -124,6 +129,7 @@ $purplePressed: #4935B5;
 // Тут стили всех шрифтов
 %mainTitleH1 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 72px;
@@ -140,6 +146,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH2 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 64px;
@@ -156,6 +163,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH3 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 36px;
@@ -172,6 +180,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH4 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 34px;
@@ -188,6 +197,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH5 {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 24px;
@@ -196,6 +206,7 @@ $purplePressed: #4935B5;
 
 %bigTextStyle {
   @include raleway;
+
   font: {
     weight: $bold;
     size: 20px;
@@ -212,6 +223,7 @@ $purplePressed: #4935B5;
 
 %mainTextStyle {
   @include raleway;
+
   font: {
     weight: $regular;
     size: 20px;
@@ -228,6 +240,7 @@ $purplePressed: #4935B5;
 
 %smallTextStyle {
   @include raleway;
+
   font: {
     weight: $medium;
     size: 18px;
@@ -243,7 +256,9 @@ $purplePressed: #4935B5;
 }
 
 %buttonTextStyle {
-  @include raleway;
+  font-family: $fontFamily;
+  line-height: 120%;
+
   font: {
     weight: $medium;
     size: 20px;
@@ -255,5 +270,19 @@ $purplePressed: #4935B5;
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
+  }
+}
+
+%textLinkStyle {
+  text-decoration-color: $backgroundColor;
+  color: $fontColor;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    text-decoration-color: $blue;
+    color: $blue;
   }
 }

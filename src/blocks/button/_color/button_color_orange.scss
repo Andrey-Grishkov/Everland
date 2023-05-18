@@ -1,0 +1,24 @@
+@import "../_type/button_type_link";
+
+// orange
+$uikitBtnLinkOrangeDefaultBgColor: $lightPink; //#FEEFEA;
+$uikitBtnLinkOrangeDefaultTxtColor: rgb(233, 133, 9);
+
+$uikitBtnLinkOrangeHoverBgColor: $orange; //#E98509;
+$uikitBtnLinkOrangeHoverTxtColor: rgb(255, 255, 255);
+
+$uikitBtnLinkOrangePressedBgColor: $orangePressed; //#864A00;
+$uikitBtnLinkOrangePressedTxtColor: rgb(255, 255, 255);
+
+.button_color_orange {
+  @include btn_link($uikitBtnLinkOrangeDefaultBgColor, $uikitBtnLinkOrangeDefaultTxtColor);
+  &:hover {
+    @include btn_link($uikitBtnLinkOrangeHoverBgColor, $uikitBtnLinkOrangePressedTxtColor);
+  }
+  &.button_disabled {
+    @include link_disabled;
+  }
+  &.button_pressed {
+    @include btn_link($uikitBtnLinkOrangePressedBgColor, $uikitBtnLinkOrangePressedTxtColor);
+  }
+}

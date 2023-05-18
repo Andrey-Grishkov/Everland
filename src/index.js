@@ -1,6 +1,8 @@
 import './pages/index.scss';
 import {sliderCardsInfinite, projectsContainer, contentContainer, sliderInfiniteArrowLeft, sliderInfiniteArrowRight} from './utils/constants.js';
 import {moveLeft, moveRight, getLastSlide, moveLastSlide, getFirstSlide} from './components/infiniteSlyder.js';
+import { initAccordions } from './scripts/accordion.js';
+initAccordions();
 
 console.log('Hello, World!');
 

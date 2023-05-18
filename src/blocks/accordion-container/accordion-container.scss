@@ -1,0 +1,21 @@
+.accordion-container {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  @include flex(column, center, start);
+  gap: 20px;
+  flex-wrap: wrap;
+  max-height: 440px;
+  max-width: 1440px;
+
+  @media screen and (max-width: 1439px) {
+    gap: 20px 0;
+    max-width: 1439px;
+    max-height: 640px;
+  }
+
+  @media screen and (max-width: 767px) {
+    gap: 16px 0;
+    max-width: 767px;
+  }
+}

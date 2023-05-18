@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -42,11 +43,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: "buttons.html",
+      template: './src/buttons.html'
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        {from: path.resolve(__dirname, 'src/icons/favicon.ico'), to: path.resolve(__dirname, 'dist/')}
+        {from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images')},
+        {from: path.resolve(__dirname, 'src/icons'), to: path.resolve(__dirname, 'dist/images')}
       ]
-    })
+    }),
+    new FaviconsWebpackPlugin('./src/icons/favicon.ico')
   ]
 }
+
