@@ -3,10 +3,61 @@
 .card {
   padding: 30px;
   border-radius: 30px;
-  @media screen and (max-width: 1439px) {
+  color: $darkGrey;
+
+  &__item {
+    &-topic {
+      @extend %smallTextStyle;
+      color: $darkGrey;
+    }
+
+    &-info-container {
+      flex: 1;
+    }
+
+    &-title {
+      @extend %mainTitleH4;
+      padding-bottom: 20px;
+    }
+
+    &-text {
+      @extend %mainTextStyle;
+    }
+
+    &-date {
+      @extend %smallTextStyle;
+      color: $grey;
+      opacity: 0.5;
+    }
+
+    &-image-container {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    &-image {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 380px;
+      object-fit: contain;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .card {
     border-radius: 20px;
   }
-  @media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 767px) {
+  .card {
     padding: 24px;
+
+    &__item-image {
+      border-radius: 20px;
+    }
   }
 }

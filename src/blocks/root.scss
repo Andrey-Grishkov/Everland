@@ -54,6 +54,8 @@ $blue: #0C4BA0;
 $orange: #E98509;
 $green: #319B17;
 $purple: #8B75FF;
+$darkGrey: #333333;
+$grey: #262626;
 
 // Основной цвет бекграунда
 $backgroundColor: #FFFFFF;
@@ -107,6 +109,8 @@ $purplePressed: #4935B5;
 @mixin raleway {
   font-family: $fontFamily;
   line-height: 120%;
+  margin: 0;
+  padding: 0;
 }
 
 %zeroSpaces {
@@ -254,6 +258,7 @@ $purplePressed: #4935B5;
 %buttonTextStyle {
   font-family: $fontFamily;
   line-height: 120%;
+
   font: {
     weight: $medium;
     size: 20px;
