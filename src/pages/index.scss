@@ -7,6 +7,8 @@
 @import "../blocks/content/content.scss";
 
 @import "../blocks/header/header.scss";
+@import "../blocks/logo/logo.scss";
+@import "../blocks/social-icon/social-icon.scss";
 @import "../blocks/menu/menu.scss";
 
 // Враперы для растяжения цвета секций на всю ширину
@@ -25,11 +27,35 @@
 @import "../blocks/card/card.scss";
 @import "../blocks/card/_type/card_type_works.scss";
 @import "../blocks/card/_type/card_type_direction.scss";
+@import "../blocks/card/_type/card_type_histories.scss";
+@import "../blocks/card/_type/card_type_motivation.scss";
+@import "../blocks/card/_type/card_type_about-person.scss";
+@import "../blocks/card/__title/card__title.scss";
+@import "../blocks/card/__title/_type/card__title_type_motivation.scss";
+@import "../blocks/card/__title/_type/card__title_type_about-person.scss";
+@import "../blocks/card/__subtitle/card__subtitle.scss";
+@import "../blocks/card/__subtitle/_type/card__subtitle_type_motivation.scss";
+@import "../blocks/card/__subtitle/_type/card__subtitle_type_about-person.scss";
+@import "../blocks/card/__text-container/card__text-container.scss";
+@import "../blocks/card/__text-container/_type/card__text-container_type_motivation.scss";
+@import "../blocks/card/__text-container/_type/card__text-container_type_about-person.scss";
+@import "../blocks/card/__name/card__name.scss";
+@import "../blocks/card/__name-link/card__name-link.scss";
+@import "../blocks/card/__link-audio/card__link-audio.scss";
+@import "../blocks/card/__image/_rounded/card__image_rounded.scss";
+@import "../blocks/card/__image/_type/card__image_type_motivation.scss";
+@import "../blocks/card/__image/_type/card__image_type_about-person.scss";
+@import "../blocks/card/__icon/card__icon.scss";
+@import "../blocks/card/__icon/_type/card__icon_type_quote.scss";
+@import "../blocks/card/__button/card__button.scss";
+@import "../blocks/card/__button/_type/card__button_type_motivation.scss";
 
 // Импорт секций
 @import "../blocks/works/works.scss";
 @import "../blocks/directions/directions.scss";
+@import "../blocks/advantage/advantage.scss";
 @import "../blocks/digits/digits.scss";
+
 @import "../blocks/donations/donations.scss";
 @import "../blocks/donations/__form/form.scss";
 @import "../blocks/donations/__explanation/donations__explanation.scss";
@@ -42,3 +68,32 @@
 @import "../blocks/donations/__agree/donations__agree.scss";
 @import "../blocks/donations/__history/history.scss";
 @import "../blocks/donations/__donate/donations__donate.scss";
+
+@import "../blocks/histories/histories.scss";
+
+// Контейнер аккордеона
+@import "../blocks/accordion-container/accordion-container.scss";
+
+// Аккордеон
+@import "../blocks/accordion/accordion.scss";
+@import "../blocks/accordion/_state/accordion_state_close.scss";
+@import "../blocks/accordion/_state/accordion_state_open.scss";
+
+@import "../blocks/footer/footer.scss";
+
+//---------- Buttons -------------
+@import "../blocks/button/button";
+@import "../blocks/button/_type/button_type_basic";
+@import "../blocks/button/_type/button_type_primary";
+@import "../blocks/button/_type/button_type_secondary";
+@import "../blocks/button/_type/button_type_secondary-transparent";
+@import "../blocks/button/_type/button_type_link";
+@import "../blocks/button/_type/button_type_slider";
+@import "../blocks/button/_type/button_type_accordion";
+
+@import "../blocks/button/_color/button_color_white";
+@import "../blocks/button/_color/button_color_blue";
+@import "../blocks/button/_color/button_color_green";
+@import "../blocks/button/_color/button_color_orange";
+@import "../blocks/button/_color/button_color_purple";
+//--------------------------------

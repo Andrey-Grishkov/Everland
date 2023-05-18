@@ -1,0 +1,26 @@
+.advantage {
+  @extend %limitedWidthSection;
+  padding: $marginBlocks $paddingSectionHorizontal 0;
+
+  @media screen and (max-width: 1439px) {
+    padding: $marginBlocksTablet $paddingSectionHorizontal 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: $marginBlocksMobile $paddingSectionHorizontalMobile 0;
+  }
+
+  &__title {
+    @extend %mainTitleH2;
+    margin-top: 0;
+    margin-bottom: $marginTitleContent;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: $marginTitleContentTablet;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: $marginTitleContentMobile;
+    }
+  }
+}

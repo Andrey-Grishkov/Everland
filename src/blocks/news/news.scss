@@ -1,0 +1,25 @@
+.news {
+  @extend %limitedWidthSection;
+  padding: $paddingSectionVertical $paddingSectionHorizontal 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: blueviolet;
+
+  &__title {
+    @extend %mainTitleH2;
+  }
+
+  &__link {
+    display: block;
+    grid-column: 6 / end;
+    grid-row: 1 / span 1;
+  }
+
+  @media screen and (max-width: 1439px) {
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal 56px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+  }
+}

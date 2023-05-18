@@ -1,0 +1,7 @@
+.card__name-link {
+  @include flex(row, flex-start, center);
+  gap: 10px;
+  @media screen and (max-width: 767px) {
+    margin-top: 8px;
+  }
+}

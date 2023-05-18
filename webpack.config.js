@@ -43,6 +43,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: "buttons.html",
+      template: './src/buttons.html'
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [

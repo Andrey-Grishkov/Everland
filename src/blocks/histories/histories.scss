@@ -1,0 +1,47 @@
+@import "../cards-container/cards-container.scss";
+@import "../root.scss";
+
+.histories {
+  display: grid;
+  padding: 150px 40px 100px;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  list-style-type: none;
+  grid-template-areas: 
+  "title button"
+  "cardsContainerHistories cardsContainerHistories"
+  "cardsContainerAboutPerson cardsContainerAboutPerson";
+  @media screen and (max-width: 1439px) {
+    grid-template-areas: 
+    "title title"
+    "cardsContainerHistories cardsContainerHistories"
+    "cardsContainerAboutPerson cardsContainerAboutPerson"
+    "button button";
+    padding: 100px 40px 50px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 64px 10px 32px;
+  }
+  &__title {
+    grid-area: title;
+    @extend %mainTitleH2;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__button {
+    grid-area: button;
+    width: fit-content;
+    justify-self: end;
+    @media screen and (max-width: 1439px) {
+      justify-self: center;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

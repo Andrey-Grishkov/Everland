@@ -1,0 +1,12 @@
+.card__image_type_motivation {
+  width: 224px;
+  height: 224px;
+  @media screen and (max-width: 1439px) {
+    width: 204px;
+    height: 204px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+  }
+}
