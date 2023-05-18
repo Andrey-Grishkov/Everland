@@ -4,7 +4,7 @@
   flex-direction: column;
   row-gap: 20px;
 
-  @media screen and (max-width: 1078px) {
+  @media screen and (max-width: 1140px) {
     &:last-child {
       display: none;
     }
@@ -16,4 +16,8 @@
       display: inherit;
     }
   }
+}
+
+*{
+  outline: 1px solid greenyellow;
 }
