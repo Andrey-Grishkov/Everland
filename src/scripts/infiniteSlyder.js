@@ -1,51 +1,45 @@
 import {sliderContainer, sliderInfiniteArrowLeft, sliderInfiniteArrowRight} from "../scripts/constants.js";
 
-let persent = 0;
-let count = 0;
-
-function disableOneButton() {
+function disableOneButton(leftArrow, rightArrow, count) {
   if (count === 0) {
-    sliderInfiniteArrowLeft.disabled = true;
-    sliderInfiniteArrowLeft.classList.add('button_disabled');
+    leftArrow.disabled = true;
+    leftArrow.classList.add('button_disabled');
   } else {
-    sliderInfiniteArrowLeft.classList.remove('button_disabled');
+    leftArrow.classList.remove('button_disabled');
   }
-  if (count === 4) {
-    sliderInfiniteArrowRight.disabled = true;
-    sliderInfiniteArrowRight.classList.add('button_disabled');
+  if (count === 5) {
+    rightArrow.disabled = true;
+    rightArrow.classList.add('button_disabled');
   } else {
-    sliderInfiniteArrowRight.classList.remove('button_disabled');
+    rightArrow.classList.remove('button_disabled');
   }
 }
 
-function disableButton(boolean) {
-  sliderInfiniteArrowLeft.disabled = boolean;
-  sliderInfiniteArrowRight.disabled = boolean;
+function disableButton(leftArrow, rightArrow, boolean) {
+  leftArrow.disabled = boolean;
+  rightArrow.disabled = boolean;
 }
 
 // Функция описывает сдвиг контейнера по процентам.
-function moveSlides(ammount) {
-  persent = persent + ammount;
-  sliderContainer.style.translate = `${persent}%`;
+function moveSlides(element, persent) {
+  element.style.translate = `${persent}%`;
 }
 
-function moveLeft() {
-  count--;
-  moveSlides(20);
-  disableButton(true);
+function moveLeft(element, persent, count, leftArrow, rightArrow) {
+  moveSlides(element, persent);
+  disableButton(leftArrow, rightArrow, true);
   setTimeout(() => {
-    disableButton(false);
-    disableOneButton();
+    disableButton(leftArrow, rightArrow, false);
+    disableOneButton(leftArrow, rightArrow, count);
   }, 500);
 }
 
-function moveRight() {
-  count++
-  moveSlides(-20);
-  disableButton(true);
+function moveRight(element, persent, count, leftArrow, rightArrow) {
+  moveSlides(element, persent);
+  disableButton(leftArrow, rightArrow, true);
   setTimeout(() => {
-    disableButton(false);
-    disableOneButton();
+    disableButton(leftArrow, rightArrow, false);
+    disableOneButton(leftArrow, rightArrow, count);
   }, 500);
 }
 
