@@ -10,6 +10,7 @@
 @import "../blocks/logo/logo.scss";
 @import "../blocks/social-icon/social-icon.scss";
 @import "../blocks/menu/menu.scss";
+@import "../blocks/description/description.scss";
 
 // Враперы для растяжения цвета секций на всю ширину
 @import "../blocks/wrapper/wrapper.scss";
@@ -32,6 +33,7 @@
 @import "../blocks/card/_type/card_type_works.scss";
 @import "../blocks/card/_type/card_type_direction.scss";
 @import "../blocks/card/_type/card_type_presentation.scss";
+@import "../blocks/card/_type/card_type_description.scss";
 @import "../blocks/card/_type/card_type_news.scss";
 @import "../blocks/card/_type/card_type_histories.scss";
 @import "../blocks/card/_type/card_type_motivation.scss";

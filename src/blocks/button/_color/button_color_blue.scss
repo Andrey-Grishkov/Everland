@@ -12,12 +12,15 @@ $uikitBtnLinkBluePressedTxtColor: rgb(255, 255, 255);
 
 .button_color_blue {
   @include btn_link($uikitBtnLinkBlueDefaultBgColor, $uikitBtnLinkBlueDefaultTxtColor);
+
   &:hover {
     @include btn_link($uikitBtnLinkBlueHoverBgColor, $uikitBtnLinkBluePressedTxtColor);
   }
+
   &.button_disabled {
     @include link_disabled;
   }
+
   &.button_pressed {
     @include btn_link($uikitBtnLinkBluePressedBgColor, $uikitBtnLinkBluePressedTxtColor);
   }

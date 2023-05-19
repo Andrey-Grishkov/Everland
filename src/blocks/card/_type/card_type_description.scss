@@ -1,0 +1,9 @@
+.card_type_description {
+  @extend %zeroSpaces;
+  @include flex(row, center, flex-start);
+  gap: 20px;
+
+  @media screen and (max-width: 767px) {
+    @include flex(column, flex-start, center);
+  }
+}

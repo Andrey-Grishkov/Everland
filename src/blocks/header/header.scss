@@ -7,11 +7,16 @@
 
   &__menu {
     @include flex(row, flex-end, center);
-    margin: 0;
+    @extend %zeroSpaces;
     border: none;
     background-color: $backgroundColor;
     flex-basis: 215px;
     gap: 12px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
 
   &__menu-image {
@@ -38,18 +43,8 @@
   }
 
   &__button {
-    box-sizing: border-box;
-    border: 1px solid $darkGrey;
-    padding: 0;
-    display: block;
     height: 48px;
     width: 180px;
-    border-radius: 10px;
-    color: $fontColor;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
 
@@ -58,6 +53,7 @@
   .header {
     padding: 18px 40px 18px;
     gap: 24px;
+    box-shadow: 0 4px 30px rgba(#2A3038, 0.1);
 
     &__menu {
       order: 99;

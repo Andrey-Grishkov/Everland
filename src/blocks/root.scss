@@ -129,6 +129,7 @@ $purplePressed: #4935B5;
 // Тут стили всех шрифтов
 %mainTitleH1 {
   @include raleway;
+  letter-spacing: -0.02em;
 
   font: {
     weight: $bold;
@@ -137,10 +138,11 @@ $purplePressed: #4935B5;
 
   @media screen and (max-width: 1439px) {
     font-size: 38px;
+    letter-spacing: -0.03em;
   }
 
   @media screen and (max-width: 767px) {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 

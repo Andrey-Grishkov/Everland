@@ -1,0 +1,257 @@
+.description {
+  @extend %limitedWidthSection;
+  padding: 51px $paddingSectionHorizontal 54px;
+
+  &__image-box {
+    position: relative;
+    max-width: 520px;
+    height: 565px;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+
+    &_type_tr {
+      border-radius: 10px;
+      object-fit: contain;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 315px;
+      width: 352px;
+      z-index: 1;
+    }
+
+    &_type_bl {
+      border-radius: 10px;
+      object-fit: contain;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      height: 407px;
+      width: 392px;
+      z-index: 2;
+    }
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+  }
+
+  &__title {
+    @extend %mainTitleH1;
+  }
+
+  &__title-mark {
+    color: $blue;
+  }
+
+  &__text {
+    display: block;
+    max-width: 543px;
+    color: $darkGrey;
+    @extend %mainTextStyle;
+  }
+
+  &__slider-box {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    margin-bottom: 86px;
+    overflow: hidden;
+  }
+
+  &__slider-control-box {
+    @include flex(row, center, center);
+    gap: 10px;
+    width: fit-content;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  &__slider-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.donation__amount {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+
+  &:checked+.donation__pseudo-item {
+    border: 1px solid $blue;
+  }
+}
+
+.donation-checkbox {
+  @include flex(row, space-between, center);
+  padding: 54px 58px 54px 30px;
+  border-radius: 10px;
+  background-color: $lightBlue;
+
+  @media screen and (max-width: 1439px) {
+    padding: 32px 24px;
+  }
+
+  @media screen and (max-width: 767px) {
+    @include flex(column, center, center);
+    gap: 32px;
+  }
+}
+
+.donation__pseudo-item {
+  display: block;
+  box-sizing: border-box;
+  background-color: $backgroundColor;
+  @extend %buttonTextStyle;
+  cursor: pointer;
+  height: 48px;
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 10px;
+  width: 100%;
+
+  @media screen and (max-width: 1439px) {
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+    opacity: 0.8;
+  }
+
+  &_type_regular {
+    width: 159px;
+
+    @media screen and (max-width: 1439px) {
+      width: 75px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 122px;
+    }
+  }
+
+  &_type_other {
+    width: 211px;
+
+    @media screen and (max-width: 1439px) {
+      width: 135px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 260px;
+    }
+  }
+}
+
+.donation__selection-box {
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media screen and (max-width: 1439px) {
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    @include flex(row, center, center);
+    gap: 16px;
+  }
+}
+
+.donation__button {
+  float: right;
+  width: 179px;
+  height: 48px;
+
+  @media screen and (max-width: 1439px) {
+    width: 143px;
+    height: 44px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 260px;
+    float: unset;
+    margin: 0 auto;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1439px) {
+  .description {
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
+
+    &__image-box {
+      max-width: 244px;
+      height: 272px;
+    }
+
+    &__image {
+      &_type_tr {
+        height: 152px;
+        width: 184px;
+      }
+
+      &_type_bl {
+        height: 175px;
+        width: 170px;
+      }
+    }
+
+    &__slider-box {
+      margin-bottom: 50px;
+    }
+
+    &__slider-button {
+      width: 34px;
+      height: 24px;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .description {
+    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+
+    &__image-box {
+      max-width: 300px;
+      max-height: 200px;
+    }
+
+    &__image {
+      &_type_tr {
+        height: 144px;
+        width: 190px;
+      }
+
+      &_type_bl {
+        height: 160px;
+        width: 170px;
+      }
+    }
+
+    &__slider-control-box {
+      position: unset;
+      margin: 16px auto 0;
+    }
+
+    &__slider-box {
+      margin-bottom: 40px;
+    }
+  }
+}
