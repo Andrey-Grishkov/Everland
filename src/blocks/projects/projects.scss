@@ -16,54 +16,6 @@
     margin-top: $marginBlocksMobile;
     padding: 0 $paddingSectionHorizontalMobile;
   }
-  &__title {
-    @extend %mainTitleH2;
-    @extend %zeroSpaces;
-  }
-  &__text-container {
-    grid-area: textContainer;
-  }
-  &__presentation {
-    grid-area: textPresentation;
-    @extend %smallTextStyle;
-    @extend %zeroSpaces;
-  }
-  &__subtitle {
-    @extend %mainTextStyle;
-    margin: 20px 0 0;
-    max-width: 427px;
-    @media screen and (max-width: 1439px) {
-      margin-top: 10px;
-    }
-  }
-  &__image {
-    grid-area: projectImage;
-    display: block;
-    object-fit: cover;
-    object-position: 100% 40%;
-    border-radius: 30px;
-    width: 555px;
-    height: 393px;
-    align-self: center;
-    @media screen and (max-width: 1439px) {
-      width: 259px;
-      height: 284px;
-      border-radius: 10px;
-      object-fit: cover;
-      object-position: 50% 100%;
-    }
-    @media screen and (max-width: 767px) {
-      width: 100%;
-      height: auto;
-    }
-  }
-  &__observe {
-    grid-area: observe;
-    width: min-content;
-    position: relative;
-    z-index: 1;
-    align-self: flex-end;
-  }
   &__container {
     position: relative;
     overflow: hidden;
@@ -72,6 +24,7 @@
   }
   &__absolute {
     position: absolute;
+    z-index: 1;
     bottom: 30px;
     gap: 8px;
     left: 0;

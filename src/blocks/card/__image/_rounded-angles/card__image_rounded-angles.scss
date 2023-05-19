@@ -1,0 +1,6 @@
+.card__image_rounded-angles {
+  border-radius: 30px;
+  @media screen and (max-width: 1439px) {
+    border-radius: 10px;
+  }
+}

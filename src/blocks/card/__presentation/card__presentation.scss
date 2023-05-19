@@ -1,0 +1,5 @@
+.card__presentation {
+  grid-area: textPresentation;
+  @extend %smallTextStyle;
+  @extend %zeroSpaces;
+}

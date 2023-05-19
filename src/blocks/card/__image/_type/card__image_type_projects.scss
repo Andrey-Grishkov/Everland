@@ -1,0 +1,18 @@
+.card__image_type_projects {
+  grid-area: projectImage;
+  display: block;
+  object-fit: cover;
+  object-position: 100% 40%;
+  width: 555px;
+  height: 393px;
+  align-self: center;
+  @media screen and (max-width: 1439px) {
+    width: 259px;
+    height: 284px;
+    object-position: 50% 100%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: auto;
+  }
+}
