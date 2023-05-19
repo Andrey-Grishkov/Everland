@@ -1,0 +1,56 @@
+.presentation {
+  @include flex(column, start, center);
+  align-self: stretch;
+  padding: $paddingSectionVertical $paddingSectionHorizontal $paddingSectionVertical;
+  background-color: $lightGrey;
+
+  @media screen and (max-width: 1439px) {
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal $paddingSectionVertical;
+  }
+
+  @media screen and (max-width: 767px) {
+    align-items: center;
+    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
+  }
+
+  &__title {
+    @extend %mainTitleH2;
+    max-width: 853px;
+    text-align: left;
+
+    @media screen and (max-width: 1439px) {
+      max-width: 394px;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 425px) {
+      max-width: 300px;
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    @extend %mainTitleH3;
+    margin: 20px 0 $marginTitleContent;
+    max-width: 955px;
+
+    @media screen and (max-width: 1439px) {
+      margin: 16px 0 $marginTitleContentTablet;
+      max-width: 660px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 10px 0 $marginTitleContentMobile;
+      text-align: justify;
+      max-width: 300px;
+    }
+
+    @media screen and (max-width: 425px) {
+      text-align: left;
+    }
+  }
+}

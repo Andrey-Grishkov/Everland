@@ -275,7 +275,7 @@
       <ul class="cards-container cards-container_type_histories cards-container_type_motivation">
         <li class="card card_type_histories card_type_motivation">
           <img class="card__image card__image_rounded card__image_type_motivation"
-            src="<%=require('./images/histories/firstMax.png')%>" alt="Первый Максим">
+            src="./images/histories/firstMax.png" alt="Первый Максим">
           <div class="card__text-container card__text-container_type_motivation">
             <div class="card__icon card__icon_type_quote"></div>
             <h3 class="card__title card__title_type_motivation">Мне интересно слушать интервью с людьми. Это мотивация и
@@ -288,7 +288,7 @@
         </li>
         <li class="card card_type_histories">
           <img class="card__image card__image_rounded card__image_type_motivation"
-            src="<%=require('./images/histories/secondMax.png')%>" alt="Второй Максим">
+            src="./images/histories/secondMax.png" alt="Второй Максим">
           <div class="card__text-container card__text-container_type_motivation">
             <div class="card__icon card__icon_type_quote"></div>
             <h3 class="card__title card__title_type_motivation">Платформа дала надежду: кто-то заинтересован в
@@ -304,7 +304,7 @@
       <ul class="cards-container cards-container_type_about-person">
         <li class="card card_type_about-person">
           <img class="card__image card__image_rounded card__image_type_about-person"
-            src="<%=require('./images/histories/Aysly.png')%>" alt="Айслу">
+            src="./images/histories/Aysly.png" alt="Айслу">
           <div class="card__text-container card__text-container_type_about-person">
             <p class="card__subtitle card__subtitle_type_about-person">Айслу Асан</p>
             <h3 class="card__title card__title_type_about-person">Когда хочется жить</h3>
@@ -316,7 +316,7 @@
         </li>
         <li class="card card_type_about-person">
           <img class="card__image card__image_rounded card__image_type_about-person"
-            src="<%=require('./images/histories/Artem.png')%>" alt="Артём">
+            src="./images/histories/Artem.png" alt="Артём">
           <div class="card__text-container card__text-container_type_about-person">
             <p class="card__subtitle card__subtitle_type_about-person">Артём Плаксин</p>
             <h3 class="card__title card__title_type_about-person">Не видеть и смотреть в будущее</h3>
@@ -329,9 +329,29 @@
       </ul>
     </section>
     <section class="presentation">
-      <ul class="cards-container">
-        <li class="card card_type_presentation"></li>
-      </ul>
+      <div class="wrapper wrapper_type_grey">
+        <h2 class="presentation__title">Лучшие проекты нашего агентства</h2>
+        <p class="presentation__subtitle">Мы выполняем работы в области веб-разработки, дизайна,
+          права, видео, анимации и контента</p>
+        <ul class="cards-container cards-container_type_presentation">
+          <li class="card card_type_presentation">
+            <img class="card__image card__image_type_presentation"
+            src="<%=require('./images/presentation/scripts.png')%>" alt="Изображение макетов скриптов-рекомендаций">
+            <p class="card__subtitle card__subtitle_type_presentation">Скрипты-рекомендации
+              для бизнеса (DisQuestion)</p>
+          </li>
+          <li class="card card_type_presentation">
+            <img class="card__image card__image_type_presentation"
+            src="<%=require('./images/presentation/navigator.png')%>" alt="Интерфейс приложения Онконавигатор">
+            <p class="card__subtitle card__subtitle_type_presentation">Проект «Онконавигатор»</p>
+          </li>
+          <li class="card card_type_presentation">
+            <img class="card__image card__image_type_presentation"
+            src="<%=require('./images/presentation/project.png')%>" alt="Хайлайты проекта Миграции">
+            <p class="card__subtitle card__subtitle_type_presentation">Проект «Миграции: приоткрывая личное»</p>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="news">
       <h2 class="news__title">Новости</h2>
@@ -341,9 +361,9 @@
         <li class="card card_type_news card_color_white">
           <p class="card__item-topic">Тема</p>
           <picture class="card__item-image-container">
-            <source srcset="<%=require('./images/news/item-photo-1_2x.png')%>" media="(min-width: 1440px)" />
-            <source srcset="<%=require('./images/news/item-photo-1.png')%>" media="(max-width: 1439px)" />
-            <img class="card__item-image" src="<%=require('./images/news/item-photo-1.png')%>"
+            <source srcset="./images/news/item-photo-1_2x.png" media="(min-width: 1440px)" />
+            <source srcset="./images/news/item-photo-1.png" media="(max-width: 1439px)" />
+            <img class="card__item-image" src="./images/news/item-photo-1.png"
               alt="Новость, открытка, поздравление" />
           </picture>
           <div class="card__item-info-container">
@@ -374,9 +394,9 @@
               людей с разными видами инвалидности</p>
           </div>
           <picture class="card__item-image-container">
-            <source srcset="<%=require('./images/news/item-photo-2_2x.png')%>" media="(min-width: 1440px)" />
-            <source srcset="<%=require('./images/news/item-photo-2.png')%>" media="(max-width: 1439px)" />
-            <img class="card__item-image" src="<%=require('./images/news/item-photo-2.png')%>"
+            <source srcset="./images/news/item-photo-2_2x.png" media="(min-width: 1440px)" />
+            <source srcset="./images/news/item-photo-2.png" media="(max-width: 1439px)" />
+            <img class="card__item-image" src="./images/news/item-photo-2.png"
               alt="Супермаркет, продавцы, витрина" />
           </picture>
           <p class="card__item-date">20 сентября 2021</p>
@@ -392,7 +412,7 @@
           </div>
           <input class="donations__button" type="radio" id="monthly" name="number" required>
           <label for="monthly" class="donations__button-label">Ежемесячно<img class="donations__explanation-button"
-              src="./images/question.svg" alt="?"></label>
+              src="./images/donations/question.svg" alt="?"></label>
           <input class="donations__button" type="radio" id="one-time" name="number">
           <label for="one-time" class="donations__button-label">Разово</label>
         </fieldset>
@@ -420,12 +440,12 @@
         <fieldset class="donations__payment">
           <legend class="donations__form-title">Способ оплаты</legend>
           <input class="donations__button" type="radio" id="bank-card" name="payment" required>
-          <label for="bank-card" class="donations__button-label"><img src="./images/payment-systems.svg"
+          <label for="bank-card" class="donations__button-label"><img src="./images/donations/payment-systems.svg"
               alt="MIR, Maestro, Visa, MasterCard"></label>
           <input class="donations__button" type="radio" id="ymoney" name="payment">
-          <label for="ymoney" class="donations__button-label"><img src="./images/yoomoney.svg" alt="YooMoney"></label>
+          <label for="ymoney" class="donations__button-label"><img src="./images/donations/yoomoney.svg" alt="YooMoney"></label>
           <input class="donations__button" type="radio" id="wmoney" name="payment">
-          <label for="wmoney" class="donations__button-label"><img src="./images/webmoney.svg" alt="WebMoney"></label>
+          <label for="wmoney" class="donations__button-label"><img src="./images/donations/webmoney.svg" alt="WebMoney"></label>
           <button class="donations__next" type="button" aria-label="Другие способы оплаты"></button>
         </fieldset>
         <fieldset class="donations__data">
@@ -447,7 +467,7 @@
                 href="#">обработку моих персональных данных</a></p>
           </div>
         </fieldset>
-        <button class="button button_type_basic button_color_blue" type="submit">Поддержать</button>
+        <button class="button button_type_primary" type="submit">Поддержать</button>
       </form>
       <div class="donations__history">
         <div class="donations__gradient-opacity"></div>
@@ -512,9 +532,9 @@
         <h3 class="footer__section-title">При поддержке</h3>
         <nav class="footer__logo-container footer__logo-container_sponsor">
           <a href="#" target="_blank"><img class="footer__sponsor-logo"
-              src="<%=require('./images/footer/beeline.svg')%>" alt="Билайн"></a>
+              src="./images/footer/beeline.svg" alt="Билайн"></a>
           <a href="#" target="_blank"><img class="footer__sponsor-logo"
-              src="<%=require('./images/footer/grant_fund.svg')%>" alt="Фонд Президентских Грантов"></a>
+              src="./images/footer/grant_fund.svg" alt="Фонд Президентских Грантов"></a>
         </nav>
         <div class="footer__contacts">
           <p class="footer__contact footer__contact_phone">+7&nbsp(495)&nbsp646&nbsp04&nbsp28</p>
@@ -536,7 +556,7 @@
       </div>
     </div>
     <div class="footer__studio-container">
-      <a href="https://practicum.yandex.ru/" target="_blank"><img src="<%=require('./images/footer/practicum.svg')%>"
+      <a href="https://practicum.yandex.ru/" target="_blank"><img src="./images/footer/practicum.svg"
           alt="Яндекс Практикум"></a>
       <p class="footer__studio-text">сделано при участии Яндекс Практикума</p>
     </div>
