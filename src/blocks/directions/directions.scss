@@ -2,18 +2,21 @@
 
 .directions {
   @include flex(column, center, center);
-  padding-top: $paddingSectionVertical;
-
+  padding: $paddingSectionVertical 0 0;
   &__title {
     @extend %mainTitleH2;
-    @extend %zeroSpaces;
+    margin: 0;
+    padding: 0 $paddingSectionHorizontal;
+    @media screen and (max-width: 767px) {
+      padding: 0 $paddingSectionHorizontalMobile;
+    }
   }
 
   @media screen and (max-width: 1439px) {
-    padding-top: $paddingSectionVerticalTablet;
+    padding: $paddingSectionVerticalTablet 0 0;
   }
 
   @media screen and (max-width: 767px) {
-    padding-top: $paddingSectionVerticalMobile;
+    padding: $paddingSectionVerticalMobile 0 0;
   }
 }

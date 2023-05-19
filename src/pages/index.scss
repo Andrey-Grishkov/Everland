@@ -41,22 +41,29 @@
 @import "../blocks/card/__title/card__title.scss";
 @import "../blocks/card/__title/_type/card__title_type_motivation.scss";
 @import "../blocks/card/__title/_type/card__title_type_about-person.scss";
+@import "../blocks/card/__title/_type/card__title_type_projects.scss";
 @import "../blocks/card/__subtitle/card__subtitle.scss";
 @import "../blocks/card/__subtitle/_type/card__subtitle_type_motivation.scss";
 @import "../blocks/card/__subtitle/_type/card__subtitle_type_about-person.scss";
+@import "../blocks/card/__subtitle/_type/card__subtitle_type_projects.scss";
 @import "../blocks/card/__text-container/card__text-container.scss";
 @import "../blocks/card/__text-container/_type/card__text-container_type_motivation.scss";
 @import "../blocks/card/__text-container/_type/card__text-container_type_about-person.scss";
+@import "../blocks/card/__text-container/_type/card__text-container_type_projects.scss";
 @import "../blocks/card/__name/card__name.scss";
 @import "../blocks/card/__name-link/card__name-link.scss";
 @import "../blocks/card/__link-audio/card__link-audio.scss";
 @import "../blocks/card/__image/_rounded/card__image_rounded.scss";
+@import "../blocks/card/__image/_rounded-angles/card__image_rounded-angles.scss";
 @import "../blocks/card/__image/_type/card__image_type_motivation.scss";
 @import "../blocks/card/__image/_type/card__image_type_about-person.scss";
 @import "../blocks/card/__icon/card__icon.scss";
 @import "../blocks/card/__icon/_type/card__icon_type_quote.scss";
 @import "../blocks/card/__button/card__button.scss";
 @import "../blocks/card/__button/_type/card__button_type_motivation.scss";
+@import "../blocks/card/__button/_type/card__button_type_projects.scss";
+@import "../blocks/card/__presentation/card__presentation.scss";
+@import "../blocks/card/_type/card_type_projects.scss";
 
 // Импорт секций
 @import "../blocks/works/works.scss";
@@ -64,6 +71,7 @@
 @import "../blocks/advantage/advantage.scss";
 @import "../blocks/digits/digits.scss";
 @import "../blocks/presentation/presentation.scss";
+@import "../blocks/projects/projects.scss";
 
 @import "../blocks/donations/donations.scss";
 @import "../blocks/donations/__form/form.scss";

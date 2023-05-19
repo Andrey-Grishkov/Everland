@@ -409,9 +409,59 @@
       </div>
     </section>
     <section class="projects">
-      <ul class="cards-container">
-        <li class="card card_type_project"></li>
-      </ul>
+      <div class="projects__container">
+        <div class="projects__absolute">
+          <button type="button" class="button button_type_slider-2-left projects__arrow_left button_disabled"></button>
+          <button type="button" class="button button_type_slider-2-right projects__arrow_right"></button>
+        </div>
+        <ul class="cards-container cards-container_type_projects">
+          <li class="card card_type_project card_color_blue">
+            <p class="card__presentation">Наши спецпроекты</p>
+            <div class="card__text-container card__text-container_type_projects">
+              <h2 class="card__title card__title_type_projects">Фотопроект "Семья как семья"</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Алексея Горшенина включает в себя восемь историй людей и семей, где один или оба супруга имеют инвалидность</p>
+            </div>
+            <img class="card__image card__image_rounded-angles card__image_type_projects" src="<%=require('./images/projects/projects-photo-first.png')%>" alt="Мужик с собакой">
+            <button class="button button_type_secondary-transparent card__button card__button_type_projects" type="button">Посмотреть</button>
+          </li>
+          <li class="card card_type_project card_color_orange">
+            <p class="card__presentation">Наши спецпроекты</p>
+            <div class="card__text-container card__text-container_type_projects">
+              <h2 class="card__title card__title_type_projects">Удивительно просто</h2>
+              <p class="card__subtitle card__subtitle_type_projects">История Анастасии, успешной бизнесвумен восточной части России.</p>
+            </div>
+            <img class="card__image card__image_rounded-angles card__image_type_projects" src="<%=require('./images/projects/techHand.png')%>" alt="Девушка с протезом">
+            <button class="button button_type_secondary-transparent card__button card__button_type_projects" type="button">Посмотреть</button>
+          </li>
+          <li class="card card_type_project card_color_green">
+            <p class="card__presentation">Наши спецпроекты</p>
+            <div class="card__text-container card__text-container_type_projects">
+              <h2 class="card__title card__title_type_projects">Лучшие возможности человека</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Ведётся активный набор для разработки новых, тестовых протезов.</p>
+            </div>
+            <img class="card__image card__image_rounded-angles card__image_type_projects" src="<%=require('./images/projects/protesMan.jpg')%>" alt="Команда разработчиков протезов">
+            <button class="button button_type_secondary-transparent card__button card__button_type_projects" type="button">Посмотреть</button>
+          </li>
+          <li class="card card_type_project card_color_purple">
+            <p class="card__presentation">Наши спецпроекты</p>
+            <div class="card__text-container card__text-container_type_projects">
+              <h2 class="card__title card__title_type_projects">Творить может каждый</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Сергея Коллесникова отроет завесу тайны над тренировками "особых людей".</p>
+            </div>
+            <img class="card__image card__image_rounded-angles card__image_type_projects" src="<%=require('./images/projects/robotic_piano.jpg')%>" alt="пианино и протез">
+            <button class="button button_type_secondary-transparent card__button card__button_type_projects" type="button">Посмотреть</button>
+          </li>
+          <li class="card card_type_project card_color_blue">
+            <p class="card__presentation">Наши спецпроекты</p>
+            <div class="card__text-container card__text-container_type_projects">
+              <h2 class="card__title card__title_type_projects">Помочь может каждый</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Помогать и развиваться могут все. В том числе и с задачами о которых на первый взгляд даже не думаешь.</p>
+            </div>
+            <img class="card__image card__image_rounded-angles card__image_type_projects" src="<%=require('./images/projects/man_recording_nerves.png')%>" alt="Мужик помогает тестировать нервные импульсф руки">
+            <button class="button button_type_secondary-transparent card__button card__button_type_projects" type="button">Посмотреть</button>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="histories">
       <h2 class="histories__title">Истории</h2>

@@ -45,6 +45,17 @@
     }
   }
 
+  &_type_projects {
+    display: flex;
+    width: 500%;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    transition: translate 0.5s ease-in-out;
+  }
+
   &_type_news {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / span 6;
