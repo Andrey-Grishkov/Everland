@@ -1,0 +1,19 @@
+.card__icon_type_quote {
+  background-image: url('../icons/card/Icon_quote.svg');
+  width: 60px;
+  height: 60px;
+  grid-area: quote;
+  background-size: 35px 27.5px;
+  @media screen and (max-width: 1439px) {
+    width: 28px;
+    height: 28px;
+    background-size: 28px 20px;
+    margin-bottom: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 17px;
+    margin-bottom: 10px;
+  }
+}

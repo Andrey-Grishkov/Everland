@@ -1,0 +1,15 @@
+.card__text-container_type_motivation {
+  display: grid;
+  grid-template-areas: 
+  "quote titleLong"
+  ". subtitleLong"
+  ". cardButton";
+  @media screen and (max-width: 1439px) {
+    grid-template-areas: 
+    "quote quote"
+    "titleLong titleLong"
+    "subtitleLong subtitleLong"
+    "cardButton cardButton";
+    gap: 0;
+  }
+}

@@ -1,0 +1,37 @@
+.donations__button {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked + &-label {
+    border-color: $blue;
+  }
+
+  &-label {
+    box-sizing: border-box;
+    max-height: 48px;
+    @extend %buttonTextStyle;
+    display: inline-flex;
+    column-gap: $marginTextIconButton;
+    cursor: pointer;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;  
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+    width: 100%;
+
+    &:hover {
+      border-color: $bluePressed;
+    }
+
+    @media screen and (max-width: 1439px) {
+      max-height: 44px;
+      padding: 12.5px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 13.5px 0;
+    }
+  }
+}

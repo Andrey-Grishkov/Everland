@@ -21,6 +21,7 @@
 
   &__image {
     width: 100%;
+    border-radius: 30px;
   }
 
   &__items {
@@ -45,7 +46,6 @@
     margin: 0;
     padding: 0;
     margin-bottom: 5px;
-    color: $fontColor;
   }
 
   &__item-header_bold {
@@ -72,7 +72,7 @@
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .digits {
     padding: $marginBlocksMobile $paddingSectionHorizontalMobile 0;
 
@@ -92,6 +92,10 @@
       row-gap: 16px;
       margin-bottom: 24px;
       min-width: unset;
+    }
+
+    &__image {
+      border-radius: 20px;
     }
   }
 }

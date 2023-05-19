@@ -1,0 +1,69 @@
+.donations {
+  &__form {
+    box-sizing: border-box;
+    max-width: 651px;
+    border-radius: $borderRadius;
+    @include flex(column, flex-start, center);
+    background-color: $backgroundColor;
+    padding: $paddingInCard 23px $paddingInCard 17px;
+
+    @media screen and (max-width: 1439px) {
+      padding: $paddingInCard;
+      max-width: 688px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: calc($paddingInCardMobile + 8px) 20px;
+      border-radius: $borderRadiusMobile;
+    }
+  }
+
+  &__form-title {
+    @include raleway;
+    font: {
+      weight: $bold;
+      size: 24px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 20px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    @extend %smallTextStyle;
+    @extend %zeroSpaces;
+    margin-top: 4px;
+    grid-column: 1 / span 4;
+    grid-row: 3;
+
+    @media screen and (max-width: 1439px) {
+      margin-top: 3px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+
+  &__next {
+    border: none;
+    @extend %zeroSpaces;
+    min-width: 20px;
+    height: 20px;
+    background: transparent url("../icons/donations/next-payment.svg") center no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    @media screen and (max-width: 767px) {
+      transform: rotate(90deg)
+    }
+  }
+}

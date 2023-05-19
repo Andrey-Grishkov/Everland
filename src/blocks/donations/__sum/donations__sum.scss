@@ -1,0 +1,85 @@
+.donations__sum {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 48px) 1fr;
+  gap: 12px 5px;
+  @extend %fieldsetSizes;
+  border: none;
+  border-top: 1px solid $borderColor;
+  margin: 0 0 24px;
+  padding: 0;
+
+  .donations__input {
+    grid-column: 2 / span 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .2s, opacity .2s ease-out;
+    max-width: none;
+
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 120px;
+      border: 1px solid $blue;
+    }
+
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    -moz-appearance: textfield;
+  }
+
+  &:has(.donations__button:nth-of-type(5):checked) .donations__input {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1439px) {
+    margin-bottom: 14px;
+    gap: 16px;
+    grid-template-rows: repeat(2, 44px) 1fr;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 44px) 1fr;
+
+    .donations__button-label {
+      &:nth-last-of-type(n) {
+        grid-column: 1;
+      }
+      
+      &:nth-of-type(2n) {
+        grid-column: 2;
+      }
+
+      &:nth-of-type(5) {
+        grid-column: span 2;
+      }
+    }
+
+    .donations__input {
+      grid-column: 1 / span 2;
+    }
+
+    .donations__text {
+      grid-column: span 2;
+      grid-row: 4;
+    }
+  }
+
+  .donations__form-title {
+    margin: 0 auto 16px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+}
