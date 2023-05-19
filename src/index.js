@@ -1,6 +1,6 @@
 import './pages/index.scss';
 import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer} from './scripts/constants.js';
-import {moveLeft, moveRight} from './scripts/infiniteSlyder.js';
+import {moveLeft, moveRight} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initDonatios from './scripts/donations.js';
 let countFirst = 0;

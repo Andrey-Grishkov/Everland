@@ -1,5 +1,3 @@
-import {sliderContainer, sliderInfiniteArrowLeft, sliderInfiniteArrowRight} from "../scripts/constants.js";
-
 function disableOneButton(leftArrow, rightArrow, count) {
   if (count === 0) {
     leftArrow.disabled = true;
