@@ -54,7 +54,7 @@ module.exports = {
         {from: path.resolve(__dirname, 'src/icons'), to: path.resolve(__dirname, 'dist/images')}
       ]
     }),
-    new FaviconsWebpackPlugin('./src/icons/favicon.ico')
+    new FaviconsWebpackPlugin('./src/icons/favicon.svg')
   ]
 }
 
