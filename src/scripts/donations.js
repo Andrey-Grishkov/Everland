@@ -14,17 +14,20 @@ function getCheckedRadioButton(block) {
       return inputs[i];
     }
   }
+
+  return null;
 }
 
 function handlePreSelectFormSubmit(evt) {
   evt.preventDefault();
 
-  const sum = getCheckedRadioButton(preSelectBlock).value;
-
-  if(sum !== 'other') {
-    sumBlock.querySelector(`#rub-${sum}`).checked = true;
-  } else {
-    sumBlock.querySelector('#other').checked = true;
+  if(getCheckedRadioButton(preSelectBlock) !== null){
+    const sum = getCheckedRadioButton(preSelectBlock).value
+    if(sum !== 'other') {
+      sumBlock.querySelector(`#rub-${sum}`).checked = true;
+    } else {
+      sumBlock.querySelector('#other').checked = true;
+    }
   }
 
   window.scrollBy({
