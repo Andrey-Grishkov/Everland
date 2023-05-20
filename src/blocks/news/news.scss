@@ -10,14 +10,10 @@
     grid-column: 1 / span 2;
   }
 
-  &__link-container {
-    display: block;
-    grid-column: 6 / end;
-    grid-row: 1 / span 1;
-
-  }
-
   &__link {
+    justify-self: end;
+    grid-column-start: 6;
+    grid-row-start: 1;
     width: 194px;
     height: 48px;
   }
@@ -27,14 +23,11 @@
   .news {
     padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
 
-    &__link-container {
-      grid-column: 3 / span 2;
-      grid-row: 3 / span 1;
-      justify-self: center;
-      margin-top: 32px;
-    }
-
     &__link {
+      justify-self: center;
+      grid-column: 3 / span 2;
+      grid-row-start: 3;
+      margin-top: 32px;
       width: 200px;
       height: 44px;
     }
@@ -46,8 +39,9 @@
     padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
     grid-template-columns: repeat(1, 1fr);
 
-    &__link-container {
+    &__link {
       grid-column: unset;
+      width: 300px;
     }
 
     &__item-image {

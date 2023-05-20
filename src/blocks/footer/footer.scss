@@ -41,6 +41,7 @@
   }
 
   &__about {
+    white-space: pre-line;
     margin-top: 20px;
     display: block;
     @extend %smallTextStyle;
