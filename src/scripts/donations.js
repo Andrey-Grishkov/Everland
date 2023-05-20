@@ -1,3 +1,4 @@
+const preSelectBlock = document.querySelector('.donation-checkbox');
 const donationsForm = document.querySelector('.donations__form');
 const numberBlock = document.querySelector('.donations__number');
 const sumBlock = document.querySelector('.donations__sum');
@@ -6,7 +7,7 @@ const dataBlock = document.querySelector('.donations__data');
 const dataInputs = dataBlock.querySelectorAll('.donations__input');
 
 function getCheckedRadioButton(block) {
-  const inputs = block.querySelectorAll('.donations__button');
+  const inputs = block.querySelectorAll('input');
 
   for(let i = 0; i < inputs.length; i++) {
     if(inputs[i].checked) {
@@ -14,6 +15,23 @@ function getCheckedRadioButton(block) {
     }
   }
 }
+
+function handlePreSelectFormSubmit(evt) {
+  evt.preventDefault();
+
+  const sum = getCheckedRadioButton(preSelectBlock).value;
+
+  if(sum !== 'other') {
+    sumBlock.querySelector(`#rub-${sum}`).checked = true;
+  } else {
+    sumBlock.querySelector('#other').checked = true;
+  }
+
+  window.scrollBy({
+    top: donationsForm.getBoundingClientRect().top - 10,
+    behavior: 'smooth'
+  });
+};
 
 function getUserData() {
   const data = {
@@ -29,14 +47,10 @@ function getUserData() {
 }
 
 function createDonate() {
-  const numberInput = getCheckedRadioButton(numberBlock);
-  const number = numberBlock.querySelector(`[for="${numberInput.id}"]`).textContent;
+  const number = getCheckedRadioButton(numberBlock).value;
 
-  const sumInput = getCheckedRadioButton(sumBlock);
-  let sum;
-  if(sumInput.id !== 'other') {
-    sum = sumBlock.querySelector(`[for="${sumInput.id}"]`).textContent.slice(0, -1);
-  } else {
+  let sum = getCheckedRadioButton(sumBlock).value;
+  if(sum === 'other') {
     sum = sumBlock.querySelector('.donations__input').value;
   }
   if(sum.slice(-1) == 2 || sum.slice(-1) == 3 || sum.slice(-1) == 4) {
@@ -45,15 +59,7 @@ function createDonate() {
     sum += ' рублей';
   }
 
-  const paymentInput = getCheckedRadioButton(paymentBlock);
-  let payment;
-  if(paymentInput.id === 'bank-card') {
-    payment = 'Банковская карта';
-  } else if(paymentInput.id === 'ymoney') {
-    payment = 'YooMoney';
-  } else {
-    payment = 'WebMoney';
-  }
+  const payment = getCheckedRadioButton(paymentBlock).value;
 
   const data = getUserData();
 
@@ -81,11 +87,12 @@ function sendDonate() {
   console.log(`Email пользователя: ${donate.email}.`);
 }
 
-function handleFormSubmit(evt) {
+function handleDonationFormSubmit(evt) {
   evt.preventDefault();
   sendDonate();
 }
 
 export default function initDonations() {
-  donationsForm.addEventListener('submit', handleFormSubmit);
+  preSelectBlock.addEventListener('submit', handlePreSelectFormSubmit);
+  donationsForm.addEventListener('submit', handleDonationFormSubmit);
 }
