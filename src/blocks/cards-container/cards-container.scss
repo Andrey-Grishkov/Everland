@@ -47,7 +47,7 @@
 
   &_type_projects {
     display: flex;
-    width: 500%;
+    width: 600%;
     flex-flow: row nowrap;
     overflow: hidden;
     margin: 0;
@@ -105,6 +105,7 @@
 
   &_type_description {
     grid-template-columns: repeat(6, 100%);
+    transition: translate 0.5s ease-in-out;
     position: relative;
     gap: unset;
   }
