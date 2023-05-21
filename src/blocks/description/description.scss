@@ -63,7 +63,7 @@
     box-sizing: border-box;
     display: block;
     position: relative;
-    margin-bottom: 86px;
+    margin-bottom: 90px;
     overflow: hidden;
   }
 
@@ -81,6 +81,10 @@
     width: 35px;
     height: 35px;
   }
+
+  &__span {
+    @extend %bigTextStyle;
+  }
 }
 
 .donation__amount {
@@ -97,7 +101,7 @@
 
 .donation-checkbox {
   @include flex(row, space-between, center);
-  padding: 54px 58px 54px 30px;
+  padding: 58px 54px 58px 30px;
   border-radius: 10px;
   background-color: $lightBlue;
 

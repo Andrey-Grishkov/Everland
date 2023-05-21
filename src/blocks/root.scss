@@ -108,9 +108,9 @@ $purplePressed: #4935B5;
 
 @mixin raleway {
   font-family: $fontFamily;
+  font-variant-numeric: lining-nums;
   line-height: 120%;
   margin: 0;
-  padding: 0;
 }
 
 %zeroSpaces {
@@ -258,6 +258,7 @@ $purplePressed: #4935B5;
 }
 
 %buttonTextStyle {
+  @include raleway;
   font-family: $fontFamily;
   line-height: 120%;
 
@@ -276,15 +277,15 @@ $purplePressed: #4935B5;
 }
 
 %textLinkStyle {
-  text-decoration-color: $backgroundColor;
-  color: $fontColor;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .3s;
 
   &:hover {
-    text-decoration: underline;
+    opacity: .7;
   }
 
   &:visited {
-    text-decoration-color: $blue;
-    color: $blue;
+    color: inherit;
   }
 }
