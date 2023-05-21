@@ -1,0 +1,17 @@
+.card__icon_type_driver {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: {
+    image: url("../icons/card/blue-driver.svg");
+    repeat: no-repeat;
+    position: center;
+    size: 32px 32px;
+    color: $lightBlue;
+  }
+  @media screen and (max-width: 1439px) {
+    width: 48px;
+    height: 48px;
+    background-size: 24px 24px;
+  } 
+}

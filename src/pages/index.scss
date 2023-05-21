@@ -42,10 +42,14 @@
 @import "../blocks/card/__title/_type/card__title_type_motivation.scss";
 @import "../blocks/card/__title/_type/card__title_type_about-person.scss";
 @import "../blocks/card/__title/_type/card__title_type_projects.scss";
+@import "../blocks/card/__title/_type/card__title_type_works.scss";
+@import "../blocks/card/__title/_type/card__title_type_directions.scss";
 @import "../blocks/card/__subtitle/card__subtitle.scss";
 @import "../blocks/card/__subtitle/_type/card__subtitle_type_motivation.scss";
 @import "../blocks/card/__subtitle/_type/card__subtitle_type_about-person.scss";
 @import "../blocks/card/__subtitle/_type/card__subtitle_type_projects.scss";
+@import "../blocks/card/__subtitle/_type/card__subtitle_type_works.scss";
+@import "../blocks/card/__subtitle/_type/card__subtitle_type_directions.scss";
 @import "../blocks/card/__text-container/card__text-container.scss";
 @import "../blocks/card/__text-container/_type/card__text-container_type_motivation.scss";
 @import "../blocks/card/__text-container/_type/card__text-container_type_about-person.scss";
@@ -59,9 +63,14 @@
 @import "../blocks/card/__image/_type/card__image_type_about-person.scss";
 @import "../blocks/card/__icon/card__icon.scss";
 @import "../blocks/card/__icon/_type/card__icon_type_quote.scss";
+@import "../blocks/card/__icon/_type/card__icon_type_driver.scss";
+@import "../blocks/card/__icon/_type/card__icon_type_suitcase.scss";
+@import "../blocks/card/__icon/_type/card__icon_type_lover.scss";
 @import "../blocks/card/__button/card__button.scss";
 @import "../blocks/card/__button/_type/card__button_type_motivation.scss";
 @import "../blocks/card/__button/_type/card__button_type_projects.scss";
+@import "../blocks/card/__button/_type/card__button_type_works.scss";
+@import "../blocks/card/__button/_type/card__button_type_directions.scss";
 @import "../blocks/card/__presentation/card__presentation.scss";
 @import "../blocks/card/_type/card_type_projects.scss";
 

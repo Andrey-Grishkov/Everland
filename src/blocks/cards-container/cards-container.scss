@@ -2,10 +2,10 @@
 
 .cards-container {
   @include grid;
-  @extend %zeroSpaces;
   box-sizing: border-box;
   width: 100%;
-  padding-top: $marginTitleContent;
+  padding: $marginTitleContent 0 0;
+  margin: 0;
   list-style-type: none;
 
   @media screen and (max-width: 1439px) {
@@ -21,6 +21,7 @@
 
     @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(1, 1fr);
+      margin: 0 auto;
     }
 
     @media screen and (max-width: 900px) {
@@ -89,12 +90,14 @@
 
   &_type_histories {
     grid-area: cardsContainerHistories;
+    padding: 0;
     @include flex(column, center, center);
     gap: 0;
   }
 
   &_type_about-person {
     display: grid;
+    padding: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-area: cardsContainerAboutPerson;
 
@@ -104,6 +107,7 @@
   }
 
   &_type_description {
+    padding: 0;
     grid-template-columns: repeat(6, 100%);
     transition: translate 0.5s ease-in-out;
     position: relative;

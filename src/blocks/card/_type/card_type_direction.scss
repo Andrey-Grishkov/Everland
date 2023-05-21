@@ -14,22 +14,4 @@
   @media screen and (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  &__title {
-    @extend %mainTitleH3;
-    @extend %zeroSpaces;
-  }
-
-  &__subtitle {
-    @extend %mainTextStyle;
-    margin: $marginCardTitleText 0 0;
-    @media screen and (max-width: 1439px) {
-      margin-top: $marginCardTitleTextTablet;
-    }
-  }
-
-  &__button {
-    align-self: flex-end;
-    justify-self: start;
-  }
 }
