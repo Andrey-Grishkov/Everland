@@ -289,7 +289,7 @@ $linkHoverOpacity: 0.5;
   @include raleway;
 
   font: {
-    weight: $medium;
+    weight: $regular;
     size: 18px;
   }
 
@@ -309,7 +309,7 @@ $linkHoverOpacity: 0.5;
   font: {
     family: $fontFamily;
     variant-numeric: lining-nums;
-    weight: $medium;
+    weight: $regular;
     size: 18px;
   }
 
@@ -346,11 +346,11 @@ $linkHoverOpacity: 0.5;
   text-decoration: none;
   opacity: 1;
   transition: opacity .3s;
+  color: inherit;
 
   &:hover {
     text-decoration: underline;
     opacity: $linkHoverOpacity;
-
   }
 
   &:visited {

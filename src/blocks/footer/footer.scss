@@ -1,18 +1,20 @@
 .footer {
   @extend %limitedWidthSection;
-  padding: 80px $paddingSectionHorizontal 150px;
+  max-width: 1440px;
+  padding: 80px 0 150px $paddingSectionHorizontal;
 
   &__info-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 84px;
-    row-gap: 90px;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 60px;
   }
 
   &__studio-container {
     @include flex(row, flex-start, center);
     column-gap: 20px;
     margin-top: 40px;
+    grid-row-start: 3;
+    white-space: nowrap;
   }
 
   &__logo-container {
@@ -20,8 +22,8 @@
 
     &_sponsor {
       column-gap: 50px;
-      margin-top: 25px;
-      margin-bottom: 55px;
+      margin-top: 20px;
+      margin-bottom: 52px;
     }
 
     &_social {
@@ -38,13 +40,15 @@
 
   &__section-title {
     @extend %mainTitleH4;
+    padding-top: 90px;
   }
 
   &__about {
     white-space: pre-line;
-    margin-top: 20px;
+    padding-top: 20px;
+    max-width: 480px;
     display: block;
-    @extend %smallTextStyle;
+    @extend %smallParagraphStyle;
   }
 
   &__links-column {
@@ -52,27 +56,28 @@
     gap: 10px;
     @extend %zeroSpaces;
     list-style-type: none;
-    max-width: 220px;
+    max-width: 227px;
   }
 
   &__link {
-    @extend %mainTextStyle;
+    @extend %mainParagraphStyle;
     @extend %textLinkStyle;
   }
 
   &__sponsor-logo {
     width: 100px;
     height: 48px;
+    object-fit: cover;
   }
 
   &__licence-text {
-    @extend %smallTextStyle;
+    @extend %smallParagraphStyle;
     color: rgba($color: #262626, $alpha: 0.5);
     max-width: 630px;
   }
 
   &__studio-text {
-    @extend %smallTextStyle;
+    @extend %smallParagraphStyle;
   }
 
   &__contacts {
@@ -85,7 +90,7 @@
 
   &__contact {
     display: block;
-    @extend %smallTextStyle;
+    @extend %smallParagraphStyle;
 
     &_phone {
       @extend %textLinkStyle;
