@@ -1,4 +1,8 @@
 .card__title_type_works {
   margin: 0;
   @extend %mainTitleH3;
+
+  @media screen and (max-width: 1439px) {
+    max-width: 374px;
+  }
 }

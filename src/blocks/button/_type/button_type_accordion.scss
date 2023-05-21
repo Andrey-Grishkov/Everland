@@ -28,8 +28,8 @@ $uikitBtnAccordionPlusColorDisabled: rgba(38, 38, 38, 0.5);
     width: 20px;
     transition: transform .3s ease;
     @media screen and (max-width: 1439px) {
-      height: 12px;
-      width: 12px;
+      height: 14px;
+      width: 14px;
     }
     @if $rotate {
        transform: rotate(45deg);
