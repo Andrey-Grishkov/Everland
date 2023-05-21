@@ -4,6 +4,8 @@ import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
 import initDonations from './scripts/donations.js';
+
+
 let countFirst = 0;
 let countSecond = 0;
 let persentFirst = 0;
