@@ -178,6 +178,7 @@
 }
 
 .donation__button {
+  @extend %buttonLinkStyle;
   float: right;
   width: 179px;
   height: 48px;

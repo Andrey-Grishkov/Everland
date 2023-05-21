@@ -4,6 +4,10 @@
   background-size: contain;
   flex-basis: 271px;
 
+  &:hover {
+    opacity: $linkHoverOpacity;
+  }
+
   &_size_small {
     height: 30px;
     width: 171px;
