@@ -76,6 +76,7 @@
 
 
   &_type_presentation {
+    padding: 0;
     grid-template-columns: repeat(3, 1fr);
 
     @media screen and (max-width: 1078px) {

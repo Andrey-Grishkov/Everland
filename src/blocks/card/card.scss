@@ -19,7 +19,7 @@
     }
 
     &-text {
-      @extend %mainTextStyle;
+      @extend %mainParagraphStyle;
     }
 
     &-date {
