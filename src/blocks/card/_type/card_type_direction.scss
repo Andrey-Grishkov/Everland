@@ -22,9 +22,9 @@
 
   &__subtitle {
     @extend %mainTextStyle;
-    margin: $marginCardTitleText 0 0;
+    padding: $marginCardTitleText 0 0;
     @media screen and (max-width: 1439px) {
-      margin-top: $marginCardTitleTextTablet;
+      padding-top: $marginCardTitleTextTablet;
     }
   }
 
