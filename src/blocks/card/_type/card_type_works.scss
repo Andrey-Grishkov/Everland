@@ -40,20 +40,7 @@
     }
   }
   &__title {
-    @include raleway;
-
-    font: {
-      weight: $bold;
-      size: 34px;
-    }
-
-    @media screen and (max-width: 1439px) {
-      font-size: 26px;
-    }
-
-    @media screen and (max-width: 767px) {
-      font-size: 18px;
-    }
+    @extend %mainTitleH3;
     @extend %zeroSpaces;
   }
 
