@@ -1,16 +1,16 @@
 .presentation {
   @include flex(column, start, center);
   align-self: stretch;
-  padding: $paddingSectionVertical $paddingSectionHorizontal $paddingSectionVertical;
+  padding: $paddingSectionVertical 0 $paddingSectionVertical;
   background-color: $lightGrey;
 
   @media screen and (max-width: 1439px) {
-    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal $paddingSectionVertical;
+    padding: $paddingSectionVerticalTablet 0 $paddingSectionVertical;
   }
 
   @media screen and (max-width: 767px) {
     align-items: center;
-    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
+    padding: $paddingSectionVerticalMobile 0 $paddingSectionVerticalMobile;
   }
 
   &__title {
@@ -24,13 +24,13 @@
 
     @media screen and (max-width: 767px) {
       max-width: 300px;
-      text-align: center;
+      // text-align: center;
     }
 
-    @media screen and (max-width: 425px) {
-      max-width: 300px;
-      text-align: left;
-    }
+  //   @media screen and (max-width: 425px) {
+  //     max-width: 300px;
+  //     text-align: left;
+  //   }
   }
 
   &__subtitle {
@@ -51,6 +51,37 @@
 
     @media screen and (max-width: 425px) {
       text-align: left;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-decoration: none;
+
+    @media screen and (max-width: 1439px) {
+      margin-top: 32px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__button {
+    padding: 12px 24px;
+    min-width: 204px;
+    min-height: 48px;
+
+    @media screen and (max-width: 1439px) {
+      min-width: 200px;
+      min-height: 44px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 300px;
     }
   }
 }

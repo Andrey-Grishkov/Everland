@@ -37,3 +37,13 @@ $uikitBtnTxtDisabled: rgba(38, 38, 38, 0.5);
   }
 }
 
+@mixin button_type_basic-transparent() {
+  height: $uikitBtnDesktopHeigth;
+  border-radius: 10px;
+  padding: 12px 38px;
+  @media screen and (max-width: 1439px) {
+    & {
+      height: $uikitBtnMobileHeigth;
+    }
+  }
+}

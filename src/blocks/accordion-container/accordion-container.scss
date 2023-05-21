@@ -1,6 +1,7 @@
 .accordion-container {
   margin: 0;
   padding-left: 0;
+  padding-top: 50px;
   list-style-type: none;
   @include flex(column, center, start);
   gap: 20px;
@@ -9,12 +10,14 @@
   max-width: 1440px;
 
   @media screen and (max-width: 1439px) {
+    padding-top: 32px;
     gap: 20px 0;
     max-width: 1439px;
     max-height: 640px;
   }
 
   @media screen and (max-width: 767px) {
+    padding-top: 24px;
     gap: 16px 0;
     max-width: 767px;
   }

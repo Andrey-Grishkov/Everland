@@ -1,6 +1,6 @@
 import './pages/index.scss';
 import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer} from './scripts/constants.js';
-import {moveLeft, moveRight} from './scripts/slider.js';
+import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initDonatios from './scripts/donations.js';
 let countFirst = 0;
@@ -28,10 +28,12 @@ firstSliderArrowLeft.addEventListener('click', () => {
   persentFirst = persentFirst + 100;
   countFirst--;
   moveLeft(firstSliderContainer, persentFirst, countFirst, firstSliderArrowLeft, firstSliderArrowRight);
+  countSlides(countFirst);
 });
 
 firstSliderArrowRight.addEventListener('click', () => {
   persentFirst = persentFirst - 100;
   countFirst++;
   moveRight(firstSliderContainer, persentFirst, countFirst, firstSliderArrowLeft, firstSliderArrowRight);
+  countSlides(countFirst);
 })

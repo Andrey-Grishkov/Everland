@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -47,6 +48,12 @@ module.exports = {
       filename: "buttons.html",
       template: './src/buttons.html'
     }),
+    new HtmlReplaceWebpackPlugin([
+      {
+        pattern: /media="\(device-width:\s\d+px\)\sand\s\(device-height:\s\d+px\)\sand\s\(-webkit-device-pixel-ratio:\s\d\)\sand\s\(orientation:\s\w+\)"/g,
+        replacement: ''
+      }
+    ]),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -57,4 +64,3 @@ module.exports = {
     new FaviconsWebpackPlugin('./src/icons/favicon.svg')
   ]
 }
-

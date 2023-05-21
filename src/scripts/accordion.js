@@ -2,6 +2,8 @@ function checkOpenedAccordion(accordion) {
   const accordionContainer = accordion.closest('.accordion-container');
   if (accordionContainer.querySelectorAll('.accordion_state_open').length !== 0) {
     const openedAccordion = accordionContainer.querySelector('.accordion_state_open');
+    const openedAccordionButton = openedAccordion.querySelector('.button_type_accordion');
+    toggleAccordionButtonState(openedAccordionButton);
     closeAccordion(openedAccordion);
   }
 }
@@ -22,6 +24,7 @@ function closeAccordion(accordion) {
 
 function handleAccordionClick(evt) {
   const accordion = evt.target.closest('.accordion');
+  toggleAccordionButtonState(evt.target);
   if (accordion.classList.contains('accordion_state_close')) {
     checkOpenedAccordion(accordion);
     openAccordion(accordion)
@@ -30,8 +33,12 @@ function handleAccordionClick(evt) {
   }
 }
 
+function toggleAccordionButtonState(button) {
+  button.classList.toggle('button_pressed');
+}
+
 export function initAccordions() {
-  const accordionButtons = document.querySelectorAll('.accordion__button');
+  const accordionButtons = document.querySelectorAll('.button_type_accordion');
   accordionButtons.forEach((button) => {
     button.addEventListener('click', handleAccordionClick);
   });

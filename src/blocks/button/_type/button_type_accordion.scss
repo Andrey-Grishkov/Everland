@@ -24,8 +24,9 @@ $uikitBtnAccordionPlusColorDisabled: rgba(38, 38, 38, 0.5);
     background-size: cover;
     background-position: center center;
     display: block;
-    height: 17px;
-    width: 17px;
+    height: 20px;
+    width: 20px;
+    transition: transform .3s ease;
     @media screen and (max-width: 1439px) {
       height: 12px;
       width: 12px;
@@ -39,7 +40,7 @@ $uikitBtnAccordionPlusColorDisabled: rgba(38, 38, 38, 0.5);
 .button_type_accordion {
   background-color: #E7F0FF;
   border: 0;
-  border-radius: 50%;
+  border-radius: 20px;
   width: 45px;
   height: 45px;
   box-sizing: border-box;
