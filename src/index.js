@@ -1,5 +1,5 @@
 import './pages/index.scss';
-import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer, burgerPopupArrows, burgerMenuIcon, burgerPopup} from './scripts/constants.js';
+import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer, burgerPopupArrows, burgerMenuIcon, burgerPopup, burgerMenu} from './scripts/constants.js';
 import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
@@ -53,6 +53,7 @@ burgerPopupArrows.forEach((arrow) => {
   });
 });
 
-burgerMenuIcon.addEventListener('click', () => {
+burgerMenu.addEventListener('click', () => {
   burgerPopup.classList.toggle('burger-popup_opened');
+  burgerMenuIcon.classList.toggle('header__menu-image_active');
 })
