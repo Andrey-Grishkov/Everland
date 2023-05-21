@@ -4,4 +4,9 @@
   position: relative;
   z-index: 1;
   align-self: flex-end;
+  padding: 0 38px;
+
+  @media screen and (max-width: 1439px) {
+    padding: 0 53px;
+  }
 }

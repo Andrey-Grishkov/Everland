@@ -14,12 +14,12 @@
     }
 
     &-title {
-      @extend %mainTitleH4;
+      @extend %mainTitleH3;
       padding-bottom: 20px;
     }
 
     &-text {
-      @extend %mainTextStyle;
+      @extend %mainParagraphStyle;
     }
 
     &-date {
@@ -47,6 +47,16 @@
 @media screen and (max-width: 1439px) {
   .card {
     border-radius: 20px;
+
+    &__item {
+      &-title {
+        padding-bottom: 10px;
+      }
+
+      &-image {
+        border-radius: 20px;
+      }
+    }
   }
 }
 

@@ -5,6 +5,7 @@ import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
 import initDonations from './scripts/donations.js';
 import {openBurgerAccordion, closeBurgerAccordion, checkOpenedAccodionBurger} from "./scripts/burger-menu.js";
+
 let countFirst = 0;
 let countSecond = 0;
 let persentFirst = 0;

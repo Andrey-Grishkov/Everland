@@ -23,11 +23,19 @@
     max-height: 44px;
   }
 
+  &::placeholder {
+    color: $borderColor;
+  }
+
   &:focus {
     outline: 1px solid $darkGrey;
   }
 
   &:nth-of-type(2) {
-    margin-bottom: 8px;
+    margin-bottom: 19px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 8px;
+    }
   }
 }

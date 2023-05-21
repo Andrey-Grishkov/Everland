@@ -5,7 +5,7 @@
   background-color: $lightGrey;
 
   @media screen and (max-width: 1439px) {
-    padding: $paddingSectionVerticalTablet 0 $paddingSectionVertical;
+    padding: $paddingSectionVerticalTablet 0 $paddingSectionVerticalTablet;
   }
 
   @media screen and (max-width: 767px) {
@@ -34,17 +34,17 @@
   }
 
   &__subtitle {
-    @extend %mainTitleH3;
-    margin: 20px 0 $marginTitleContent;
+    @extend %mainTitleH4;
+    padding: 20px 0 $marginTitleContent;
     max-width: 955px;
 
     @media screen and (max-width: 1439px) {
-      margin: 16px 0 $marginTitleContentTablet;
-      max-width: 660px;
+      padding: 16px 0 22px;
+      max-width: 506px;
     }
 
     @media screen and (max-width: 767px) {
-      margin: 10px 0 $marginTitleContentMobile;
+      padding: 10px 0 $marginTitleContentMobile;
       text-align: justify;
       max-width: 300px;
     }
@@ -70,7 +70,7 @@
   }
 
   &__button {
-    padding: 12px 24px;
+    padding: 0 24px;
     min-width: 204px;
     min-height: 48px;
 

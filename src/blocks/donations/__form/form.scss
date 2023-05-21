@@ -1,7 +1,7 @@
 .donations {
   &__form {
     box-sizing: border-box;
-    max-width: 651px;
+    max-width: 691px;
     border-radius: $borderRadius;
     @include flex(column, flex-start, center);
     background-color: $backgroundColor;
@@ -19,6 +19,7 @@
   }
 
   &__form-title {
+    padding: 0 10px;
     @include raleway;
     font: {
       weight: $bold;
@@ -27,6 +28,7 @@
 
     @media screen and (max-width: 1439px) {
       font-size: 20px;
+      padding: 0 14px;
     }
   
     @media screen and (max-width: 767px) {
@@ -35,7 +37,7 @@
   }
 
   &__text {
-    @extend %smallTextStyle;
+    @extend %smallParagraphStyle;
     @extend %zeroSpaces;
     margin-top: 4px;
     grid-column: 1 / span 4;
@@ -64,6 +66,14 @@
 
     @media screen and (max-width: 767px) {
       transform: rotate(90deg)
+    }
+  }
+
+  &__submit-button {
+    padding: 0 36px;
+
+    @media screen and (max-width: 1439px) {
+      padding: 0 51px;
     }
   }
 }

@@ -18,6 +18,7 @@
 $uikitLinkDisabledBg: $buttonDisabledHardColor; //#C4C4C4;
 $uikitLinkDisabledTxt: rgba(38, 38, 38, 0.5);
 $uikitArrowSize: 24px;
+$uikitArrowSizeTablet: 20px;
 
 @mixin btn_link($bgColor,$txtColor) {
   background-color: $bgColor;
@@ -26,11 +27,14 @@ $uikitArrowSize: 24px;
     content:'' ;
     @include arrow($txtColor);
     background-repeat: no-repeat;
-    // background-size: contain;
     background-position: center;
     display: block;
     height: $uikitArrowSize;
     width: $uikitArrowSize;
+    @media screen and (max-width: 1439px) {
+      width: $uikitArrowSizeTablet;
+      height: $uikitArrowSizeTablet;
+    }
   }
 }
 
