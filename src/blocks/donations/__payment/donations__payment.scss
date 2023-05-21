@@ -5,7 +5,7 @@
   border: none;
   border-top: 1px solid $borderColor;
   margin: 0 0 41px;
-  padding: 0 0 0 29px;
+  padding: 0;
 
   @media screen and (max-width: 1439px) {
     margin-bottom: 48px;
@@ -33,6 +33,7 @@
   }
 
   .donations__button-label:nth-of-type(1) {
+    margin-left: 29px;
     padding: 11px 0;
 
     @media screen and (max-width: 767px) {
