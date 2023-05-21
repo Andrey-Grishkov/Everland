@@ -3,14 +3,14 @@ import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firs
 import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
-import initDonatios from './scripts/donations.js';
+import initDonations from './scripts/donations.js';
 import {openBurgerAccordion, closeBurgerAccordion, checkOpenedAccodionBurger} from "./scripts/burger-menu.js";
 let countFirst = 0;
 let countSecond = 0;
 let persentFirst = 0;
 let persentSecond = 0;
 
-initDonatios();
+initDonations();
 initAccordions();
 initAnimation();
 
