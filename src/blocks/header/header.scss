@@ -6,9 +6,11 @@
   background-color: $backgroundColor;
 
   &__menu {
-    @include flex(row, flex-end, center);
-    @extend %zeroSpaces;
-    flex-basis: 215px;
+    
+    @include flex(row, flex-start, center);
+    border: none;
+    background-color: $backgroundColor;
+
     gap: 12px;
 
     &:hover {

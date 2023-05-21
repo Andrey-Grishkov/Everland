@@ -1,6 +1,8 @@
 .logo {
   display: block;
-  background: url("../icons/shared/logo.svg") 0 0/contain no-repeat;
+  background: url("../icons/shared/logo.svg") left no-repeat;
+  background-size: contain;
+  flex-basis: 271px;
 
   &:hover {
     opacity: $linkHoverOpacity;
@@ -8,7 +10,7 @@
 
   &_size_small {
     height: 30px;
-    width: 180px;
+    width: 171px;
   }
 
   &_size_big {

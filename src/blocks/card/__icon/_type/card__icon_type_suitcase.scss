@@ -1,0 +1,17 @@
+.card__icon_type_suitcase {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: {
+    image: url("../icons/card/orange-suitcase.svg");
+    repeat: no-repeat;
+    position: center;
+    size: 32px 32px;
+    color: $lightPink;
+  }
+  @media screen and (max-width: 1439px) {
+    width: 48px;
+    height: 48px;
+    background-size: 24px 24px;
+  } 
+}

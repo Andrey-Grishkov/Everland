@@ -110,9 +110,9 @@ $linkHoverOpacity: 0.5;
 
 @mixin raleway {
   font-family: $fontFamily;
+  font-variant-numeric: lining-nums;
   line-height: 120%;
   margin: 0;
-  padding: 0;
 }
 
 %zeroSpaces {
@@ -150,6 +150,7 @@ $linkHoverOpacity: 0.5;
 
 %mainTitleH2 {
   @include raleway;
+  letter-spacing: -0.01em;
 
   font: {
     weight: $bold;
@@ -170,7 +171,7 @@ $linkHoverOpacity: 0.5;
 
   font: {
     weight: $bold;
-    size: 36px;
+    size: 34px;
   }
 
   @media screen and (max-width: 1439px) {
@@ -260,6 +261,7 @@ $linkHoverOpacity: 0.5;
 }
 
 %buttonTextStyle {
+  @include raleway;
   font-family: $fontFamily;
   line-height: 120%;
 
@@ -278,17 +280,18 @@ $linkHoverOpacity: 0.5;
 }
 
 %textLinkStyle {
-  text-decoration-color: $backgroundColor;
-  color: $fontColor;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .3s;
 
   &:hover {
     text-decoration: underline;
     opacity: $linkHoverOpacity;
+
   }
 
   &:visited {
-    text-decoration-color: $blue;
-    color: $blue;
+    color: inherit;
   }
 }
 
