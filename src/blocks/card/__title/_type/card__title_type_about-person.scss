@@ -1,3 +1,4 @@
 .card__title_type_about-person {
+  @extend %mainTitleH4;
   margin: 0;
 }
