@@ -191,16 +191,18 @@
     &__info-container {
       max-width: 320px;
       margin: 0 auto;
-      grid-template-columns: auto;
+      grid-template-columns: 1fr;
       row-gap: 40px;
     }
 
     &__studio-container {
       max-width: 320px;
-      margin: 0 auto;
+      margin: 0;
       @include flex(column, flex-start, flex-start);
       column-gap: unset;
       row-gap: 7px;
+      grid-column: 1 / span 1;
+      grid-row-start: 5;
     }
 
     &__links-container {
