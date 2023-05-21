@@ -1,5 +1,7 @@
 .header {
   @extend %limitedWidthSection;
+  position: relative;
+  z-index: 3;
   margin: 0;
   @include flex(row, space-between, center);
   padding: 16px $paddingSectionHorizontal 16px;
@@ -22,7 +24,10 @@
   &__menu-image {
     height: 25px;
     width: 25px;
-    background: url("../icons/header/header__menu-image.svg") 0 0/contain no-repeat;
+    background-image: url("../icons/header/header__menu-image.svg");
+    background-size: 25px 24px;
+    background-position: contain;
+    background-repeat: no-repeat;
 
     &_active {
       background-image: url("../icons/header/header__menu-image_active.svg");

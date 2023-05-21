@@ -1,10 +1,10 @@
 import './pages/index.scss';
-import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer} from './scripts/constants.js';
+import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer, burgerPopupArrows, burgerMenuIcon, burgerPopup, burgerMenu} from './scripts/constants.js';
 import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
 import initDonations from './scripts/donations.js';
-
+import {openBurgerAccordion, closeBurgerAccordion, checkOpenedAccodionBurger} from "./scripts/burger-menu.js";
 
 let countFirst = 0;
 let countSecond = 0;
@@ -40,4 +40,21 @@ firstSliderArrowRight.addEventListener('click', () => {
   countFirst++;
   moveRight(firstSliderContainer, persentFirst, countFirst, firstSliderArrowLeft, firstSliderArrowRight);
   countSlides(countFirst);
+});
+
+burgerPopupArrows.forEach((arrow) => {
+  arrow.addEventListener('click', (evt) => {
+    checkOpenedAccodionBurger();
+    evt.target.classList.toggle('burger-popup__button_direction_up');
+    if (evt.target.classList.contains('burger-popup__button_direction_up')) {
+      openBurgerAccordion(evt.target);
+    } else {
+      closeBurgerAccordion(evt.target);
+    }
+  });
+});
+
+burgerMenu.addEventListener('click', () => {
+  burgerPopup.classList.toggle('burger-popup_opened');
+  burgerMenuIcon.classList.toggle('header__menu-image_active');
 })

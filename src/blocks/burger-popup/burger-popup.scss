@@ -1,0 +1,114 @@
+.burger-popup {
+  max-width: 1440px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color:#fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  padding-top: 100px;
+  translate: 0 -150%;
+  transition: translate 0.5s ease-in-out;
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+    padding-top: 50px;
+  }
+  &_opened {
+    translate: 0;
+  }
+  &__container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    @media screen and (max-width: 1439px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, minmax(min-content, max-content));
+      gap: 20px;
+    }
+  }
+  &__accordion {
+    border: 0;
+    display: grid;
+    gap: 30px;
+    padding: 0;
+    border-radius: 0;
+    @media screen and (max-width: 767px) {
+      gap: 24px;
+    }
+  }
+  &__grid {
+    grid-template-areas: 
+    "accordionTitle accordionTitle"
+    "accordionText accordionText";
+    @media screen and (max-width: 767px) {
+      grid-template-areas: 
+      "accordionTitle accordionButton"
+      "accordionText accordionText";
+      gap: 0;
+    }
+  }
+  &__title {
+    @extend %mainTitleH3;
+    grid-area: accordionTitle;
+  }
+  &__button {
+    display: none;
+    grid-area: accordionButton;
+    width: 24px;
+    height: 24px;
+    background-image: url("../icons/arrowBurgerMenu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 0;
+    justify-self: flex-end;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+    &_direction_up {
+      transform: scale(1, -1);
+    }
+  }
+  &__text {
+    grid-area: accordionText;
+    position: relative;
+    z-index: 2;
+    visibility: visible;
+    overflow: visible;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    @media screen and (max-width: 1439px) {
+      padding: 0;
+      gap: 16px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 0;
+      gap: 10px;
+      max-height: 0;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    max-width: 260px;
+    @media screen and (max-width: 1439px) {
+      max-width: 185px;
+    }
+  }
+}
