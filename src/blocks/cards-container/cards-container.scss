@@ -66,6 +66,7 @@
 
     @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 32px;
     }
 
     @media screen and (max-width: 767px) {

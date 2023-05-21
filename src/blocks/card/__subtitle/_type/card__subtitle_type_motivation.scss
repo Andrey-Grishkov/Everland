@@ -1,11 +1,11 @@
 .card__subtitle_type_motivation {
   @extend %mainParagraphStyle;
   grid-area: subtitleLong;
-  margin: 0;
+  padding: 0;
   @media screen and (max-width: 1439px) {
-    margin-top: 20px;
+    padding: 20px 0;
   }
   @media screen and (max-width: 767px) {
-    margin-top: 16px;
+    padding: 16px 0;
   }
 }

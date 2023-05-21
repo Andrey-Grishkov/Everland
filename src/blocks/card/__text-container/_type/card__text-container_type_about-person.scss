@@ -2,7 +2,9 @@
   display: grid;
   grid-template-rows: minmax(min-content, max-content) minmax(120px, 1fr) minmax(min-content, max-content);
   gap: 20px;
+
   @media screen and (max-width: 1439px) {
-    gap: 0;
+    grid-template-rows: minmax(min-content, max-content);
+    gap: 6px;
   }
 }

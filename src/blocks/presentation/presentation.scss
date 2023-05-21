@@ -5,7 +5,7 @@
   background-color: $lightGrey;
 
   @media screen and (max-width: 1439px) {
-    padding: $paddingSectionVerticalTablet 0 $paddingSectionVertical;
+    padding: $paddingSectionVerticalTablet 0 $paddingSectionVerticalTablet;
   }
 
   @media screen and (max-width: 767px) {
@@ -34,13 +34,13 @@
   }
 
   &__subtitle {
-    @extend %mainTitleH3;
+    @extend %mainTitleH4;
     padding: 20px 0 $marginTitleContent;
     max-width: 955px;
 
     @media screen and (max-width: 1439px) {
-      padding: 16px 0 $marginTitleContentTablet;
-      max-width: 660px;
+      padding: 16px 0 22px;
+      max-width: 506px;
     }
 
     @media screen and (max-width: 767px) {
