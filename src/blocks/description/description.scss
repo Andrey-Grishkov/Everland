@@ -56,7 +56,7 @@
     display: block;
     max-width: 543px;
     color: $darkGrey;
-    @extend %mainTextStyle;
+    @extend %mainParagraphStyle;
   }
 
   &__slider-box {
@@ -124,6 +124,7 @@
   height: 48px;
   text-align: center;
   padding-top: 12px;
+  border: 1px solid transparent;
   border-radius: 10px;
   width: 100%;
 
@@ -133,8 +134,7 @@
   }
 
   &:hover {
-    border: 1px solid $blue;
-    opacity: 0.8;
+    border: 1px solid $bluePressed;
   }
 
   &_type_regular {
