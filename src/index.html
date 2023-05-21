@@ -615,23 +615,23 @@
           <div class="donations__explanation">
             <p class="donations__explanation-text">Вы всегда можете отписаться от ежемесячного пожертвования</p>
           </div>
-          <input class="donations__button" type="radio" id="monthly" name="number" required>
+          <input class="donations__button" type="radio" id="monthly" name="number" value="Ежемесячно" required>
           <label for="monthly" class="donations__button-label">Ежемесячно<img class="donations__explanation-button"
               src="./images/donations/question.svg" alt="?"></label>
-          <input class="donations__button" type="radio" id="one-time" name="number">
+          <input class="donations__button" type="radio" id="one-time" name="number" value="Разово">
           <label for="one-time" class="donations__button-label">Разово</label>
         </fieldset>
         <fieldset class="donations__sum">
           <legend class="donations__form-title">Размер пожертвования</legend>
-          <input class="donations__button" type="radio" id="rub-250" name="sum" required>
+          <input class="donations__button" type="radio" id="rub-250" name="sum" value="250" required>
           <label for="rub-250" class="donations__button-label">250&#8381;</label>
-          <input class="donations__button" type="radio" id="rub-500" name="sum">
+          <input class="donations__button" type="radio" id="rub-500" name="sum" value="500">
           <label for="rub-500" class="donations__button-label">500&#8381;</label>
-          <input class="donations__button" type="radio" id="rub-750" name="sum">
+          <input class="donations__button" type="radio" id="rub-750" name="sum" value="750">
           <label for="rub-750" class="donations__button-label">750&#8381;</label>
-          <input class="donations__button" type="radio" id="rub-1000" name="sum">
+          <input class="donations__button" type="radio" id="rub-1000" name="sum" value="1000">
           <label for="rub-1000" class="donations__button-label">1000&#8381;</label>
-          <input class="donations__button" type="radio" id="other" name="sum">
+          <input class="donations__button" type="radio" id="other" name="sum" value="other">
           <label for="other" class="donations__button-label">Другая сумма</label>
           <input class="donations__input" type="number" name="sum" value="" placeholder="Введите сумму">
           <p class="donations__text">
@@ -644,12 +644,12 @@
         </fieldset>
         <fieldset class="donations__payment">
           <legend class="donations__form-title">Способ оплаты</legend>
-          <input class="donations__button" type="radio" id="bank-card" name="payment" required>
+          <input class="donations__button" type="radio" id="bank-card" name="payment" value="Банковская карта" required>
           <label for="bank-card" class="donations__button-label"><img src="./images/donations/payment-systems.svg"
               alt="MIR, Maestro, Visa, MasterCard"></label>
-          <input class="donations__button" type="radio" id="ymoney" name="payment">
+          <input class="donations__button" type="radio" id="ymoney" name="payment" value="YooMoney">
           <label for="ymoney" class="donations__button-label"><img src="./images/donations/yoomoney.svg" alt="YooMoney"></label>
-          <input class="donations__button" type="radio" id="wmoney" name="payment">
+          <input class="donations__button" type="radio" id="wmoney" name="payment" value="WebMoney">
           <label for="wmoney" class="donations__button-label"><img src="./images/donations/webmoney.svg" alt="WebMoney"></label>
           <button class="donations__next" type="button" aria-label="Другие способы оплаты"></button>
         </fieldset>
