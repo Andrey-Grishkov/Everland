@@ -17,7 +17,7 @@
 
 $uikitLinkDisabledBg: $buttonDisabledHardColor; //#C4C4C4;
 $uikitLinkDisabledTxt: rgba(38, 38, 38, 0.5);
-$uikitArrowSize: 15px;
+$uikitArrowSize: 24px;
 
 @mixin btn_link($bgColor,$txtColor) {
   background-color: $bgColor;
@@ -26,7 +26,8 @@ $uikitArrowSize: 15px;
     content:'' ;
     @include arrow($txtColor);
     background-repeat: no-repeat;
-    background-size: contain;
+    // background-size: contain;
+    background-position: center;
     display: block;
     height: $uikitArrowSize;
     width: $uikitArrowSize;
@@ -44,7 +45,7 @@ $uikitArrowSize: 15px;
 .button_type_link {
   height: $uikitBtnDesktopHeigth;
   border-radius: 10px;
-  padding: 12px 16px;
+  padding: 12px 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

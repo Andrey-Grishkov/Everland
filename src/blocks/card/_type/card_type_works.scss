@@ -40,15 +40,28 @@
     }
   }
   &__title {
-    @extend %mainTitleH3;
+    @include raleway;
+
+    font: {
+      weight: $bold;
+      size: 34px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
     @extend %zeroSpaces;
   }
 
   &__subtitle {
     @extend %mainTextStyle;
-    margin: $marginCardTitleText 0 0;
+    padding: $marginCardTitleText 0 0;
     @media screen and (max-width: 1439px) {
-      margin-top: $marginCardTitleTextTablet;
+      padding-top: $marginCardTitleTextTablet;
     }
   }
 

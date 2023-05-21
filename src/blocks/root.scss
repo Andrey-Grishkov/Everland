@@ -148,6 +148,7 @@ $purplePressed: #4935B5;
 
 %mainTitleH2 {
   @include raleway;
+  letter-spacing: -0.01em;
 
   font: {
     weight: $bold;
