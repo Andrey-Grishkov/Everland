@@ -1,8 +1,6 @@
-@import "../../root.scss";
-
 .card_type_directions {
   @include grid;
-  gap: 100px;
+  gap: 88px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: minmax(min-content, max-content);
 

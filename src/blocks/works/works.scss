@@ -10,6 +10,10 @@
   &__title {
     @extend %mainTitleH2;
     @extend %zeroSpaces;
+
+    @media screen and (max-width: 1439px) {
+      text-align: center;
+    }
   }
 
   @media screen and (max-width: 1439px) {

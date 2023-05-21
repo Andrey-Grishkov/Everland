@@ -14,7 +14,7 @@ $uikitBtnSecondaryTransPressedBrColor: $darkGrey; //#333333;
 $uikitBtnSecondaryTransPressedTxtColor: $backgroundColor; //#FFFFFF;
 
 .button_type_secondary-transparent {
- @include button_type_basic-transparent;
+ @include button_type_basic;
   @include btn-basic($uikitBtnSecondaryTransDefaultBgColor, $uikitBtnSecondaryTransDefaultTxtColor,
     1px, $uikitBtnSecondaryTransDefaultBrColor);
   &:hover {

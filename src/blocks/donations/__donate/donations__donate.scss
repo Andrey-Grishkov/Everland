@@ -1,20 +1,7 @@
 .donations__donate {
   display: flex;
-  line-height: 130%;
-  font: {
-    family: $fontFamily;
-    weight: $regular;
-    size: 20px;
-  }
-
-  @media screen and (max-width: 1439px) {
-    font-size: 16px;
-    line-height: 120%;
-  }
-
-  @media screen and (max-width: 767px) {
-    font-size: 14px;
-  }
+  column-gap: 10px;
+  @extend %mainParagraphStyle;
   
   &:nth-last-child(1) {
     margin: 0;

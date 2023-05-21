@@ -37,8 +37,11 @@
     grid-area: button;
     width: fit-content;
     justify-self: end;
+    align-self: center;
+    padding: 0 35px;
     @media screen and (max-width: 1439px) {
       justify-self: center;
+      padding: 0 51px;
     }
     @media screen and (max-width: 767px) {
       width: 100%;

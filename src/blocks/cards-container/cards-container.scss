@@ -35,9 +35,11 @@
 
   &_type_directions {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 428px);
 
     @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 311px);
       max-width: unset;
     }
 
@@ -64,6 +66,7 @@
 
     @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 32px;
     }
 
     @media screen and (max-width: 767px) {
@@ -75,6 +78,7 @@
 
 
   &_type_presentation {
+    padding: 0;
     grid-template-columns: repeat(3, 1fr);
 
     @media screen and (max-width: 1078px) {

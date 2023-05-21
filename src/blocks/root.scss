@@ -226,6 +226,27 @@ $linkHoverOpacity: 0.5;
   }
 }
 
+%bigParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $bold;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
 %mainTextStyle {
   @include raleway;
 
@@ -243,16 +264,58 @@ $linkHoverOpacity: 0.5;
   }
 }
 
+%mainParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $regular;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
 %smallTextStyle {
   @include raleway;
 
   font: {
-    weight: $medium;
+    weight: $regular;
     size: 18px;
   }
 
   @media screen and (max-width: 1439px) {
     font-size: 14px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+%smallParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $regular;
+    size: 18px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+    line-height: 120%;
   }
 
   @media screen and (max-width: 767px) {
@@ -283,11 +346,11 @@ $linkHoverOpacity: 0.5;
   text-decoration: none;
   opacity: 1;
   transition: opacity .3s;
+  color: inherit;
 
   &:hover {
     text-decoration: underline;
     opacity: $linkHoverOpacity;
-
   }
 
   &:visited {
