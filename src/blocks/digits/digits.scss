@@ -34,6 +34,9 @@
     justify-items: center;
     column-gap: 20px;
     row-gap: 30px;
+    @media screen and (max-width: 1439px) {
+      row-gap: 33px;
+    }
   }
 
   &__item {
@@ -42,10 +45,13 @@
   }
 
   &__item-header {
-    @extend %mainTitleH4;
+    @extend %mainTitleH3;
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
+    @media screen and (max-width: 1439px) {
+      padding-bottom: 10px;
+    }
   }
 
   &__item-header_bold {
@@ -63,7 +69,7 @@
 
     &__container {
       gap: 0px;
-      margin-top: 32px;
+      margin-top: 36px;
     }
 
     &__image-container {
