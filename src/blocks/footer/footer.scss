@@ -111,15 +111,18 @@
 
     &__studio-container {
       column-gap: 10px;
+      grid-column: 1 / span 2;
+      margin-top: 34px;
     }
 
     &__links-container {
-      gap: 55px;
+      gap: 52px;
+      align-self: center;
     }
 
     &__info-container {
       column-gap: 60px;
-      row-gap: 60px;
+      grid-template-columns: 294px 1fr;
     }
 
     &__links-column {
@@ -127,7 +130,7 @@
     }
 
     &__about {
-      margin-top: 16px;
+      padding-top: 16px;
     }
 
     &__logo-container {
@@ -147,15 +150,16 @@
     &__sponsor-logo {
       width: 89px;
       height: 63px;
+      object-fit: contain;
     }
 
     &__licence-text {
-      max-width: 340px;
+      white-space: pre-line;
     }
 
     &__contacts {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content) 1fr;
       column-gap: unset;
       row-gap: 16px;
     }
@@ -165,6 +169,16 @@
         grid-row: unset;
         grid-column: unset;
       }
+    }
+
+    &__section-title {
+      padding-top: 56px;
+      max-width: 188px;
+    }
+
+    &__studio-image {
+      width: 115px;
+      height: 20px;
     }
   }
 }
