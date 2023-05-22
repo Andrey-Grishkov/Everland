@@ -5,6 +5,7 @@
 ## 🌐 Ссылки
 
 * [Everland](https://andrey-grishkov.github.io/Everland/#) - страница на хостинге GH Pages;
+* [Brief](https://www.notion.so/Everland-1-9c4229cab9644888b709bae9d15369cb) - бриф проекта Everland;
 * [Figma](https://www.figma.com/file/59a1PXM1KLWN0hWWMl1Kni/Everland-(Веб%2B)?type=design&node-id=430-712&t=745u5bBGQgqZnntj-0) - макет проекта;
 
 ---
@@ -52,15 +53,15 @@ HTML, CSS & SASS, JavaScript, WebPack, GitHub
 
 ## 💪 Команда проекта
 
-__Project Manager__: Вероника Горбунова 💼  
-__Team Leader__: [Андрей Гришков](https://github.com/Andrey-Grishkov) 👑  
-__Наставник__: Алексей Мартынов 👨‍🏫  
+__Project Manager__: Вероника Горбунова 💼
+__Team Leader__: [Андрей Гришков](https://github.com/Andrey-Grishkov) 👑
+__Наставник__: Алексей Мартынов 👨‍🏫
 
 #### Команда разработчиков
-[Александр Сватков](https://github.com/SpamJacket) ✌  
-[Виктор Тарапата](https://github.com/vveb) ✊  
-[Яков Самсонов](https://github.com/yakovsamsonov) 👌  
-[Ярослав Шадрин](https://github.com/DislJack) 🤟  
+[Александр Сватков](https://github.com/SpamJacket) ✌
+[Виктор Тарапата](https://github.com/vveb) ✊
+[Яков Самсонов](https://github.com/yakovsamsonov) 👌
+[Ярослав Шадрин](https://github.com/DislJack) 🤟
 [Алексей Лагуткин](https://github.com/a1exxy) 🖖  
 
 ---
