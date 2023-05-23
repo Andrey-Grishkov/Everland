@@ -49,14 +49,13 @@
   }
 
   &_type_projects {
-    display: flex;
-    width: 600%;
-    flex-flow: row nowrap;
+    display: grid;
+    width: calc(var(--slides) * 100%);
+    grid-template-columns: repeat(var(--slides), 1fr);
     overflow: hidden;
     margin: 0;
     padding: 0;
     gap: 0;
-    transition: translate 0.5s ease-in-out;
   }
 
   &_type_news {
@@ -112,8 +111,9 @@
 
   &_type_description {
     padding: 0;
-    grid-template-columns: repeat(6, 100%);
-    transition: translate 0.5s ease-in-out;
+    display: grid;
+    width: calc(var(--slides) * 100%);
+    grid-template-columns: repeat(var(--slides), 1fr);
     position: relative;
     gap: unset;
   }

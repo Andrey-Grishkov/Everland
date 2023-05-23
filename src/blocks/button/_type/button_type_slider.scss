@@ -3,14 +3,14 @@
  Использование:
   Тип1 (слева на макете UI Kit):
     Стрелка влево:
-      <button class="button button_type_slider-1-left"></button>
+      <button class="button button_type_slider-blue button_side_left"></button>
     Стрелка вправо:
-      <button class="button button_type_slider-1-right"></button>
+      <button class="button button_type_slider-blue "></button>
   Тип2 (справа на макете UI Kit):
     Стрелка влево:
-      <button class="button button_type_slider-2-left"></button>
+      <button class="button button_type_slider-grey button_side_left"></button>
     Стрелка вправо:
-      <button class="button button_type_slider-2-right"></button>
+      <button class="button button_type_slider-grey"></button>
    Для того что бы сделать кнопку нажатой добавить класс button_pressed:
       <a href="#" class="button button_type_link button_color_white button_pressed">Default</a>
    Для дективации добавить к кнопке сласс button_disabled:
@@ -30,7 +30,7 @@ $uikitBtnSliderDisabledBgcolor: $buttonDisabledHardColor; //#C4C4C4;
 $uikitBtnSliderDisabledArrowColor: rgba(38, 38, 38, 0.5);
 $uikitBtnSliderArrowColor: rgb(255, 255, 255);
 
-@mixin addArrow($arrowColor:$uikitBtnSliderArrowColor) {
+@mixin addArrow($arrowColor: $uikitBtnSliderArrowColor) {
   &:after {
     content: ' ';
     @include arrow($arrowColor);
@@ -40,6 +40,7 @@ $uikitBtnSliderArrowColor: rgb(255, 255, 255);
     display: block;
     height: 17px;
     width: 17px;
+
     @media screen and (max-width: 1439px) {
       height: 10px;
       width: 10px;
@@ -47,7 +48,7 @@ $uikitBtnSliderArrowColor: rgb(255, 255, 255);
   }
 }
 
-@mixin sliderBtn($bgColor,$hoverColor, $pressedColor, $left: false) {
+@mixin sliderBtn($bgColor, $hoverColor, $pressedColor) {
   background-color: $bgColor;
   border-radius: 10px;
   border: 0;
@@ -57,50 +58,35 @@ $uikitBtnSliderArrowColor: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
   @include addArrow;
+
   @media screen and (max-width: 1439px) {
     border-radius: 6px;
     height: 24px;
     width: 24px;
   }
+
   &:hover {
     background-color: $hoverColor;
   }
+
   &.button_disabled {
     @include addArrow($uikitBtnSliderDisabledArrowColor);
     background-color: $uikitBtnSliderDisabledBgcolor;
   }
+
   &.button_pressed {
     background-color: $pressedColor;
-  }
-  @if $left {
-    transform: rotate(180deg);
   }
 }
 
 .button_type_slider {
-  &-1 {
-    &-left {
-      @include sliderBtn($uikitBtnSlider1DefaultBgcolor, $uikitBtnSlider1HoverBgcolor,
-        $uikitBtnSlider1PressedBgcolor, true);
-    }
-    &-right {
-      @include sliderBtn($uikitBtnSlider1DefaultBgcolor, $uikitBtnSlider1HoverBgcolor,
-        $uikitBtnSlider1PressedBgcolor);
-    }
+  &-blue {
+    @include sliderBtn($uikitBtnSlider1DefaultBgcolor, $uikitBtnSlider1HoverBgcolor,
+      $uikitBtnSlider1PressedBgcolor);
   }
-  &-2 {
-    &-left {
-      @include sliderBtn($uikitBtnSlider2DefaultBgcolor, $uikitBtnSlider2HoverBgcolor,
-        $uikitBtnSlider2PressedBgcolor, true);
-    }
-    &-right {
-      @include sliderBtn($uikitBtnSlider2DefaultBgcolor, $uikitBtnSlider2HoverBgcolor,
-        $uikitBtnSlider2PressedBgcolor);
-    }
+
+  &-grey {
+    @include sliderBtn($uikitBtnSlider2DefaultBgcolor, $uikitBtnSlider2HoverBgcolor,
+      $uikitBtnSlider2PressedBgcolor);
   }
 }
-
-
-
-
-

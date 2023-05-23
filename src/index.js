@@ -1,15 +1,10 @@
 import './pages/index.scss';
-import {sliderInfiniteArrowLeft, sliderInfiniteArrowRight, sliderContainer, firstSliderArrowLeft, firstSliderArrowRight, firstSliderContainer, burgerPopupArrows, burgerMenuIcon, burgerPopup, burgerMenu} from './scripts/constants.js';
-import {moveLeft, moveRight, countSlides} from './scripts/slider.js';
+import { burgerPopupArrows, burgerMenuIcon, burgerPopup, burgerMenu } from './scripts/constants.js';
+import { Slider, InfiniteSlider } from './scripts/slider.js';
 import { initAccordions } from './scripts/accordion.js';
 import initAnimation from './scripts/animation.js';
 import initDonations from './scripts/donations.js';
 import {openBurgerAccordion, closeBurgerAccordion, checkOpenedAccodionBurger} from "./scripts/burger-menu.js";
-
-let countFirst = 0;
-let countSecond = 0;
-let persentFirst = 0;
-let persentSecond = 0;
 
 initDonations();
 initAccordions();
@@ -17,29 +12,21 @@ initAnimation();
 
 console.log('Hello, World!');
 
-sliderInfiniteArrowLeft.addEventListener('click', () => {
-  persentSecond = persentSecond + 100/6;
-  countSecond--;
-  moveLeft(sliderContainer, persentSecond, countSecond, sliderInfiniteArrowLeft, sliderInfiniteArrowRight);
-});
-sliderInfiniteArrowRight.addEventListener('click', () => {
-  persentSecond = persentSecond - 100/6;
-  countSecond++;
-  moveRight(sliderContainer, persentSecond, countSecond, sliderInfiniteArrowLeft, sliderInfiniteArrowRight);
-});
+const sliders = Array.from(document.querySelectorAll(".slider"));
 
-firstSliderArrowLeft.addEventListener('click', () => {
-  persentFirst = persentFirst + 100;
-  countFirst--;
-  moveLeft(firstSliderContainer, persentFirst, countFirst, firstSliderArrowLeft, firstSliderArrowRight);
-  countSlides(countFirst);
-});
-
-firstSliderArrowRight.addEventListener('click', () => {
-  persentFirst = persentFirst - 100;
-  countFirst++;
-  moveRight(firstSliderContainer, persentFirst, countFirst, firstSliderArrowLeft, firstSliderArrowRight);
-  countSlides(countFirst);
+sliders.forEach((el) => {
+  let slider;
+  const sliderParams = {
+    sliderContainer: el.querySelector(".slider__container"),
+    controlContainer: el.querySelector(".slider__actions"),
+    labelContainer: el.querySelector(".slider__label"),
+  };
+  if (el.classList.contains("slider_infinite")) {
+    slider = new InfiniteSlider(sliderParams);
+  } else {
+    slider = new Slider(sliderParams);
+  }
+  slider.initiate();
 });
 
 burgerPopupArrows.forEach((arrow) => {
