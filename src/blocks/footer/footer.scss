@@ -65,9 +65,23 @@
   }
 
   &__sponsor-logo {
+    display: block;
     width: 100px;
     height: 48px;
-    object-fit: cover;
+
+    &_type_beeline {
+      background-image: url("../icons/footer/beeline.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_type_fund {
+      background-image: url("../icons/footer/grant_fund.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &__licence-text {
@@ -150,7 +164,15 @@
     &__sponsor-logo {
       width: 89px;
       height: 63px;
-      object-fit: contain;
+
+      &_type_beeline {
+        background-image: url("../icons/footer/beeline_old.svg");
+        background-size: 56px 40px;
+      }
+
+      &_type_fund {
+        background-size: 88px 30px;
+      }
     }
 
     &__licence-text {
@@ -230,6 +252,14 @@
     &__sponsor-logo {
       width: 72px;
       height: 48px;
+
+      &_type_beeline {
+        background-size: 48px 34px;
+      }
+  
+      &_type_fund {
+        background-size: 72px 25px;
+      }
     }
 
     &__licence-text {
