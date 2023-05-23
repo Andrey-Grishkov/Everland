@@ -24,12 +24,17 @@
   }
   &__absolute {
     position: absolute;
+    width: min-content;
     z-index: 1;
     bottom: 30px;
     gap: 8px;
-    left: 0;
-    right: 0;
+    left: calc(50% - 38px);
     @include flex(row, center, center);
+
+    @media screen and (max-width: 1439px) {
+      left: calc(50% - 28px);
+    }
+
     @media screen and (max-width: 767px) {
       top: 24px;
       right: 24px;
