@@ -128,24 +128,24 @@ class InfiniteSlider extends Slider {
   }
 
   _prepareInfiniteSlider() {
-    const item = this._sliderContainer
-      .querySelector(".slider__item:last-of-type")
-      .cloneNode(true);
-    this._sliderContainer.querySelector(".slider__item:last-of-type").remove();
+    const sliderSelector = this._sliderContainer.querySelector(
+      ".slider__item:last-of-type"
+    );
+    const item = sliderSelector.cloneNode(true);
+    sliderSelector.remove();
     this._sliderContainer.prepend(item);
     this._instantMove(2);
   }
 
   _moveLeft() {
-    const item = this._sliderContainer
-      .querySelector(".slider__item:last-of-type")
-      .cloneNode(true);
+    const sliderSelector = this._sliderContainer.querySelector(
+      ".slider__item:last-of-type"
+    );
+    const item = sliderSelector.cloneNode(true);
     this._disableAllControls();
     this._animatedMove(1);
     setTimeout(() => {
-      this._sliderContainer
-        .querySelector(".slider__item:last-of-type")
-        .remove();
+      sliderSelector.remove();
       this._instantMove(2);
       this._sliderContainer.prepend(item);
       this._enableAllControls();
@@ -153,15 +153,14 @@ class InfiniteSlider extends Slider {
   }
 
   _moveRight() {
-    const item = this._sliderContainer
-      .querySelector(".slider__item:first-of-type")
-      .cloneNode(true);
+    const sliderSelector = this._sliderContainer.querySelector(
+      ".slider__item:first-of-type"
+    );
+    const item = sliderSelector.cloneNode(true);
     this._disableAllControls();
     this._animatedMove(3);
     setTimeout(() => {
-      this._sliderContainer
-        .querySelector(".slider__item:first-of-type")
-        .remove();
+      sliderSelector.remove();
       this._instantMove(2);
       this._sliderContainer.append(item);
       this._enableAllControls();
