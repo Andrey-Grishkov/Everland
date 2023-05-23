@@ -32,6 +32,7 @@
       "projectImage"
       "textContainer"
       "observe";
-    gap: 30px;
+    grid-template-rows: 22px repeat(2, minmax(min-content, max-content)) 1fr;
+    gap: 20px;
   }
 }
