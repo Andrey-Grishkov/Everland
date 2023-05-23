@@ -1,7 +1,8 @@
 .header {
   @extend %limitedWidthSection;
-  position: relative;
+  position: sticky;
   z-index: 3;
+  top: 0;
   margin: 0;
   @include flex(row, space-between, center);
   padding: 16px $paddingSectionHorizontal 16px;
