@@ -214,7 +214,6 @@
       max-width: 320px;
       margin: 0 auto;
       grid-template-columns: 1fr;
-      row-gap: 40px;
     }
 
     &__studio-container {
@@ -225,16 +224,23 @@
       row-gap: 7px;
       grid-column: 1 / span 1;
       grid-row-start: 5;
+      padding-top: 40px;
+    }
+
+    &__studio-link {
+      display: block;
+      max-height: 20px;
     }
 
     &__links-container {
       gap: 16px;
+      padding: 40px 0;
     }
 
     &__links-column {
       max-width: unset;
       width: 50%;
-      gap: 16px;
+      gap: 10px;
     }
 
     &__logo-container {
@@ -258,7 +264,7 @@
       }
   
       &_type_fund {
-        background-size: 72px 25px;
+        background-size: contain;
       }
     }
 
@@ -268,9 +274,10 @@
 
     &__contacts {
       grid-template-columns: max-content 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
       column-gap: 16px;
       row-gap: 10px;
+      padding-bottom: 24px;
     }
 
     &__contact {
@@ -279,6 +286,10 @@
         grid-column: 1 / span 2;
         max-width: 300px;
       }
+    }
+
+    &__section-title {
+      padding-top: 0;
     }
   }
 }
