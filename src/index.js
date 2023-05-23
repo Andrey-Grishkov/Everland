@@ -41,6 +41,11 @@ burgerPopupArrows.forEach((arrow) => {
   });
 });
 
+burgerMenu.addEventListener('mouseover', () => {
+  burgerPopup.classList.add('burger-popup_opened');
+  burgerMenuIcon.classList.add('header__menu-image_active');
+});
+
 burgerMenu.addEventListener('click', () => {
   burgerPopup.classList.toggle('burger-popup_opened');
   burgerMenuIcon.classList.toggle('header__menu-image_active');
