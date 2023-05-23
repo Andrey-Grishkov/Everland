@@ -7,29 +7,31 @@
 
 .card_type_project {
   display: grid;
-  width: 100%;
   column-gap: 30px;
   justify-content: space-between;
   align-items: flex-start;
   grid-template-rows: 42px repeat(2, minmax(min-content, max-content));
-  grid-template-areas: 
-  "textPresentation projectImage"
-  "textContainer projectImage"
-  "observe projectImage";
+  grid-template-areas:
+    "textPresentation projectImage"
+    "textContainer projectImage"
+    "observe projectImage";
+
   &__disabled {
     display: none;
     visibility: hidden;
   }
+
   @media screen and (max-width: 1439px) {
     grid-template-rows: 22px repeat(2, minmax(min-content, max-content));
     gap: 10px 30px;
   }
+
   @media screen and (max-width: 767px) {
-    grid-template-areas: 
-    "textPresentation"
-    "projectImage"
-    "textContainer"
-    "observe";
+    grid-template-areas:
+      "textPresentation"
+      "projectImage"
+      "textContainer"
+      "observe";
     gap: 30px;
   }
 }

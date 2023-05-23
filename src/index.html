@@ -43,9 +43,9 @@
       </ul>
     </nav>
     <section class="description" id="description">
-      <div class="description__slider-box">
-        <ul class="cards-container cards-container_type_description">
-          <li class="card card_type_description">
+      <div class="description__slider-box slider">
+        <ul class="cards-container cards-container_type_description slider__container">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h1 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h1>
@@ -68,7 +68,7 @@
               </picture>
             </div>
           </li>
-          <li class="card card_type_description">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h2 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h2>
@@ -91,7 +91,7 @@
               </picture>
             </div>
           </li>
-          <li class="card card_type_description">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h2 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h2>
@@ -114,7 +114,7 @@
               </picture>
             </div>
           </li>
-          <li class="card card_type_description">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h2 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h2>
@@ -137,7 +137,7 @@
               </picture>
             </div>
           </li>
-          <li class="card card_type_description">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h2 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h2>
@@ -160,7 +160,7 @@
               </picture>
             </div>
           </li>
-          <li class="card card_type_description">
+          <li class="card card_type_description slider__item">
             <div class="description__text-container">
               <h2 class="description__title"><span class="description__title-mark">Everland</span> — социальный
                 предпринимательский проект</h2>
@@ -184,10 +184,12 @@
             </div>
           </li>
         </ul>
-        <div class="description__slider-control-box"><button type="button"
-            class="description__slider-button description__slider-button_type_left button button_type_slider-1-left button_disabled"></button><span
-            class="description__span">1/6</span><button type="button"
-            class="description__slider-button description__slider-button_type_right button button_type_slider-1-right"></button>
+        <div class="description__slider-control-box slider__actions">
+          <button type="button" name="left"
+            class="description__slider-button button button_type_slider-blue button_side_left slider__button"></button>
+          <span class="description__span slider__label">1/6</span>
+          <button type="button" name="right"
+            class="description__slider-button button button_type_slider-blue slider__button"></button>
         </div>
       </div>
       <form class="donation-checkbox" name="preselection">
@@ -226,7 +228,8 @@
             <div class="card__icon card__icon_type_driver"></div>
             <div>
               <h3 class="card__title card__title_type_works">Для людей с&nbsp;инвалидностью</h3>
-              <p class="card__subtitle card__subtitle_type_works">Помогаем найти работу, пройти обучение, предоставляем разные виды&nbsp;поддержки</p>
+              <p class="card__subtitle card__subtitle_type_works">Помогаем найти работу, пройти обучение, предоставляем
+                разные виды&nbsp;поддержки</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_blue card__button card__button_type_works">Подробнее</button>
@@ -235,7 +238,8 @@
             <div class="card__icon card__icon_type_suitcase"></div>
             <div>
               <h3 class="card__title card__title_type_works">Для работодателей</h3>
-              <p class="card__subtitle card__subtitle_type_works">Помогаем создать устойчивые инклюзивные команды, вовлекаем интеллектуальных волонтеров</p>
+              <p class="card__subtitle card__subtitle_type_works">Помогаем создать устойчивые инклюзивные команды,
+                вовлекаем интеллектуальных волонтеров</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_orange card__button card__button_type_works">Подробнее</button>
@@ -244,7 +248,8 @@
             <div class="card__icon card__icon_type_lover"></div>
             <div>
               <h3 class="card__title card__title_type_works">Для КСО-партнеров Everland</h3>
-              <p class="card__subtitle card__subtitle_type_works">Помогаем найти работу, пройти обучение, предоставляем разные виды&nbsp;поддержки</p>
+              <p class="card__subtitle card__subtitle_type_works">Помогаем найти работу, пройти обучение, предоставляем
+                разные виды&nbsp;поддержки</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_green card__button card__button_type_works">Подробнее</button>
@@ -259,7 +264,8 @@
           <li class="card card_color_orange card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Доступность услуг DisQuestion</h3>
-              <p class="card__subtitle card__subtitle_type_directions">Сервисы для бизнеса по повышению доступности услуг для маломобильных клиентов ― контракты с крупнейшими компаниями в России</p>
+              <p class="card__subtitle card__subtitle_type_directions">Сервисы для бизнеса по повышению доступности
+                услуг для маломобильных клиентов ― контракты с крупнейшими компаниями в России</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -267,7 +273,9 @@
           <li class="card card_color_blue card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Трудоустройство</h3>
-              <p class="card__subtitle card__subtitle_type_directions">Решение социальной проблемы с использованием предпринимательских инструментов: оказываем услуги разным компаниям и НКО, таким образом зарабатываем и даем работу людям с инвалидностью</p>
+              <p class="card__subtitle card__subtitle_type_directions">Решение социальной проблемы с использованием
+                предпринимательских инструментов: оказываем услуги разным компаниям и НКО, таким образом зарабатываем и
+                даем работу людям с инвалидностью</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -275,7 +283,8 @@
           <li class="card card_color_green card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Биржа проектов и&nbsp;готовые решения</h3>
-              <p class="card__subtitle card__subtitle_type_directions">ИТ-система для интеграции в открытый рынок труда людей с инвалидностью в качестве самозанятых и в рамках трудоустройства в другие компании</p>
+              <p class="card__subtitle card__subtitle_type_directions">ИТ-система для интеграции в открытый рынок труда
+                людей с инвалидностью в качестве самозанятых и в рамках трудоустройства в другие компании</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -283,7 +292,8 @@
           <li class="card card_color_blue card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Агентство</h3>
-              <p class="card__subtitle card__subtitle_type_directions">Услуги специалистов с инвалидностью для крупных компаний (дизайн, право, контент и другие)</p>
+              <p class="card__subtitle card__subtitle_type_directions">Услуги специалистов с инвалидностью для крупных
+                компаний (дизайн, право, контент и другие)</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -291,7 +301,9 @@
           <li class="card card_color_green card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Коворкинг</h3>
-              <p class="card__subtitle card__subtitle_type_directions">Уникальное пространство, в котором специалисты с инвалидностью могут работать и офлайн – приходить, участвовать в образовательных мероприятиях, встречаться с заказчиками, работать в команде</p>
+              <p class="card__subtitle card__subtitle_type_directions">Уникальное пространство, в котором специалисты с
+                инвалидностью могут работать и офлайн – приходить, участвовать в образовательных мероприятиях,
+                встречаться с заказчиками, работать в команде</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -299,7 +311,8 @@
           <li class="card card_color_orange card_type_directions">
             <div>
               <h3 class="card__title card__title_type_directions">Для людей с&nbsp;инвалидностью</h3>
-              <p class="card__subtitle card__subtitle_type_directions">Помогаем найти работу, пройти обучение, предоставляем разные виды поддержки</p>
+              <p class="card__subtitle card__subtitle_type_directions">Помогаем найти работу, пройти обучение,
+                предоставляем разные виды поддержки</p>
             </div>
             <button type="button"
               class="button button_type_link button_color_white card__button card__button_type_directions">Подробнее</button>
@@ -383,17 +396,19 @@
       </div>
     </section>
     <section class="projects" id="projects">
-      <div class="projects__container">
-        <div class="projects__absolute">
-          <button type="button" class="button button_type_slider-2-left projects__arrow_left button_disabled"></button>
-          <button type="button" class="button button_type_slider-2-right projects__arrow_right"></button>
+      <div class="projects__container slider slider_infinite">
+        <div class="projects__absolute slider__actions">
+          <button type="button" name="left"
+            class="button button_type_slider-grey button_side_left slider__button"></button>
+          <button type="button" name="right" class="button button_type_slider-grey slider__button"></button>
         </div>
-        <ul class="cards-container cards-container_type_projects">
-          <li class="card card_type_project card_color_blue">
+        <ul class="cards-container cards-container_type_projects slider__container">
+          <li class="card card_type_project card_color_blue slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
-              <h2 class="card__title card__title_type_projects">Фотопроект 	&#171;Семья&nbsp;как&nbsp;семья&#187;</h2>
-              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Алексея Горшенина включает&nbsp;в себя восемь
+              <h2 class="card__title card__title_type_projects">Фотопроект &#171;Семья&nbsp;как&nbsp;семья&#187;</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Алексея Горшенина включает&nbsp;в себя
+                восемь
                 историй людей и&nbsp;семей, где один или оба супруга имеют&nbsp;инвалидность</p>
             </div>
             <img class="card__image card__image_rounded-angles card__image_type_projects"
@@ -401,7 +416,7 @@
             <button class="button button_type_secondary-transparent card__button card__button_type_projects"
               type="button">Посмотреть</button>
           </li>
-          <li class="card card_type_project card_color_orange">
+          <li class="card card_type_project card_color_orange slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
               <h2 class="card__title card__title_type_projects">Удивительно просто</h2>
@@ -413,7 +428,7 @@
             <button class="button button_type_secondary-transparent card__button card__button_type_projects"
               type="button">Посмотреть</button>
           </li>
-          <li class="card card_type_project card_color_green">
+          <li class="card card_type_project card_color_green slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
               <h2 class="card__title card__title_type_projects">Лучшие возможности человека</h2>
@@ -425,7 +440,7 @@
             <button class="button button_type_secondary-transparent card__button card__button_type_projects"
               type="button">Посмотреть</button>
           </li>
-          <li class="card card_type_project card_color_purple">
+          <li class="card card_type_project card_color_purple slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
               <h2 class="card__title card__title_type_projects">Творить может каждый</h2>
@@ -437,7 +452,7 @@
             <button class="button button_type_secondary-transparent card__button card__button_type_projects"
               type="button">Посмотреть</button>
           </li>
-          <li class="card card_type_project card_color_blue">
+          <li class="card card_type_project card_color_blue slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
               <h2 class="card__title card__title_type_projects">Помочь может каждый</h2>
@@ -449,11 +464,12 @@
             <button class="button button_type_secondary-transparent card__button card__button_type_projects"
               type="button">Посмотреть</button>
           </li>
-          <li class="card card_type_project card_color_blue">
+          <li class="card card_type_project card_color_blue slider__item">
             <p class="card__presentation">Наши спецпроекты</p>
             <div class="card__text-container card__text-container_type_projects">
-              <h2 class="card__title card__title_type_projects">Фотопроект 	&#171;Семья&nbsp;как&nbsp;семья&#187;</h2>
-              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Алексея Горшенина включает&nbsp;в себя восемь
+              <h2 class="card__title card__title_type_projects">Фотопроект &#171;Семья&nbsp;как&nbsp;семья&#187;</h2>
+              <p class="card__subtitle card__subtitle_type_projects">Фотопроект Алексея Горшенина включает&nbsp;в себя
+                восемь
                 историй людей и&nbsp;семей, где один или оба супруга имеют&nbsp;инвалидность</p>
             </div>
             <img class="card__image card__image_rounded-angles card__image_type_projects"
@@ -564,7 +580,8 @@
           </picture>
           <div class="card__item-info-container">
             <h4 class="card__item-title">Ура! Новое партнерство — с PepsiCo</h4>
-            <p class="card__item-text">Everland совместно с PepsiCo приняли участие в акции «Благотворительность вместо сувениров»</p>
+            <p class="card__item-text">Everland совместно с PepsiCo приняли участие в акции «Благотворительность вместо
+              сувениров»</p>
           </div>
           <p class="card__item-date">20 сентября 2021</p>
         </li>
@@ -755,8 +772,8 @@
           Если&nbsp;не указано иначе, все материалы сайта доступны по лицензии Creative Commons CC-BY-SA&nbsp;3.0</p>
       </div>
       <div class="footer__studio-container">
-        <a href="https://practicum.yandex.ru/" target="_blank"><img class="footer__studio-image" src="./images/footer/practicum.svg"
-            alt="Яндекс Практикум"></a>
+        <a href="https://practicum.yandex.ru/" target="_blank"><img class="footer__studio-image"
+            src="./images/footer/practicum.svg" alt="Яндекс Практикум"></a>
         <p class="footer__studio-text">сделано при участии Яндекс Практикума</p>
       </div>
     </div>
