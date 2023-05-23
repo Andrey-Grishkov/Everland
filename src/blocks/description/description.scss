@@ -231,7 +231,11 @@
 // Mobile
 @media screen and (max-width: 767px) {
   .description {
-    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+    padding: 50px $paddingSectionHorizontalMobile $paddingSectionVerticalMobile;
+
+    &__title {
+      white-space: pre-line;
+    }
 
     &__image-box {
       max-width: 300px;
