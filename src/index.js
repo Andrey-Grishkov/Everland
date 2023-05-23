@@ -60,6 +60,6 @@ burgerMenu.addEventListener('mouseover', () => {
 });
 
 burgerMenu.addEventListener('click', () => {
-  burgerPopup.classList.remove('burger-popup_opened');
-  burgerMenuIcon.classList.remove('header__menu-image_active');
+  burgerPopup.classList.toggle('burger-popup_opened');
+  burgerMenuIcon.classList.toggle('header__menu-image_active');
 })
