@@ -88,14 +88,14 @@
   }
 }
 
-.donation__amount {
+.donation-checkbox__amount {
   position: absolute;
   width: 0px;
   height: 0px;
   overflow: hidden;
   clip-path: inset(0 0 0 0);
 
-  &:checked+.donation__pseudo-item {
+  &:checked+.donation-checkbox__pseudo-item {
     border: 1px solid $blue;
   }
 }
@@ -122,7 +122,7 @@
   }
 }
 
-.donation__pseudo-item {
+.donation-checkbox__pseudo-item {
   display: block;
   box-sizing: border-box;
   background-color: $backgroundColor;
@@ -169,7 +169,7 @@
   }
 }
 
-.donation__selection-box {
+.donation-checkbox__selection-box {
   @include flex(row, flex-start, center);
   flex-wrap: wrap;
   gap: 40px;
@@ -184,7 +184,7 @@
   }
 }
 
-.donation__button {
+.donation-checkbox__button {
   @extend %buttonLinkStyle;
   float: right;
   width: 179px;
