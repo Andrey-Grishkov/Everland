@@ -4,6 +4,8 @@
   gap: 20px;
 
   @media screen and (max-width: 767px) {
-    @include flex(column, flex-start, center);
+    @include flex(column, flex-start, flex-start);
+    justify-self: center;
+    padding: 0;
   }
 }
