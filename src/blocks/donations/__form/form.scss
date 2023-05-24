@@ -57,7 +57,7 @@
     @extend %zeroSpaces;
     min-width: 20px;
     height: 20px;
-    background: transparent url("../icons/donations/next-payment.svg") center no-repeat;
+    background: transparent url("../images/icons/donations/next-payment.svg") center no-repeat;
     cursor: pointer;
 
     &:hover {
@@ -74,6 +74,11 @@
 
     @media screen and (max-width: 1439px) {
       padding: 0 51px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
     }
   }
 }

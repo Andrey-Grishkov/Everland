@@ -3,7 +3,6 @@
 @import "../__text-container/_type/card__text-container_type_projects.scss";
 @import "../__presentation/card__presentation.scss";
 @import "../__button/_type/card__button_type_projects.scss";
-@import "../../root.scss";
 
 .card_type_project {
   display: grid;
@@ -32,6 +31,7 @@
       "projectImage"
       "textContainer"
       "observe";
-    gap: 30px;
+    grid-template-rows: 22px repeat(2, minmax(min-content, max-content)) 1fr;
+    gap: 20px;
   }
 }

@@ -39,7 +39,19 @@
   @media screen and (max-width: 1439px) {
     margin-bottom: 14px;
     gap: 16px;
+    grid-template-columns: repeat(4, 145px);
     grid-template-rows: repeat(2, 44px) 1fr;
+
+    .donations__button-label:nth-of-type(5) {
+      width: 190px;
+      grid-column: span 2;
+    }
+
+    .donations__input {
+      grid-column: 3 / span 2;
+      transform: translateX(-112px);
+      width: 422px;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -57,12 +69,15 @@
       }
 
       &:nth-of-type(5) {
+        width: 100%;
         grid-column: span 2;
       }
     }
 
     .donations__input {
       grid-column: 1 / span 2;
+      transform: translateX(0);
+      width: 100%;
     }
 
     .donations__text {

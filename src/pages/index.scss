@@ -1,7 +1,7 @@
 @import "../vendor/normalize.css";
 @import "../vendor/fonts.css";
 
-@import "../blocks/root.scss";
+@import "../root.scss";
 
 @import "../blocks/page/page.scss";
 @import "../blocks/content/content.scss";
@@ -35,7 +35,6 @@
 @import "../blocks/card/_type/card_type_description.scss";
 @import "../blocks/card/_type/card_type_news.scss";
 @import "../blocks/card/_type/card_type_histories.scss";
-@import "../blocks/card/_type/card_type_motivation.scss";
 @import "../blocks/card/_type/card_type_about-person.scss";
 @import "../blocks/card/__title/_type/card__title_type_motivation.scss";
 @import "../blocks/card/__title/_type/card__title_type_about-person.scss";

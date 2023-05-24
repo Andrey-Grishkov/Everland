@@ -22,15 +22,15 @@
   }
 
   &__menu-image {
-    height: 25px;
+    height: 20px;
     width: 25px;
-    background-image: url("../icons/header/header__menu-image.svg");
-    background-size: 25px 24px;
-    background-position: contain;
+    background-image: url("../images/icons/header/header__menu-image.svg");
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
 
     &_active {
-      background-image: url("../icons/header/header__menu-image_active.svg");
+      background-image: url("../images/icons/header/header__menu-image_active.svg");
     }
   }
 
@@ -82,7 +82,7 @@
 // Mobile
 @media screen and (max-width: 767px) {
   .header {
-    padding: 10px 15px 10px;
+    padding: 15px 10px;
 
     &__menu-label {
       display: none;

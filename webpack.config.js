@@ -57,10 +57,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        {from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images')},
-        {from: path.resolve(__dirname, 'src/icons'), to: path.resolve(__dirname, 'dist/images')}
+        {from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images')}
       ]
     }),
-    new FaviconsWebpackPlugin('./src/icons/favicon.svg')
+    new FaviconsWebpackPlugin('./src/images/icons/favicon.svg')
   ]
 }

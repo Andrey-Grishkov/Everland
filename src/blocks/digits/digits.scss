@@ -52,6 +52,9 @@
     @media screen and (max-width: 1439px) {
       padding-bottom: 10px;
     }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 5px;
+    }
   }
 
   &__item-header_bold {
@@ -90,6 +93,7 @@
 
     &__image-container {
       display: block;
+      padding-top: 24px;
     }
 
     &__items {
@@ -98,6 +102,10 @@
       row-gap: 16px;
       margin-bottom: 24px;
       min-width: unset;
+    }
+
+    &__item:nth-of-type(2n) {
+      order: 1;
     }
 
     &__image {

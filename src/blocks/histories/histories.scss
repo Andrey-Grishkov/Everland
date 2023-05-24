@@ -1,5 +1,4 @@
 @import "../cards-container/cards-container.scss";
-@import "../root.scss";
 
 .histories {
   display: grid;
@@ -30,7 +29,7 @@
     margin: 0;
     padding: 0;
     @media screen and (max-width: 767px) {
-      margin-bottom: 24px;
+      padding-bottom: 24px;
     }
   }
   &__button {

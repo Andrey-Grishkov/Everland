@@ -16,7 +16,11 @@
     padding: 18px;
   }
   @media screen and (max-width: 767px) {
-    padding: 17px 19px 17px 15px;
+    &:nth-of-type(1) {
+      padding: 17px 19px 17px 15px;
+    }
+
+    padding: 11px 19px 11px 15px;
     border: 1px solid $borderColor;
     border-radius: 15px;
   }
