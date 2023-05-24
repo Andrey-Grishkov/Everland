@@ -20,14 +20,11 @@
     @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(1, 1fr);
       margin: 0 auto;
+      max-width: 540px;
     }
 
     @media screen and (max-width: 900px) {
       max-width: 450px;
-    }
-
-    @media screen and (max-width: 767px) {
-      max-width: unset;
     }
   }
 
@@ -44,6 +41,7 @@
     @media screen and (max-width: 767px) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(6, min-content);
+      max-width: 450px;
     }
   }
 
