@@ -2,20 +2,26 @@
   max-width: 1440px;
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  left: calc(50% - 720px);
   z-index: 2;
   background-color:#fff;
   width: 100%;
   box-sizing: border-box;
   padding: 40px;
-  padding-top: 100px;
+  padding-top: 120px;
+  box-shadow: 2px 2px 30px 0 $darkGrey;
   translate: 0 -150%;
   transition: translate 0.5s ease-in-out;
+  @media screen and (max-width: 1439px) {
+    max-width: 768px;
+    right: 0;
+    left: unset;
+    padding-top: 112px;
+  }
   @media screen and (max-width: 767px) {
     padding: 10px;
-    padding-top: 50px;
+    padding-top: 72px;
+    max-width: 320px;
   }
   &_opened {
     translate: 0;
@@ -25,47 +31,83 @@
     padding: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 325px);
+    column-gap: 20px;
+    >.accordion:nth-of-type(1) {
+      padding: 0;
+    }
     @media screen and (max-width: 1439px) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
-      gap: 20px;
+      grid-template-columns: repeat(3, 216px);
+      row-gap: 64px;
     }
     @media screen and (max-width: 767px) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 300px);
       grid-template-rows: repeat(4, minmax(min-content, max-content));
-      gap: 20px;
+      row-gap: 20px;
     }
   }
   &__accordion {
     border: 0;
     display: grid;
-    gap: 30px;
+    row-gap: 30px;
     padding: 0;
     border-radius: 0;
+    @media screen and (max-width: 1439px) {
+      row-gap: 24px;
+    }
     @media screen and (max-width: 767px) {
-      gap: 24px;
+      row-gap: 0;
+      grid-template-columns: repeat(2, minmax(min-content, max-content));
     }
   }
   &__grid {
-    grid-template-areas: 
-    "accordionTitle accordionTitle"
-    "accordionText accordionText";
+    row-gap: 26px;
+    @media screen and (max-width: 1439px) {
+      justify-content: start;
+      row-gap: 24px;
+      column-gap: 78px;
+      grid-template-columns: repeat(2, 158px);
+      grid-column: 1 / span 2;
+      .burger-popup__title:nth-of-type(2n) {
+        order: 1;
+      }
+    }
+    // grid-template-areas: 
+    // "accordionTitle accordionTitle"
+    // "accordionText accordionText";
     @media screen and (max-width: 767px) {
-      grid-template-areas: 
-      "accordionTitle accordionButton"
-      "accordionText accordionText";
-      gap: 0;
+      grid-template-columns: 300px;
+      grid-column: 1 / span 1;
+      row-gap: 20px;
+      // grid-template-areas: 
+      // "accordionTitle accordionButton"
+      // "accordionText accordionText";
+      .burger-popup__title:nth-of-type(2n) {
+        order: 0;
+      }
     }
   }
   &__title {
-    @extend %mainTitleH3;
-    grid-area: accordionTitle;
+    @extend %textLinkStyle;
+    @include raleway;
+
+    font: {
+      weight: $bold;
+      size: 34px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+    // grid-area: accordionTitle;
   }
   &__button {
     display: none;
-    grid-area: accordionButton;
+    // grid-area: accordionButton;
     width: 24px;
     height: 24px;
     background-image: url("../images/icons/arrowBurgerMenu.svg");
@@ -84,7 +126,7 @@
     }
   }
   &__text {
-    grid-area: accordionText;
+    // grid-area: accordionText;
     position: relative;
     z-index: 2;
     visibility: visible;
@@ -105,8 +147,9 @@
     }
   }
   &__link {
+    @extend %textLinkStyle;
+    @extend %mainParagraphStyle;
     cursor: pointer;
-    max-width: 260px;
     @media screen and (max-width: 1439px) {
       max-width: 185px;
     }
