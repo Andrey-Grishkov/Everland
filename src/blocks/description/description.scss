@@ -108,11 +108,17 @@
 
   @media screen and (max-width: 1439px) {
     padding: 32px 24px;
+    column-gap: 22px;
+    justify-content: flex-start;
+    max-width: 688px;
+    box-sizing: border-box;
+    justify-self: center;
   }
 
   @media screen and (max-width: 767px) {
     @include flex(column, center, center);
     gap: 32px;
+    max-width: 388px;
   }
 }
 
@@ -200,6 +206,8 @@
 @media screen and (max-width: 1439px) {
   .description {
     padding: calc($paddingSectionVerticalTablet + 6px) $paddingSectionHorizontal;
+    max-width: 950px;
+    display: grid;
 
     &__image-box {
       margin-top: 14px;

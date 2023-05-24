@@ -12,13 +12,14 @@
   @media screen and (max-width: 1439px) {
     padding-top: 32px;
     gap: 20px 0;
-    max-width: 1439px;
+    max-width: 540px;
     max-height: 640px;
+    justify-self: center;
   }
 
   @media screen and (max-width: 767px) {
     padding-top: 24px;
     gap: 16px 0;
-    max-width: 767px;
+    max-width: 450px;
   }
 }
