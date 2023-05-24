@@ -4,8 +4,6 @@ $bold: 700;
 $medium: 500;
 $regular: 400;
 
-
-
 // Система отступов
 
 // На разрешение экрана от 1440px
@@ -39,8 +37,6 @@ $paddingInCardMobile: 24px;
 $paddingSectionHorizontalMobile: 10px;
 $paddingSectionVerticalMobile: 32px;
 $borderRadiusMobile: 20px;
-
-
 
 // Переменные с цветами
 // Цвета фона карточек
@@ -83,8 +79,6 @@ $purplePressed: #4935B5;
 
 $linkHoverOpacity: 0.5;
 
-
-
 // Тут находятся все миксины
 @mixin flex($flex-direction, $justify-content, $align-items) {
   display: flex;
@@ -120,13 +114,11 @@ $linkHoverOpacity: 0.5;
   padding: 0;
 }
 
-
 %limitedWidthSection {
   box-sizing: border-box;
   max-width: 1440px;
   width: 100%;
 }
-
 
 // Тут стили всех шрифтов
 %mainTitleH1 {
