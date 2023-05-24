@@ -49,4 +49,17 @@ burgerMenu.addEventListener('mouseover', () => {
 burgerMenu.addEventListener('click', () => {
   burgerPopup.classList.toggle('burger-popup_opened');
   burgerMenuIcon.classList.toggle('header__menu-image_active');
-})
+});
+
+const content = document.querySelector('.content');
+const footer = document.querySelector('.footer');
+
+function addClosePopupListener(element) {
+  element.addEventListener('mouseover', () => {
+    burgerPopup.classList.remove('burger-popup_opened');
+    burgerMenuIcon.classList.remove('header__menu-image_active');
+  });
+}
+
+addClosePopupListener(content);
+addClosePopupListener(footer);
