@@ -28,10 +28,12 @@ $uikitArrowSizeTablet: 20px;
     @include arrow($txtColor);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 16px 16px;
     display: block;
     height: $uikitArrowSize;
     width: $uikitArrowSize;
     @media screen and (max-width: 1439px) {
+      background-size: 13px 13px;
       width: $uikitArrowSizeTablet;
       height: $uikitArrowSizeTablet;
     }

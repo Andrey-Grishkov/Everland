@@ -7,6 +7,8 @@
 
   @media screen and (max-width: 767px) {
     padding: 15px;
+    border-radius: 20px;
+    border: 2px solid $borderColor;
   }
 
   >.accordion__text {

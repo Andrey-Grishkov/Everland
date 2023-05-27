@@ -1,4 +1,12 @@
 .card__title_type_about-person {
   @extend %mainTitleH4;
   margin: 0;
+
+  @media screen and (max-width: 1439px) {
+    margin-top: 6px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0;
+  }
 }
