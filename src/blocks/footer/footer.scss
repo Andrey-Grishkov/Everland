@@ -171,7 +171,7 @@
       }
 
       &_type_fund {
-        background-size: 88px 30px;
+        background-size: contain;
       }
     }
 
@@ -261,10 +261,6 @@
 
       &_type_beeline {
         background-size: 48px 34px;
-      }
-  
-      &_type_fund {
-        background-size: contain;
       }
     }
 

@@ -1,6 +1,5 @@
 .donations__donate {
   display: flex;
-  column-gap: 10px;
   @extend %mainParagraphStyle;
   
   &:nth-last-child(1) {

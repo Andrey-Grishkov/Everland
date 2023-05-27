@@ -23,7 +23,7 @@
   }
 
   &__menu-image {
-    height: 20px;
+    height: 24px;
     width: 25px;
     background-image: url("../images/icons/header/header__menu-image.svg");
     background-size: contain;
@@ -32,6 +32,10 @@
 
     &_active {
       background-image: url("../images/icons/header/header__menu-image_active.svg");
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 20px;
     }
   }
 

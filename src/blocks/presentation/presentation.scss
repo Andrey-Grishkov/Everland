@@ -15,7 +15,6 @@
 
   &__title {
     @extend %mainTitleH2;
-    max-width: 853px;
     text-align: left;
 
     @media screen and (max-width: 1439px) {
@@ -77,12 +76,12 @@
     @media screen and (max-width: 1439px) {
       min-width: 200px;
       min-height: 44px;
+      text-align: center;
     }
 
     @media screen and (max-width: 767px) {
       width: 100%;
       max-width: 300px;
-      text-align: center;
     }
   }
 }

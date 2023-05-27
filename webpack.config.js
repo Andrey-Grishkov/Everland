@@ -44,10 +44,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new HtmlWebpackPlugin({
-      filename: "buttons.html",
-      template: './src/buttons.html'
-    }),
     new HtmlReplaceWebpackPlugin([
       {
         pattern: /media="\(device-width:\s\d+px\)\sand\s\(device-height:\s\d+px\)\sand\s\(-webkit-device-pixel-ratio:\s\d\)\sand\s\(orientation:\s\w+\)"/g,
