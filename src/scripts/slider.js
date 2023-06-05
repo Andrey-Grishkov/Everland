@@ -76,7 +76,8 @@ class Slider {
   }
 
   _drawSlider() {
-    this._disableAllControls();
+    this._disableButton(this._leftButton);
+    this._disableButton(this._rightButton);
     this._animatedMove();
 
     setTimeout(() => {
@@ -104,6 +105,10 @@ class Slider {
   _enableAllControls() {
     this._enableControl(this._leftButton);
     this._enableControl(this._rightButton);
+  }
+
+  _disableButton(button) {
+    button.disabled = true;
   }
 
   _disableControl(control) {
@@ -142,7 +147,8 @@ class InfiniteSlider extends Slider {
       ".slider__item:last-of-type"
     );
     const item = sliderSelector.cloneNode(true);
-    this._disableAllControls();
+    this._disableButton(this._leftButton);
+    this._disableButton(this._rightButton);
     this._animatedMove(1);
     setTimeout(() => {
       sliderSelector.remove();
@@ -157,7 +163,8 @@ class InfiniteSlider extends Slider {
       ".slider__item:first-of-type"
     );
     const item = sliderSelector.cloneNode(true);
-    this._disableAllControls();
+    this._disableButton(this._leftButton);
+    this._disableButton(this._rightButton);
     this._animatedMove(3);
     setTimeout(() => {
       sliderSelector.remove();
