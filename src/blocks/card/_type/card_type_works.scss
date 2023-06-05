@@ -1,0 +1,27 @@
+%backgoundIcon {
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: 32px 32px;
+  }
+  @media screen and (max-width: 1439px) {
+    background-size: 24px 24px;
+  }
+}
+
+.card_type_works {
+  @include grid;
+  gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: minmax(min-content, max-content);
+  background-color: $backgroundColor;
+
+  @media screen and (max-width: 1439px) {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

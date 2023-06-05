@@ -1,0 +1,18 @@
+.card__button_type_projects {
+  grid-area: observe;
+  width: min-content;
+  position: relative;
+  z-index: 1;
+  align-self: flex-end;
+  padding: 0 38px;
+  text-decoration: none;
+
+  @media screen and (max-width: 1439px) {
+    padding: 0 53px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+  }
+}

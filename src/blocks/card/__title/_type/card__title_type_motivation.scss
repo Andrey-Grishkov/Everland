@@ -1,0 +1,5 @@
+.card__title_type_motivation {
+  @extend %mainTitleH4;
+  grid-area: titleLong;
+  margin: 0;
+}

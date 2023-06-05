@@ -1,0 +1,38 @@
+.logo {
+  display: block;
+  background: url("../images/icons/shared/logo.svg") left no-repeat;
+  background-size: contain;
+  flex-basis: 271px;
+
+  &:hover {
+    opacity: $linkHoverOpacity;
+  }
+
+  &_size_small {
+    height: 30px;
+    width: 171px;
+  }
+
+  &_size_big {
+    height: 46px;
+    width: 265px;
+  }
+}
+
+// Tablet + mobile
+@media screen and (max-width: 1439px) {
+  .logo {
+    &_size_small {
+      height: 24px;
+      width: 140px;
+    }
+
+    &_size_big {
+      height: 24px;
+      width: 140px;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {}

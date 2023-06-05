@@ -1,0 +1,23 @@
+.accordion_state_open {
+  padding: 18px;
+
+  @media screen and (max-width: 1439px) {
+    padding: 28px 18px 21px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid $borderColor;
+  }
+
+  >.accordion__text {
+    transform: scaleY(1);
+    visibility: visible;
+    padding-top: 10px;
+
+    @media screen and (max-width: 1439px) {
+      padding-top: 20px;
+    }
+  }
+}

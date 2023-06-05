@@ -1,0 +1,35 @@
+@import "./button_type_basic";
+
+// primary
+$uikitBtnPrimaryDefaultBgcolor: $blue; //#0C4BA0;
+$uikitBtnPrimaryDefaultBrcolor: $blue; //#0C4BA0;
+$uikitBtnPrimaryDefaultTxtColor: $backgroundColor; //#FFFFFF;
+
+$uikitBtnPrimaryHoverBgcolor: $buttonHoverColor; //#4183DC;
+$uikitBtnPrimaryHoverBrColor: $buttonHoverColor; //#4183DC;
+$uikitBtnPrimaryHoverTxtColor: $backgroundColor; //#FFFFFF;
+
+$uikitBtnPrimaryPressedBgColor: $bluePressed; //#00275C;
+$uikitBtnPrimaryPressedBrColor: $bluePressed; //#00275C;
+$uikitBtnPrimaryPressedTxtColor: $backgroundColor; //#FFFFFF;
+
+.button_type_primary {
+  @include button_type_basic;
+
+  @include btn-basic($uikitBtnPrimaryDefaultBgcolor, $uikitBtnPrimaryDefaultTxtColor,
+    0px, $uikitBtnPrimaryDefaultBrcolor);
+
+  &:hover {
+    @include btn-basic($uikitBtnPrimaryHoverBgcolor, $uikitBtnPrimaryHoverTxtColor,
+      0px, $uikitBtnPrimaryHoverBrColor);
+  }
+
+  &.button_disabled {
+    @include button_disabled;
+  }
+
+  &.button_pressed {
+    @include btn-basic($uikitBtnPrimaryPressedBgColor, $uikitBtnPrimaryPressedTxtColor,
+      0px, $uikitBtnPrimaryPressedBrColor);
+  }
+}

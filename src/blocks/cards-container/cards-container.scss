@@ -1,0 +1,117 @@
+.cards-container {
+  @include grid;
+  box-sizing: border-box;
+  width: 100%;
+  padding: $marginTitleContent 0 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media screen and (max-width: 1439px) {
+    padding-top: $marginTitleContentTablet;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: $marginTitleContentMobile;
+  }
+
+  &_type_works {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1439px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 auto;
+      max-width: 540px;
+    }
+
+    @media screen and (max-width: 900px) {
+      max-width: 450px;
+    }
+  }
+
+  &_type_directions {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 428px);
+
+    @media screen and (max-width: 1439px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      max-width: unset;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, min-content);
+      max-width: 450px;
+    }
+  }
+
+  &_type_projects {
+    display: grid;
+    width: calc(var(--slides) * 100%);
+    grid-template-columns: repeat(var(--slides), 1fr);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  &_type_news {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 1;
+
+    @media screen and (max-width: 1439px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 32px;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+
+
+  &_type_presentation {
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1078px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      row-gap: 30px;
+    }
+  }
+
+  &_type_histories {
+    grid-area: cardsContainerHistories;
+    padding: 0;
+    @include flex(column, center, center);
+    gap: 0;
+  }
+
+  &_type_about-person {
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: cardsContainerAboutPerson;
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &_type_description {
+    padding: 0;
+    display: grid;
+    width: calc(var(--slides) * 100%);
+    grid-template-columns: repeat(var(--slides), 1fr);
+    position: relative;
+    gap: unset;
+  }
+}

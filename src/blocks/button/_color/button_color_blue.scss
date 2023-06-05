@@ -1,0 +1,27 @@
+@import "../_type/button_type_link";
+
+// blue
+$uikitBtnLinkBlueDefaultBgColor: $lightBlue; //#E7F0FF;
+$uikitBtnLinkBlueDefaultTxtColor: rgb(12, 75, 160);
+
+$uikitBtnLinkBlueHoverBgColor: $blue; //#0C4BA0;
+$uikitBtnLinkBlueHoverTxtColor: rgb(255, 255, 255);
+
+$uikitBtnLinkBluePressedBgColor: $bluePressed; //#00275C;
+$uikitBtnLinkBluePressedTxtColor: rgb(255, 255, 255);
+
+.button_color_blue {
+  @include btn_link($uikitBtnLinkBlueDefaultBgColor, $uikitBtnLinkBlueDefaultTxtColor);
+
+  &:hover {
+    @include btn_link($uikitBtnLinkBlueHoverBgColor, $uikitBtnLinkBluePressedTxtColor);
+  }
+
+  &.button_disabled {
+    @include link_disabled;
+  }
+
+  &.button_pressed {
+    @include btn_link($uikitBtnLinkBluePressedBgColor, $uikitBtnLinkBluePressedTxtColor);
+  }
+}

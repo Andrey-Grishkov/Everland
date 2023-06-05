@@ -1,0 +1,87 @@
+.presentation {
+  @include flex(column, start, center);
+  align-self: stretch;
+  padding: $paddingSectionVertical 0 $paddingSectionVertical;
+  background-color: $lightGrey;
+
+  @media screen and (max-width: 1439px) {
+    padding: $paddingSectionVerticalTablet 0 $paddingSectionVerticalTablet;
+  }
+
+  @media screen and (max-width: 767px) {
+    align-items: center;
+    padding: $paddingSectionVerticalMobile 0 $paddingSectionVerticalMobile;
+  }
+
+  &__title {
+    @extend %mainTitleH2;
+    text-align: left;
+
+    @media screen and (max-width: 1439px) {
+      max-width: 394px;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 300px;
+      // text-align: center;
+    }
+
+  //   @media screen and (max-width: 425px) {
+  //     max-width: 300px;
+  //     text-align: left;
+  //   }
+  }
+
+  &__subtitle {
+    @extend %mainTitleH4;
+    padding: 20px 0 $marginTitleContent;
+    max-width: 955px;
+
+    @media screen and (max-width: 1439px) {
+      padding: 16px 0 22px;
+      max-width: 506px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 10px 0 $marginTitleContentMobile;
+      text-align: justify;
+      max-width: 300px;
+    }
+
+    @media screen and (max-width: 425px) {
+      text-align: left;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-decoration: none;
+
+    @media screen and (max-width: 1439px) {
+      margin-top: 32px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__button {
+    padding: 0 24px;
+    min-width: 204px;
+    min-height: 48px;
+
+    @media screen and (max-width: 1439px) {
+      min-width: 200px;
+      min-height: 44px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}

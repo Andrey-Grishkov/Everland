@@ -1,0 +1,8 @@
+.wrapper {
+  @extend %limitedWidthSection;
+  padding: 0 $paddingSectionHorizontal;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 $paddingSectionHorizontalMobile;
+  }
+}

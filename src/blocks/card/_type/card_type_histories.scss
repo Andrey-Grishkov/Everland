@@ -1,0 +1,25 @@
+.card_type_histories {
+  padding: 50px 0;
+  width: 100%;
+  gap: 80px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  @include flex(row, space-between, center);
+  @media screen and (max-width: 1439px) {
+    padding: 32px 0 0;
+    gap: 32px;
+    margin: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0 0 32px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+}

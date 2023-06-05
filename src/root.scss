@@ -1,0 +1,357 @@
+// Тут будут записаны все переменные
+$fontFamily: 'Raleway', 'Arial', sans-serif;
+$bold: 700;
+$medium: 500;
+$regular: 400;
+
+// Система отступов
+
+// На разрешение экрана от 1440px
+// Отступ между блоками
+$marginBlocks: 150px;
+// Отступ от заголовка до основного контента в секции
+$marginTitleContent: 50px;
+// Отступ внутри карточки
+$paddingInCard: 30px;
+// Отступ между заголовком и текстом в карточке
+$marginCardTitleText: 20px;
+// Отступ между текстом и иконкой в кнопке
+$marginTextIconButton: 10px;
+// Горизонтальные отступы в секциях
+$paddingSectionHorizontal: 40px;
+// Вертикальные отступы в секциях
+$paddingSectionVertical: 100px;
+// Радиус для карточек
+$borderRadius: 30px;
+
+// На разрешение экрана в диапазоне от 768 до 1439 пикселей. Ко всем именам добавлено слово Tablet.
+$marginBlocksTablet: 100px;
+$marginTitleContentTablet: 32px;
+$marginCardTitleTextTablet: 10px;
+$paddingSectionVerticalTablet: 50px;
+
+// На разрешение экрана в диапазоне от 320 до 768px. Ко всем именам добавлено слово Mobile
+$marginBlocksMobile: 64px;
+$marginTitleContentMobile: 24px;
+$paddingInCardMobile: 24px;
+$paddingSectionHorizontalMobile: 10px;
+$paddingSectionVerticalMobile: 32px;
+$borderRadiusMobile: 20px;
+
+// Переменные с цветами
+// Цвета фона карточек
+$lightBlue: #E7F0FF;
+$lightPink: #FEEFEA;
+$lightGreen: #DAEFD5;
+$lightPurple: #EAE6FF;
+
+// Цвета текста карточек, кнопок в стандартном виде
+$blue: #0C4BA0;
+$orange: #E98509;
+$green: #319B17;
+$purple: #8B75FF;
+$darkGrey: #333333;
+$grey: #262626;
+
+// Основной цвет бекграунда
+$backgroundColor: #FFFFFF;
+
+// Основной текст шрифта
+$fontColor: #333333;
+
+// Цвет для фона блоков
+$lightGrey: #F5F5F5;
+$superLightBlue: #E7F0FF;
+
+// Цвет границы border
+$borderColor: #DADADA;
+
+// Цвет кнопок в состоянии hover и disabled
+$buttonHoverColor: #4183DC;
+$buttonDisabledColor: #CACACA;
+$buttonDisabledHardColor: #C4C4C4;
+
+// Цвет кнопок в состоянии pressed
+$bluePressed: #00275C;
+$orangePressed: #864A00;
+$greenPressed: #0E4900;
+$purplePressed: #4935B5;
+
+$linkHoverOpacity: 0.5;
+
+// Тут находятся все миксины
+@mixin flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: 1439px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@mixin raleway {
+  font-family: $fontFamily;
+  font-variant-numeric: lining-nums;
+  line-height: 120%;
+  margin: 0;
+}
+
+%zeroSpaces {
+  margin: 0;
+  padding: 0;
+}
+
+%limitedWidthSection {
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+}
+
+// Тут стили всех шрифтов
+%mainTitleH1 {
+  @include raleway;
+  letter-spacing: -0.02em;
+
+  font: {
+    weight: $bold;
+    size: 72px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 38px;
+    letter-spacing: -0.03em;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 27px;
+  }
+}
+
+%mainTitleH2 {
+  @include raleway;
+  letter-spacing: -0.01em;
+
+  font: {
+    weight: $bold;
+    size: 64px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+
+%mainTitleH3 {
+  @include raleway;
+
+  font: {
+    weight: $bold;
+    size: 34px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+%mainTitleH4 {
+  @include raleway;
+
+  font: {
+    weight: $bold;
+    size: 34px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+%mainTitleH5 {
+  @include raleway;
+
+  font: {
+    weight: $bold;
+    size: 24px;
+  }
+}
+
+%bigTextStyle {
+  @include raleway;
+
+  font: {
+    weight: $bold;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%bigParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $bold;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%mainTextStyle {
+  @include raleway;
+
+  font: {
+    weight: $regular;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%mainParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $regular;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%smallTextStyle {
+  @include raleway;
+
+  font: {
+    weight: $regular;
+    size: 18px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+%smallParagraphStyle {
+  line-height: 130%;
+  margin: 0;
+
+  font: {
+    family: $fontFamily;
+    variant-numeric: lining-nums;
+    weight: $regular;
+    size: 18px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+%buttonTextStyle {
+  @include raleway;
+  font-family: $fontFamily;
+  line-height: 120%;
+
+  font: {
+    weight: $medium;
+    size: 20px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+%textLinkStyle {
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .3s;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: $linkHoverOpacity;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+%buttonLinkStyle {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}

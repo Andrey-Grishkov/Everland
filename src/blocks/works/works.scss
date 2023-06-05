@@ -1,0 +1,24 @@
+.works {
+  @include flex(column, center, center);
+  align-self: stretch;
+  box-sizing: border-box;
+  background-color: $lightGrey;
+  padding: $paddingSectionVertical 0;
+
+  &__title {
+    @extend %mainTitleH2;
+    @extend %zeroSpaces;
+
+    @media screen and (max-width: 1439px) {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    padding: $paddingSectionVerticalTablet 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: $paddingSectionVerticalMobile 0;
+  }
+}

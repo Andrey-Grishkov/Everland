@@ -1,0 +1,14 @@
+.card_type_news {
+  @include flex(column, flex-start, stretch);
+  gap: 30px;
+
+  @media screen and (max-width: 1439px) {
+    gap: 20px
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .card_type_news:last-child {
+    display: none;
+  }
+}

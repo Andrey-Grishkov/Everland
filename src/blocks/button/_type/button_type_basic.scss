@@ -1,0 +1,39 @@
+// UI Kit --- Стандартные кнопки:
+/*
+ Использование:
+      <button class="button button_type_primary">Default</button>
+      <button class="button button_type_secondary">Default</button>
+      <button class="button button_type_secondary-transparent">Default</button>
+   Для того что бы сделать кнопку нажатой добавить класс pressed:
+      <button class="button button_type_primary pressed">Default</button>
+   Для дективации достаточно добавить к кнопке атрибут disable:
+      <button class="button button_type_primary disabled" disabled>Disabled</button>
+ */
+
+@import "../button";
+
+$uikitBtnBgDisabled: $lightGrey; //#F5F5F5;
+$uikitBtnBrDisabled: $buttonDisabledHardColor; //#C4C4C4;
+$uikitBtnTxtDisabled: rgba(38, 38, 38, 0.5);
+
+@mixin button_disabled() {
+  @include btn-basic($uikitBtnBgDisabled, $uikitBtnTxtDisabled, 2px, $uikitBtnBrDisabled);
+}
+
+@mixin btn-basic($bg-color, $txt-color, $br-size, $br-color){
+  background-color: $bg-color;
+  border: $br-size solid $br-color;
+  color: $txt-color;
+}
+
+@mixin button_type_basic() {
+  height: $uikitBtnDesktopHeigth;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @media screen and (max-width: 1439px) {
+    & {
+      height: $uikitBtnMobileHeigth;
+    }
+  }
+}

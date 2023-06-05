@@ -1,0 +1,7 @@
+.card__subtitle_type_directions {
+  @extend %mainParagraphStyle;
+  padding: $marginCardTitleText 0 0;
+  @media screen and (max-width: 1439px) {
+    padding-top: $marginCardTitleTextTablet;
+  }
+}

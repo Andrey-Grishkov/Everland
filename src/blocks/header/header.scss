@@ -1,0 +1,141 @@
+.header {
+  @extend %limitedWidthSection;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  margin: 0;
+  @include flex(row, space-between, center);
+  padding: 16px $paddingSectionHorizontal 16px;
+  background-color: $backgroundColor;
+  box-shadow: 0 4px 30px rgba(#2A3038, 0.1);
+
+  &__menu {
+    
+    @include flex(row, flex-start, center);
+    border: none;
+    background-color: $backgroundColor;
+
+    gap: 12px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: $linkHoverOpacity;
+    }
+  }
+
+  &__menu-image {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s;
+
+    &::after {
+      content: '';
+      height: 3px;
+      width: 25px;
+      background-color: #333;
+      position: absolute;
+      top: 10px;
+      transition-duration: .3s, .3s;
+      transition-delay: .3s, 0s;
+      transition-property: top, transform;
+    }
+
+    &::before {
+      content: '';
+      height: 3px;
+      width: 25px;
+      background-color: #333;
+      position: absolute;
+      top: -10px;
+      transition-duration: .3s, .3s;
+      transition-delay: .3s, 0s;
+      transition-property: top, transform;
+    }
+
+    &_active {
+      background-color: #fff;
+      &::before {
+        transition-delay: 0s, .3s;
+        top: 0;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transition-delay: 0s, .3s;
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 20px;
+    }
+  }
+
+  &__menu-label {
+    @extend %bigTextStyle;
+    box-sizing: border-box;
+    display: block;
+    color: $fontColor;
+  }
+
+  &__button-container {
+    @include flex(row, space-between, center);
+    box-sizing: border-box;
+    gap: 16px;
+  }
+
+  &__button {
+    @extend %buttonLinkStyle;
+    height: 48px;
+    width: 180px;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1439px) {
+  .header {
+    padding: 18px 40px 18px;
+    gap: 24px;
+
+    &__menu {
+      order: 99;
+      flex-basis: unset;
+    }
+
+    &__button {
+      height: 34px;
+      width: 134px;
+    }
+
+    &__button-container {
+      gap: 8px;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 15px 10px;
+
+    &__menu-label {
+      display: none;
+    }
+
+    &__button-container {
+      display: none;
+    }
+
+    &__button {
+      height: 34px;
+      width: 134px;
+    }
+  }
+}

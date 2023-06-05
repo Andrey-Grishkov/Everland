@@ -1,0 +1,50 @@
+.news {
+  @extend %limitedWidthSection;
+  padding: $paddingSectionVertical $paddingSectionHorizontal;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+
+  &__title {
+    @extend %mainTitleH2;
+    grid-column: 1 / span 2;
+  }
+
+  &__link {
+    justify-self: end;
+    grid-column-start: 6;
+    grid-row-start: 1;
+    width: 194px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .news {
+    padding: $paddingSectionVerticalTablet $paddingSectionHorizontal;
+
+    &__link {
+      justify-self: center;
+      grid-column: 3 / span 2;
+      grid-row-start: 3;
+      width: 200px;
+      height: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news {
+    padding: $paddingSectionVerticalMobile $paddingSectionHorizontalMobile;
+    grid-template-columns: repeat(1, 1fr);
+
+    &__link {
+      grid-column: unset;
+      width: 300px;
+    }
+
+    &__item-image {
+      border-radius: 20px;
+    }
+  }
+}
